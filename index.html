@@ -1,1 +1,135 @@
-Hello poter
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKY-FI Shop</title>
+
+    <link rel="stylesheet" href="Styles/main.css">
+    <link rel="stylesheet" href="Styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+</head>
+
+<header>
+    <div class="header">
+        <h1 class="main-logo">Shop</h1>
+        <button class="personal-account" onclick="showPopup()">
+            <img id="login-img" src="Images/Персона.png" alt="login"/>
+        </button>
+    </div>
+</header>
+
+<body class="body">
+
+    <h2>Введи свои данные:</h2>
+    <form action="Scripts/test.php" method="POST">
+        <p>Введите имя: <input type="text" name="firstname" /></p>
+        <p>Введите фамилию: <input type="text" name="lastname" /></p>
+    <input type="submit" value="Отправить">
+
+    <div class="grid-goods">
+        <section class="card">
+            <div class="card-name">
+                JKS-200
+            </div>    
+            <div class="image-holder">
+                <image class="card-image" src=""/>
+            </div>            
+        </section>
+        <section class="card">
+            <div class="card-name">
+                MV-33
+            </div>
+            <div class="image-holder">
+                <!-- <image class="card-image" src="https://cdna.artstation.com/p/assets/images/images/040/831/598/large/h-cy-image0001.jpg?1629992502"/> -->
+            </div>   
+        </section>
+        <section class="card">
+            <div class="card-name">
+                JKS-200
+            </div>
+        </section>
+        <section class="card">
+            <div class="card-name">
+                JKS-200
+            </div>
+        </section>
+        <section class="card">
+            <div class="card-name">
+                JKS-200
+            </div>
+        </section>
+        <section class="card">
+            <div class="card-name">
+                JKS-200
+            </div>
+        </section>
+    </div>
+    
+    <div id="popup-overlay">
+        <div id="popup">
+            <button id="exit-button" onclick="hidePopup()">X</button>
+            <h3>Пример всплывающего окна</h3>
+            <p>Это пример</p>
+            <div class="input-fields">
+                <label for="login">Login</label>
+                <input class="field" type="text" id="login" name="login" 
+                    minlength="3" maxlength="16" placeholder="Input login or email" required autocomplete></input>
+                
+                <label for="password">Password</label>
+                <input class="field" type="password" id="password" name="password" 
+                    minlength="8" maxlength="155" required autocomplete></input>
+                
+                <label for="repeat-password">Repeat password</label>
+                <input class="field" type="password" id="repeat-password" 
+                    name="repeat password" minlength="8" maxlength="155" required autocomplete></input>
+                
+                <input id="login-submit-button" type="submit" value="Submit"></input>
+            </div>
+        </div>
+    </div>
+</body>
+
+<footer class="footer">
+
+    <section id="dinamic-text-container">
+        <h3">Corporation - "ERROR IMPLANT"</h3>
+        <p id="dinamic-text"></p>
+    </section>
+
+    <section class="information-block">
+        <h3>Contacts</h3>
+        <div class="contacts-container">
+            <section id="contact-element">
+                <img id="contact-icon" src="Images/Telephone.png"/>
+                <a class="left-padding" id="link" href="tel:+79200001010">+7-900-000-10-10</a>
+            </section>
+            <section id="contact-element">
+                <img id="contact-icon" src="Images/Email.png"/>
+                <a class="left-padding" id="link" href="ruslan.minatullaev-1000@yandex.ru">ruslan.minatullaev-1000@yandex.ru</a>
+            </section>
+            <section id="contact-element">
+                <img id="contact-icon" src="Images/Geo-point.png"/>
+                <p class="left-padding">Лунная станция 47, ячейка 3</p>
+            </section>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d397917.99737469194!2d-77.50865960924497!3d38.815639690823204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7b7bcdecbb1df%3A0x715969d86d0b76bf!2z0JHQtdC70YvQuSDQtNC-0Lw!5e0!3m2!1sru!2sru!4v1731240645760!5m2!1sru!2sru" 
+            width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>        
+    </section>
+
+    <section class="information-block">
+        <h3>Social media</h3>
+        <div class="social-media-container">
+            <button class="icon"><a target="_blank" href="https://t.me/toplesofficial"><img id="icon-image" src="/Images/Telegram-icon.png"></a></button>
+            <button class="icon"><a target="_blank" href="https://wa.me/79200001010"><img id="icon-image" src="/Images/Whatsapp.png"></a></button>
+            <button class="icon"><a target="_blank" href="https://github.com/Hi-Tech-Mechanic?tab=repositories"><img id="icon-image" src="/Images/Github.png"></a></button>
+            <button class="icon"><a target="_blank" href="https://www.artstation.com/hcy"><img id="icon-image" src="/Images/Artstation.png"></a></button>
+        </div>
+    </section>
+
+</footer>
+
+<script src="Scripts/main.js"></script>
+</html>
