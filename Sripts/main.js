@@ -95,19 +95,25 @@ const exolab = [technologies["Python"], technologies["Tkinter"], technologies["S
 const multiverseMemes = [
   technologies["Csharp"], technologies["Unity"], technologies["PluginYG"],
   technologies["DOTween"], technologies["ShaderGraphs"], technologies["ParticleSystem"],
-  technologies["Blender"], technologies["SonyVegasPro"]];
+  technologies["Blender"], technologies["SonyVegasPro"]
+];
 
 const minecraftIndustrialization = [
   technologies["Csharp"], technologies["Unity"], technologies["PluginYG"],
   technologies["DOTween"], technologies["ShaderGraphs"], technologies["ParticleSystem"],
-  technologies["Photoshop"]];
+  technologies["Photoshop"]
+];
 
 const furnitureShop = [
   technologies["Csharp"], technologies["ASPNetCore"], technologies["Blazor"],
   technologies["RazorPages"], technologies["Unity"], technologies["WebGL"],
-  technologies["HTML5"], technologies["CSS3"]];
+  technologies["HTML5"], technologies["CSS3"]
+];
 
-const characterMenuConcept = [technologies["Csharp"], technologies["Unity"]];
+const characterMenuConcept = [
+  technologies["Csharp"], technologies["Unity"],
+  technologies["DOTween"], technologies["Photoshop"]
+];
 
 const allProjects = [exolab, multiverseMemes,
    minecraftIndustrialization, furnitureShop, characterMenuConcept];
@@ -156,6 +162,7 @@ const lightTheme = {
   "--text-color": "black",
   "--background-color": "rgb(235, 235, 235)",
   "--button-background-color": "rgb(200, 200, 200)",
+  "--brend-color": ""
 };
 
 const themeToggle = document.getElementById("theme toggle");
@@ -163,17 +170,37 @@ themeToggle.addEventListener("click", function(){
   if (themeToggle.index % 2 != 0){
     for(let key in lightTheme){
       document.documentElement.style.setProperty(key, lightTheme[key]);
+      localStorage.setItem(key, lightTheme[key]);
     }
-    themeToggle.lastChild.src = "Images/Other/moon.avif";
 
+    themeToggle.lastChild.src = "Images/Other/moon.avif";
     themeToggle.index = 2;
+
+    // localStorage.setItem('themeColor', lightTheme["--text-color"]);
+    let savedTheme = localStorage.getItem('themeColor');
+    console.log(savedTheme);
+    // for(let key in savedTheme){
+    //   console.log(savedTheme[key]);
+    //   // document.documentElement.style.setProperty(key, savedTheme[key]);
+    // }
   }
   else{
     for(let key in darkTheme){
       document.documentElement.style.setProperty(key, darkTheme[key]);
     }
 
-    themeToggle.lastChild.src = "Images/Other/sun.avif";
+    themeToggle.lastChild.src = "images/Other/sun.avif";
     themeToggle.index = 1;
+
+    localStorage.setItem('themeColor', darkTheme);
   }
 });
+
+const savedTheme = localStorage.getItem('themeColor');
+// console.log(savedTheme[0]);
+if (savedTheme != null){
+  for(let key in savedTheme){
+    // console.log(key);
+    document.documentElement.style.setProperty(key, savedTheme[key]);
+  }
+}

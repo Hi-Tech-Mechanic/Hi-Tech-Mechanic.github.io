@@ -4,7 +4,7 @@
     --background-color: rgb(15, 15, 15);
     --button-border-color: grey;
     --button-background-color: rgb(32, 32, 32);
-    --brend-color: rgb(61, 255, 255);
+    --brend-color: rgb(0, 255, 255);
     --stack-text-color: aquamarine;
     --stack-background-color: rgb(0, 136, 102);
     --stack-border-color: rgb(8, 168, 160);
@@ -38,7 +38,7 @@
 
 @font-face {
     font-family: "zarubkaType-Regular";
-    src: url('Fonts/zarubkaType-Regular.ttf') format('ttf');
+    src: url('fonts/zarubkaType-Regular.ttf') format('ttf');
     font-weight: 400;
 }
 
@@ -247,7 +247,6 @@
         display: flex;
         margin-bottom: 5px;
         --angle: 0deg;
-        
 
         animation: 10s rotate linear infinite;
     }
@@ -309,6 +308,8 @@
     top: 50%;
     left: 50%;
   
+    /* width: 100%; */
+    /* height: 100%; */
     max-width: var(--content-max-width);
     max-height: 90%;
     padding: 15px;
@@ -321,6 +322,8 @@
   }
 
   #extended-image{
+    /* width: 100%; */
+    /* height: 100%; */
     max-width: 100%;
     max-height: 1000px;
   }
