@@ -1,0 +1,511 @@
+/*!*******************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./styles/main.css ***!
+  \*******************************************************************/
+:root{
+    --small-border-radius: 5px;
+    --average-border-radius: 10px;
+    --big-border-radius: 15px;
+
+    --content-max-width: 1200px;
+    --content-min-width: auto;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+/* @font-face {
+    font-family: "zarubkaType-Regular";
+    src: url('fonts/zarubkaType-Regular.ttf') format('ttf');
+    font-weight: 400;
+} */
+
+
+.project-description-container{
+    margin: 10px 0 10px 10px;
+}
+
+.stack-description{
+    display: inline-block;
+    color: var(--stack-text-color);
+    font-size: larger;
+    font-weight: 600;
+    line-height: 30px;
+    text-wrap: stable;
+}
+
+.stack-container{
+    display: inline-block;
+}
+
+.info-container{
+    border: 1px solid var(--border-color);
+    border-radius: var(--average-border-radius);
+    padding: 10px;
+    margin: 0 10px 10px 0;
+}
+
+    .info-container .inner-element{
+        padding: 8px;
+        margin: 5px;
+
+        border: 1px solid var(--border-color);
+        border-radius: var(--average-border-radius);
+    }
+
+    .promo-card{
+        display: flex;
+        flex-direction: column;
+        transform: perspective(2000px) rotatey(0deg) rotatex(0deg);
+
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(255, 255 ,255 , 0.3));
+        text-align: center;
+        transition: 
+        filter var(--animation-duration-05s),
+        transform var(--animation-duration-03s) ease;
+    }
+
+    .card-button{
+        cursor: pointer;
+    }
+
+    .promo-card:hover{
+        filter: drop-shadow(0 0 0.75rem white); 
+    }
+
+    .promo-card:focus{
+        filter: drop-shadow(0 0 0.75rem white); 
+    }
+
+    .multiverse-memes-font{
+        font-family: 'zarubkaType-Regular', sans-serif;
+    }
+
+    .animated-border {
+        display: flex;
+        margin-bottom: 5px;
+        --angle: 0deg;
+
+        animation: 10s rotate linear infinite;
+    }
+    
+    @keyframes rotate {
+        to {
+            --angle: 360deg;
+        }
+    }
+    
+    @property --angle {
+      syntax: '<angle>';
+      initial-value: 0deg;
+      inherits: false;
+    }
+
+  .extended-image{
+    /* width: 100%; */
+    /* height: 100%; */
+    max-width: 100%;
+    max-height: 1000px;
+  }
+
+
+    .footer .header{
+        font-size: larger;
+        font-weight: 600;
+    }
+
+
+
+.text-decoration-style_dashed{
+    text-decoration: underline;
+    text-decoration-style: dashed;
+}
+
+.inner-link{
+    font-weight: 600;
+    font-size: var(--font-size-20px);
+}
+
+.contacts-link{
+    display: flex;
+    align-items: center;
+    font-size: large;
+}
+
+.stack-link{
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.details-summary{
+    font-size: larger;
+    font-weight: 600;
+    margin-bottom: 10px;
+    cursor: pointer;
+
+    transition: font-size var(--animation-duration-03s);
+}
+
+.details-summary:hover{
+    font-size: 24px;
+}
+
+.details-summary:focus{
+    font-size: 24px;
+}
+
+details summary ~ div{
+    overflow: hidden;
+}
+
+    details[open] summary ~ div{ 
+        animation: sweep-open 2s ease-in-out;
+    }
+
+    @keyframes sweep-open {
+    from {max-height:0;}
+    to {max-height:2500px;}
+    }
+
+.left-padding-10px{
+    padding-left: 10px;
+}
+
+.padding-top-10px{
+    padding-top: 10px;
+}
+
+.padding-bottom-10px{
+    padding-bottom: 10px;
+}
+
+.image{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.transition-none{
+    transition: all;
+}
+/*!***************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./styles/roots/colors.css ***!
+  \***************************************************************************/
+:root{
+    --text-color: white;
+    --border-color: grey;
+    --background-color: rgb(15, 15, 15);
+    --button-border-color: grey;
+    --button-background-color: rgb(32, 32, 32);
+    --brend-color: rgb(0, 255, 255);
+    --stack-text-color: aquamarine;
+    --stack-background-color: rgb(0, 136, 102);
+    --stack-border-color: rgb(8, 168, 160);
+}
+/*!**************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./styles/roots/fonts.css ***!
+  \**************************************************************************/
+:root{
+    --font-size-16px: 16px;
+    --font-size-18px: 18px;
+    --font-size-20px: 20px;
+    --font-size-22px: 22px;
+    --font-size-24px: 24px;
+    --font-size-26px: 26px;
+}
+/*!********************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./styles/roots/transitions.css ***!
+  \********************************************************************************/
+:root{
+    --animation-duration-01s: 0.1s;
+    --animation-duration-03s: 0.3s;
+    --animation-duration-05s: 0.5s;
+    --animation-duration-07s: 0.7s;
+    --animation-duration-1s: 1s;
+}
+/*!*******************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./common.blocks/body/body.css ***!
+  \*******************************************************************************/
+.body{
+    max-width: var(--content-max-width);
+    min-width: var(--content-min-width);
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 80px;
+
+    font-family:  "Kelly Slab", sans-serif;
+    font-weight: 400;
+    font-size: large;
+    font-style: normal;
+    color: var(--text-color);
+
+    background-color: var(--background-color);
+}
+/*!*********************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./common.blocks/brand/brand.css ***!
+  \*********************************************************************************/
+.brand{
+    text-shadow: 2px 2px 5rem rgb(0, 162, 255);
+    margin-right: 2rem;
+    color: var(--brend-color);
+    font-size: 2rem;
+    font-weight: 900;
+    text-decoration: none;
+
+    transition: text-shadow var(--animation-duration-05s);
+}
+
+.brand:hover{
+    text-shadow: 2px 2px 2rem rgb(0, 162, 255);
+}
+
+.brand:focus{
+    text-shadow: 2px 2px 2rem rgb(0, 162, 255);
+}
+/*!***********************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./common.blocks/button/button.css ***!
+  \***********************************************************************************/
+.button{
+    padding: 10px;
+    margin: 0 5px;
+    
+    color: inherit;
+    font-size: large;
+    font-weight: 600;
+    background-color: var(--button-background-color);
+    border: 1px solid var(--button-border-color);
+    border-radius: var(--average-border-radius);
+    text-align: center;
+    text-wrap: nowrap;
+
+    transition: 
+    background-color var(--animation-duration-1s);
+}
+
+.button:hover{
+    background-color: lch(from var(--button-background-color) calc(l + 20) c h);
+}
+
+.button:focus{
+    background-color: lch(from var(--button-background-color) calc(l + 20) c h);
+}
+/*!*************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./common.blocks/difficult-tag/difficult-tag.css ***!
+  \*************************************************************************************************/
+.difficult-tag{
+    display: inline-block;
+    padding: 2px;
+    text-align: center;
+    font-size: large;
+    right: 0;
+    color: black;
+    background-color: rgb(255, 124, 124);
+    border: 2px solid red;
+    border-radius: var(--small-border-radius);
+}
+/*!*********************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./common.blocks/exit-button/exit-button.css ***!
+  \*********************************************************************************************/
+.exit-button{
+    display: block;
+    position: fixed;
+    right: 0;
+    top: 0;
+    margin: 5px;
+    width: 35px;
+    height: 35px;
+
+    font-weight: 600;
+    font-size: large;
+    color: white;
+    background-color: var(--button-background-color);
+    border-color: white;
+    border-radius: var(--average-border-radius);
+
+    transition: 
+    background-color var(--animation-duration-03s);
+}
+
+    .exit-button:hover{
+        background-color: lch(from var(--button-background-color) calc(l - 15) c h);
+    }
+
+    .exit-button:focus{
+        background-color: lch(from var(--button-background-color) calc(l - 15) c h);
+    }
+/*!***********************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./common.blocks/footer/footer.css ***!
+  \***********************************************************************************/
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 20px);
+    min-width: var(--content-min-width);
+    height: 150px;
+    margin: 5px auto 10px auto;
+    padding: 5px 0;
+
+    background-color: var(--button-background-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--average-border-radius);
+}
+/*!***********************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./common.blocks/header/header.css ***!
+  \***********************************************************************************/
+
+/*!*******************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./common.blocks/icon/icon.css ***!
+  \*******************************************************************************/
+.icon{
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+    border-radius: 50%;
+}
+/*!***********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./common.blocks/image-content-grid/image-content-grid.css ***!
+  \***********************************************************************************************************/
+.image-content-grid{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 1fr);
+
+    @media (min-width: 750px) and (max-width: 1100px) {
+        grid-template-columns: repeat(3, 1fr);
+    };
+
+    @media (max-width: 750px) {
+        grid-template-columns: repeat(2, 1fr);
+    };
+}
+
+.image-content-grid-2-columns{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+
+    @media (max-width: 750px) {
+        grid-template-columns: 1fr;
+    };
+}
+/*!*******************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./common.blocks/link/link.css ***!
+  \*******************************************************************************/
+.link{
+    color: var(--text-color);
+    text-decoration: none;
+
+    transition: font-size var(--animation-duration-03s);
+}
+
+.link:hover{
+    font-size: calc(1em + 4px);
+}
+
+.link:focus{
+    font-size: calc(1em + 4px);
+}
+/*!*******************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./common.blocks/navigation/navigation.css ***!
+  \*******************************************************************************************/
+.navigation{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    min-width: var(--content-min-width);
+    height: 50px;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 5px 20px;
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1;
+    color: var(--text-color);
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--background-color);
+}
+/*!*************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./common.blocks/popup-overlay/popup-overlay.css ***!
+  \*************************************************************************************************/
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+/*!****************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./common.blocks/popup-overlay/__popup/popup-overlay__popup.css ***!
+  \****************************************************************************************************************/
+.popup-overlay__popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  
+    /* width: 100%; */
+    /* height: 100%; */
+    max-width: var(--content-max-width);
+    max-height: 90%;
+    padding: 15px;
+    transform: translate(-50%, -50%);
+  
+    background-color: var(--button-background-color);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 1em;
+    object-fit: contain;
+  }
+/*!*****************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./common.blocks/technology-unit/technology-unit.css ***!
+  \*****************************************************************************************************/
+.technology-unit{
+    display: inline;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 5px;
+    margin: 0px 4px;
+    width: 100%;
+    height: 100%;
+    line-height: 30px;
+
+    flex-grow: 2; /* Элемент будет занимать в два раза больше свободного места */
+    flex-shrink: 2; /* Элемент не будет сжиматься */
+
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    background-color: var(--stack-background-color);
+    border: 2px solid var(--stack-border-color);
+    border-radius: 10px;
+    cursor: pointer;
+    filter: drop-shadow(2px 2px 3px var(--brend-color));
+
+    transition: font-size var(--animation-duration-03s);
+}
+
+.technology-unit:hover{
+    font-size: larger;
+}
+
+.technology-unit:focus{
+    font-size: larger;
+}
+/*!***********************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./common.blocks/theme-toggle/theme-toggle.css ***!
+  \***********************************************************************************************/
+.theme-toggle{
+    display: flex;
+    width: 45px;
+    height: 45px;
+    margin-left: 10px;
+    justify-content: center;
+    align-items: center;
+}
