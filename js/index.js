@@ -4,7 +4,6 @@ const cardsBorders = [...document.querySelectorAll(".animated-border")];
 const cardsButtons = document.getElementsByClassName("card-button");
 const popupOverlay = document.getElementById("popup-overlay");
 const popupOverlayExitButton = document.getElementById("overlay-exit-button");
-const popup = popupOverlay.children[0];
 const popupPicture = document.getElementById("extended-image");
 
 cards.forEach(el => {
@@ -61,6 +60,9 @@ const linksArray = {
   "WebGL ": "https://www.khronos.org/webgl/wiki/Main_Page",
   "HTML5 ": "https://doka.guide/html/",
   "CSS3 ": "https://doka.guide/css/",
+  "JavaScript " : "https://learn.javascript.ru/",
+  "Webpack ": "https://webpack.js.org/",
+  "BEM ": "https://ru.bem.info/",
   "Blender ": "https://www.blender.org/",
   "Photoshop ": "https://www.adobe.com/ru/products/photoshop.html",
   "Sony&nbsp;Vegas&nbsp;Pro" : "https://www.vegascreativesoftware.com/ru/",
@@ -82,6 +84,9 @@ const technologies = {
   WebGL: "WebGL ",
   HTML5: "HTML5 ",
   CSS3: "CSS3 ",
+  Webpack: "Webpack ",
+  BEM: "BEM ",
+  JavaScript: "JavaScript ",
   Blender: "Blender ",
   Photoshop: "Photoshop ",
   SonyVegasPro: "Sony&nbsp;Vegas&nbsp;Pro ",
@@ -115,15 +120,24 @@ const characterMenuConcept = [
   technologies["DOTween"], technologies["Photoshop"]
 ];
 
+const portfolioSite = [
+  technologies["HTML5"], technologies["CSS3"],
+  technologies["JavaScript"], technologies["Webpack"],
+  technologies["BEM"]
+]
+
 const allProjects = [exolab, multiverseMemes,
-   minecraftIndustrialization, furnitureShop, characterMenuConcept];
+  minecraftIndustrialization, furnitureShop,
+  characterMenuConcept, portfolioSite
+];
 
 const stackContainers = [
   document.getElementById("Exolab"),
   document.getElementById("Multiverse memes"),
   document.getElementById("Minecraft: Industrialization"),
   document.getElementById("Furniture shop"),
-  document.getElementById("Character menu concept")
+  document.getElementById("Character menu concept"),
+  document.getElementById("Portfolio site"),
 ];
 
 let iteration = 0;
@@ -153,54 +167,25 @@ function GetLinkAddress(technology){
   }
 }
 
-const darkTheme = {
-  "--text-color": "white",
-  "--background-color": "rgb(15, 15, 15)",
-  "--button-background-color": "rgb(32, 32, 32)",
-};
-const lightTheme = {
-  "--text-color": "black",
-  "--background-color": "rgb(235, 235, 235)",
-  "--button-background-color": "rgb(200, 200, 200)",
-  "--brend-color": ""
-};
+import "../styles/main.css";
+import "../styles/roots/colors.css";
+import "../styles/roots/fonts.css";
+import "../styles/roots/transitions.css";
 
-const themeToggle = document.getElementById("theme toggle");
-themeToggle.addEventListener("click", function(){
-  if (themeToggle.index % 2 != 0){
-    for(let key in lightTheme){
-      document.documentElement.style.setProperty(key, lightTheme[key]);
-      localStorage.setItem(key, lightTheme[key]);
-    }
+import "../common.blocks/body/body.css";
+import "../common.blocks/brand/brand.css";
+import "../common.blocks/button/button.css";
+import "../common.blocks/difficult-tag/difficult-tag.css";
+import "../common.blocks/exit-button/exit-button.css";
+import "../common.blocks/footer/footer.css";
+import "../common.blocks/header/header.css";
+import "../common.blocks/icon/icon.css";
+import "../common.blocks/image-content-grid/image-content-grid.css";
+import "../common.blocks/link/link.css";
+import "../common.blocks/navigation/navigation.css";
+import "../common.blocks/popup-overlay/popup-overlay.css";
+import "../common.blocks/popup-overlay/__popup/popup-overlay__popup.css";
+import "../common.blocks/technology-unit/technology-unit.css";
 
-    themeToggle.lastChild.src = "Images/Other/moon.avif";
-    themeToggle.index = 2;
-
-    // localStorage.setItem('themeColor', lightTheme["--text-color"]);
-    let savedTheme = localStorage.getItem('themeColor');
-    console.log(savedTheme);
-    // for(let key in savedTheme){
-    //   console.log(savedTheme[key]);
-    //   // document.documentElement.style.setProperty(key, savedTheme[key]);
-    // }
-  }
-  else{
-    for(let key in darkTheme){
-      document.documentElement.style.setProperty(key, darkTheme[key]);
-    }
-
-    themeToggle.lastChild.src = "images/Other/sun.avif";
-    themeToggle.index = 1;
-
-    localStorage.setItem('themeColor', darkTheme);
-  }
-});
-
-const savedTheme = localStorage.getItem('themeColor');
-// console.log(savedTheme[0]);
-if (savedTheme != null){
-  for(let key in savedTheme){
-    // console.log(key);
-    document.documentElement.style.setProperty(key, savedTheme[key]);
-  }
-}
+import "../common.blocks/theme-toggle/theme-toggle.js";
+import "../common.blocks/theme-toggle/theme-toggle.css";

@@ -1,0 +1,27 @@
+.exit-button{
+    display: block;
+    position: fixed;
+    right: 0;
+    top: 0;
+    margin: 5px;
+    width: 35px;
+    height: 35px;
+
+    font-weight: 600;
+    font-size: large;
+    color: white;
+    background-color: var(--button-background-color);
+    border-color: white;
+    border-radius: var(--average-border-radius);
+
+    transition: 
+    background-color var(--animation-duration-03s);
+}
+
+    .exit-button:hover{
+        background-color: lch(from var(--button-background-color) calc(l - 15) c h);
+    }
+
+    .exit-button:focus{
+        background-color: lch(from var(--button-background-color) calc(l - 15) c h);
+    }

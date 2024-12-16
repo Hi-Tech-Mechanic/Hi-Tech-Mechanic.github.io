@@ -1,0 +1,11 @@
+.difficult-tag{
+    display: inline-block;
+    padding: 2px;
+    text-align: center;
+    font-size: large;
+    right: 0;
+    color: black;
+    background-color: rgb(255, 124, 124);
+    border: 2px solid red;
+    border-radius: var(--small-border-radius);
+}

@@ -1,0 +1,11 @@
+:root{
+    --text-color: white;
+    --border-color: grey;
+    --background-color: rgb(15, 15, 15);
+    --button-border-color: grey;
+    --button-background-color: rgb(32, 32, 32);
+    --brend-color: rgb(0, 255, 255);
+    --stack-text-color: aquamarine;
+    --stack-background-color: rgb(0, 136, 102);
+    --stack-border-color: rgb(8, 168, 160);
+}
