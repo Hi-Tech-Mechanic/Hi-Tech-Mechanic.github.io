@@ -1,8 +1,4 @@
 :root{
-    --small-border-radius: 5px;
-    --average-border-radius: 10px;
-    --big-border-radius: 15px;
-
     --content-max-width: 1200px;
     --content-min-width: auto;
 }
@@ -11,6 +7,7 @@
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    box-sizing: content-box;
 }
 
 /* @font-face {
@@ -21,7 +18,7 @@
 
 
 .project-description-container{
-    margin: 10px 0 10px 10px;
+    margin: var(--offset-10px);
 }
 
 .stack-description{
@@ -37,28 +34,24 @@
     display: inline-block;
 }
 
-.info-container{
-    border: 1px solid var(--border-color);
-    border-radius: var(--average-border-radius);
-    padding: 10px;
-    margin: 0 10px 10px 0;
-}
 
-    .info-container .inner-element{
-        padding: 8px;
-        margin: 5px;
 
-        border: 1px solid var(--border-color);
-        border-radius: var(--average-border-radius);
-    }
+
 
     .promo-card{
         display: flex;
         flex-direction: column;
         transform: perspective(2000px) rotatey(0deg) rotatex(0deg);
 
-        background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(255, 255 ,255 , 0.3));
         text-align: center;
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(255, 255 ,255 , 0.3));
+
+        padding: 8px;
+        margin: 5px;
+    
+        border: 1px solid var(--border-color);
+        border-radius: var(--average-border-radius);
+
         transition: 
         filter var(--animation-duration-05s),
         transform var(--animation-duration-03s) ease;
@@ -108,13 +101,6 @@
   }
 
 
-    .footer .header{
-        font-size: larger;
-        font-weight: 600;
-    }
-
-
-
 .text-decoration-style_dashed{
     text-decoration: underline;
     text-decoration-style: dashed;
@@ -141,6 +127,7 @@
     font-weight: 600;
     margin-bottom: 10px;
     cursor: pointer;
+    padding-right: 120px;
 
     transition: font-size var(--animation-duration-03s);
 }

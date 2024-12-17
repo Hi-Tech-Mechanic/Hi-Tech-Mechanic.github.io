@@ -1,0 +1,8 @@
+.info-container{
+    position: relative;
+    border: 1px solid var(--border-color);
+    border-radius: var(--average-border-radius);
+    padding: var(--offset-10px);
+    margin: var(--offset-10px);
+    margin-left: 0;
+}

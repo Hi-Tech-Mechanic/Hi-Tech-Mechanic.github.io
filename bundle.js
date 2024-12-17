@@ -26,7 +26,7 @@ eval("const darkTheme = {\r\n    \"--text-color\": \"white\",\r\n    \"--backgro
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_main_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../styles/main.css */ \"./styles/main.css\");\n/* harmony import */ var _styles_roots_colors_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles/roots/colors.css */ \"./styles/roots/colors.css\");\n/* harmony import */ var _styles_roots_fonts_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../styles/roots/fonts.css */ \"./styles/roots/fonts.css\");\n/* harmony import */ var _styles_roots_transitions_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../styles/roots/transitions.css */ \"./styles/roots/transitions.css\");\n/* harmony import */ var _common_blocks_body_body_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../common.blocks/body/body.css */ \"./common.blocks/body/body.css\");\n/* harmony import */ var _common_blocks_brand_brand_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../common.blocks/brand/brand.css */ \"./common.blocks/brand/brand.css\");\n/* harmony import */ var _common_blocks_button_button_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../common.blocks/button/button.css */ \"./common.blocks/button/button.css\");\n/* harmony import */ var _common_blocks_difficult_tag_difficult_tag_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../common.blocks/difficult-tag/difficult-tag.css */ \"./common.blocks/difficult-tag/difficult-tag.css\");\n/* harmony import */ var _common_blocks_exit_button_exit_button_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../common.blocks/exit-button/exit-button.css */ \"./common.blocks/exit-button/exit-button.css\");\n/* harmony import */ var _common_blocks_footer_footer_css__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../common.blocks/footer/footer.css */ \"./common.blocks/footer/footer.css\");\n/* harmony import */ var _common_blocks_header_header_css__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../common.blocks/header/header.css */ \"./common.blocks/header/header.css\");\n/* harmony import */ var _common_blocks_icon_icon_css__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../common.blocks/icon/icon.css */ \"./common.blocks/icon/icon.css\");\n/* harmony import */ var _common_blocks_image_content_grid_image_content_grid_css__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../common.blocks/image-content-grid/image-content-grid.css */ \"./common.blocks/image-content-grid/image-content-grid.css\");\n/* harmony import */ var _common_blocks_link_link_css__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../common.blocks/link/link.css */ \"./common.blocks/link/link.css\");\n/* harmony import */ var _common_blocks_navigation_navigation_css__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../common.blocks/navigation/navigation.css */ \"./common.blocks/navigation/navigation.css\");\n/* harmony import */ var _common_blocks_popup_overlay_popup_overlay_css__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../common.blocks/popup-overlay/popup-overlay.css */ \"./common.blocks/popup-overlay/popup-overlay.css\");\n/* harmony import */ var _common_blocks_popup_overlay_popup_popup_overlay_popup_css__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../common.blocks/popup-overlay/__popup/popup-overlay__popup.css */ \"./common.blocks/popup-overlay/__popup/popup-overlay__popup.css\");\n/* harmony import */ var _common_blocks_technology_unit_technology_unit_css__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../common.blocks/technology-unit/technology-unit.css */ \"./common.blocks/technology-unit/technology-unit.css\");\n/* harmony import */ var _common_blocks_theme_toggle_theme_toggle_js__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../common.blocks/theme-toggle/theme-toggle.js */ \"./common.blocks/theme-toggle/theme-toggle.js\");\n/* harmony import */ var _common_blocks_theme_toggle_theme_toggle_js__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(_common_blocks_theme_toggle_theme_toggle_js__WEBPACK_IMPORTED_MODULE_18__);\n/* harmony import */ var _common_blocks_theme_toggle_theme_toggle_css__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../common.blocks/theme-toggle/theme-toggle.css */ \"./common.blocks/theme-toggle/theme-toggle.css\");\nconst cards = [...document.querySelectorAll(\".promo-card\")];\r\nconst cardsBorders = [...document.querySelectorAll(\".animated-border\")];\r\n\r\nconst cardsButtons = document.getElementsByClassName(\"card-button\");\r\nconst popupOverlay = document.getElementById(\"popup-overlay\");\r\nconst popupOverlayExitButton = document.getElementById(\"overlay-exit-button\");\r\nconst popupPicture = document.getElementById(\"extended-image\");\r\n\r\ncards.forEach(el => {\r\n  el.addEventListener(\"mousemove\", fCardRotate);\r\n  el.addEventListener(\"mouseout\", fCardDefault);\r\n});\r\n\r\nfor (var i = 0; i < cardsButtons.length; i++) {\r\n  cardsButtons[i].addEventListener(\"click\", (e) => {\r\n      let src = e.currentTarget.children[0].src;\r\n      OpenExtendedPictureOverlay(src);\r\n    });\r\n  cardsButtons[i].addEventListener(\"mouseenter\", DisplayAnimatedBorder);\r\n  cardsBorders[i].addEventListener(\"mouseleave\", CloseAnimatedBorder);\r\n}\r\npopupOverlayExitButton.addEventListener(\"click\", ExitExtendedPictureOverlay);\r\n\r\nfunction fCardRotate(ev) {\r\n  this.style.transform = `perspective(2000px) rotatey(${(ev.offsetX - this.offsetWidth / 2) / 6}deg)\r\n    rotatex(${((ev.offsetY - this.offsetHeight / 2) / 6) * -1}deg)`;\r\n}\r\n\r\nfunction fCardDefault() {\r\n  this.style.transform = ``;\r\n}\r\n\r\nfunction DisplayAnimatedBorder(){\r\n  this.setAttribute(\"style\", 'border: 2px solid; border-image: conic-gradient(from var(--angle), red, yellow, lime, aqua, blue, magenta, red) 1;');\r\n}\r\n\r\nfunction CloseAnimatedBorder(){\r\n  this.setAttribute(\"style\", 'border: 0;');\r\n}\r\n\r\nfunction OpenExtendedPictureOverlay(imageSrc){\r\n    popupOverlay.style.display = \"block\";\r\n    popupPicture.setAttribute(\"src\", imageSrc);\r\n}\r\n\r\nfunction ExitExtendedPictureOverlay(){\r\n  popupOverlay.style.display = \"none\";\r\n}\r\n\r\nconst linksArray = {\r\n  \"Unity \": \"https://unity.com/\",\r\n  \"C# \": \"https://learn.microsoft.com/ru-ru/dotnet/csharp/\",\r\n  \"PluginYG \": \"https://ash-message-bf4.notion.site/PluginYG-d457b23eee604b7aa6076116aab647ed#61f1dc643f8046a2815dbd8834035ea7\",\r\n  \"DOTween \": \"https://dotween.demigiant.com/\",\r\n  \"Shader&nbsp;Graphs \": \"https://unity.com/features/shader-graph\",\r\n  \"Particle&nbsp;System \": \"https://docs.unity3d.com/Manual/ParticleSystems.html\",\r\n  \"ASP.Net&nbsp;Core \": \"https://dotnet.microsoft.com/ru-ru/apps/aspnet\",\r\n  \"Blazor \": \"https://learn.microsoft.com/ru-ru/aspnet/core/blazor/?view=aspnetcore-9.0\",\r\n  \"Razor&nbsp;Pages \": \"https://learn.microsoft.com/ru-ru/aspnet/core/razor-pages/?view=aspnetcore-9.0&tabs=visual-studio\",\r\n  \"WebGL \": \"https://www.khronos.org/webgl/wiki/Main_Page\",\r\n  \"HTML5 \": \"https://doka.guide/html/\",\r\n  \"CSS3 \": \"https://doka.guide/css/\",\r\n  \"JavaScript \" : \"https://learn.javascript.ru/\",\r\n  \"Webpack \": \"https://webpack.js.org/\",\r\n  \"BEM \": \"https://ru.bem.info/\",\r\n  \"Blender \": \"https://www.blender.org/\",\r\n  \"Photoshop \": \"https://www.adobe.com/ru/products/photoshop.html\",\r\n  \"Sony&nbsp;Vegas&nbsp;Pro\" : \"https://www.vegascreativesoftware.com/ru/\",\r\n  \"Python \": \"https://www.python.org/\",\r\n  \"Tkinter&nbsp;(отрисовка&nbsp;UI) \": \"https://docs.python.org/3/library/tkinter.html\",\r\n  \"Simplaudio&nbsp;(воспроизведение&nbsp;звука) \": \"https://simpleaudio.readthedocs.io/en/latest/\",\r\n};\r\n\r\nconst technologies = {\r\n  Csharp: \"C# \",\r\n  Unity: \"Unity \",\r\n  PluginYG: \"PluginYG \",\r\n  DOTween: \"DOTween \",\r\n  ShaderGraphs: \"Shader&nbsp;Graphs \",\r\n  ParticleSystem: \"Particle&nbsp;System \",\r\n  ASPNetCore: \"ASP.Net&nbsp;Core \",\r\n  Blazor: \"Blazor \",\r\n  RazorPages: \"Razor&nbsp;Pages \",\r\n  WebGL: \"WebGL \",\r\n  HTML5: \"HTML5 \",\r\n  CSS3: \"CSS3 \",\r\n  Webpack: \"Webpack \",\r\n  BEM: \"BEM \",\r\n  JavaScript: \"JavaScript \",\r\n  Blender: \"Blender \",\r\n  Photoshop: \"Photoshop \",\r\n  SonyVegasPro: \"Sony&nbsp;Vegas&nbsp;Pro \",\r\n  Python: \"Python \",\r\n  Tkinter: \"Tkinter&nbsp;(отрисовка&nbsp;UI) \",\r\n  Simplaudio: \"Simplaudio&nbsp;(воспроизведение&nbsp;звука) \"\r\n};\r\n\r\nconst exolab = [technologies[\"Python\"], technologies[\"Tkinter\"], technologies[\"Simplaudio\"]];\r\n\r\nconst multiverseMemes = [\r\n  technologies[\"Csharp\"], technologies[\"Unity\"], technologies[\"PluginYG\"],\r\n  technologies[\"DOTween\"], technologies[\"ShaderGraphs\"], technologies[\"ParticleSystem\"],\r\n  technologies[\"Blender\"], technologies[\"SonyVegasPro\"]\r\n];\r\n\r\nconst minecraftIndustrialization = [\r\n  technologies[\"Csharp\"], technologies[\"Unity\"], technologies[\"PluginYG\"],\r\n  technologies[\"DOTween\"], technologies[\"ShaderGraphs\"], technologies[\"ParticleSystem\"],\r\n  technologies[\"Photoshop\"]\r\n];\r\n\r\nconst furnitureShop = [\r\n  technologies[\"Csharp\"], technologies[\"ASPNetCore\"], technologies[\"Blazor\"],\r\n  technologies[\"RazorPages\"], technologies[\"Unity\"], technologies[\"WebGL\"],\r\n  technologies[\"HTML5\"], technologies[\"CSS3\"]\r\n];\r\n\r\nconst characterMenuConcept = [\r\n  technologies[\"Csharp\"], technologies[\"Unity\"],\r\n  technologies[\"DOTween\"], technologies[\"Photoshop\"]\r\n];\r\n\r\nconst portfolioSite = [\r\n  technologies[\"HTML5\"], technologies[\"CSS3\"],\r\n  technologies[\"JavaScript\"], technologies[\"Webpack\"],\r\n  technologies[\"BEM\"]\r\n]\r\n\r\nconst allProjects = [exolab, multiverseMemes,\r\n  minecraftIndustrialization, furnitureShop,\r\n  characterMenuConcept, portfolioSite\r\n];\r\n\r\nconst stackContainers = [\r\n  document.getElementById(\"Exolab\"),\r\n  document.getElementById(\"Multiverse memes\"),\r\n  document.getElementById(\"Minecraft: Industrialization\"),\r\n  document.getElementById(\"Furniture shop\"),\r\n  document.getElementById(\"Character menu concept\"),\r\n  document.getElementById(\"Portfolio site\"),\r\n];\r\n\r\nlet iteration = 0;\r\nallProjects.forEach(project =>{\r\n  project.forEach(element => {\r\n    let link = document.createElement(\"a\");\r\n    link.innerHTML = element;\r\n    link.className = \"stack-link\";\r\n    link.href = GetLinkAddress(element);\r\n    link.target = \"_blank\";\r\n  \r\n    let unit = document.createElement(\"p\");\r\n    unit.className = \"technology-unit\";\r\n    unit.appendChild(link);\r\n\r\n    stackContainers[iteration].appendChild(unit);\r\n  });\r\n\r\n  iteration++;\r\n});\r\n\r\nfunction GetLinkAddress(technology){\r\n  for (var key in linksArray) {\r\n    if (key == technology){\r\n      return linksArray[key];\r\n    }\r\n  }\r\n}\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack://my-portfolio/./js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_main_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../styles/main.css */ \"./styles/main.css\");\n/* harmony import */ var _styles_roots_colors_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles/roots/colors.css */ \"./styles/roots/colors.css\");\n/* harmony import */ var _styles_roots_fonts_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../styles/roots/fonts.css */ \"./styles/roots/fonts.css\");\n/* harmony import */ var _styles_roots_transitions_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../styles/roots/transitions.css */ \"./styles/roots/transitions.css\");\n/* harmony import */ var _styles_roots_offsets_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../styles/roots/offsets.css */ \"./styles/roots/offsets.css\");\n/* harmony import */ var _styles_roots_borders_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../styles/roots/borders.css */ \"./styles/roots/borders.css\");\n/* harmony import */ var _common_blocks_body_body_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../common.blocks/body/body.css */ \"./common.blocks/body/body.css\");\n/* harmony import */ var _common_blocks_brand_brand_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../common.blocks/brand/brand.css */ \"./common.blocks/brand/brand.css\");\n/* harmony import */ var _common_blocks_button_button_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../common.blocks/button/button.css */ \"./common.blocks/button/button.css\");\n/* harmony import */ var _common_blocks_difficulty_tag_difficulty_tag_css__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../common.blocks/difficulty-tag/difficulty-tag.css */ \"./common.blocks/difficulty-tag/difficulty-tag.css\");\n/* harmony import */ var _common_blocks_difficulty_tag_theme_easy_difficulty_tag_theme_easy_css__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../common.blocks/difficulty-tag/_theme_easy/difficulty-tag_theme_easy.css */ \"./common.blocks/difficulty-tag/_theme_easy/difficulty-tag_theme_easy.css\");\n/* harmony import */ var _common_blocks_difficulty_tag_theme_medium_difficulty_tag_theme_medium_css__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../common.blocks/difficulty-tag/_theme_medium/difficulty-tag_theme_medium.css */ \"./common.blocks/difficulty-tag/_theme_medium/difficulty-tag_theme_medium.css\");\n/* harmony import */ var _common_blocks_difficulty_tag_theme_hard_difficulty_tag_theme_hard_css__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../common.blocks/difficulty-tag/_theme_hard/difficulty-tag_theme_hard.css */ \"./common.blocks/difficulty-tag/_theme_hard/difficulty-tag_theme_hard.css\");\n/* harmony import */ var _common_blocks_difficulty_tag_theme_very_hard_difficulty_tag_theme_very_hard_css__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../common.blocks/difficulty-tag/_theme_very-hard/difficulty-tag_theme_very-hard.css */ \"./common.blocks/difficulty-tag/_theme_very-hard/difficulty-tag_theme_very-hard.css\");\n/* harmony import */ var _common_blocks_exit_button_exit_button_css__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../common.blocks/exit-button/exit-button.css */ \"./common.blocks/exit-button/exit-button.css\");\n/* harmony import */ var _common_blocks_footer_footer_css__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../common.blocks/footer/footer.css */ \"./common.blocks/footer/footer.css\");\n/* harmony import */ var _common_blocks_footer_header_footer_header_css__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../common.blocks/footer/__header/footer__header.css */ \"./common.blocks/footer/__header/footer__header.css\");\n/* harmony import */ var _common_blocks_icon_icon_css__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../common.blocks/icon/icon.css */ \"./common.blocks/icon/icon.css\");\n/* harmony import */ var _common_blocks_image_content_grid_image_content_grid_css__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../common.blocks/image-content-grid/image-content-grid.css */ \"./common.blocks/image-content-grid/image-content-grid.css\");\n/* harmony import */ var _common_blocks_info_container_info_container_css__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../common.blocks/info-container/info-container.css */ \"./common.blocks/info-container/info-container.css\");\n/* harmony import */ var _common_blocks_info_container_inner_element_info_container_inner_element_css__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../common.blocks/info-container/__inner-element/info-container__inner-element.css */ \"./common.blocks/info-container/__inner-element/info-container__inner-element.css\");\n/* harmony import */ var _common_blocks_info_container_header_info_container_header_css__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../common.blocks/info-container/__header/info-container__header.css */ \"./common.blocks/info-container/__header/info-container__header.css\");\n/* harmony import */ var _common_blocks_link_link_css__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../common.blocks/link/link.css */ \"./common.blocks/link/link.css\");\n/* harmony import */ var _common_blocks_navigation_navigation_css__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../common.blocks/navigation/navigation.css */ \"./common.blocks/navigation/navigation.css\");\n/* harmony import */ var _common_blocks_popup_overlay_popup_overlay_css__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ../common.blocks/popup-overlay/popup-overlay.css */ \"./common.blocks/popup-overlay/popup-overlay.css\");\n/* harmony import */ var _common_blocks_popup_overlay_popup_popup_overlay_popup_css__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ../common.blocks/popup-overlay/__popup/popup-overlay__popup.css */ \"./common.blocks/popup-overlay/__popup/popup-overlay__popup.css\");\n/* harmony import */ var _common_blocks_project_type_project_type_css__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ../common.blocks/project-type/project-type.css */ \"./common.blocks/project-type/project-type.css\");\n/* harmony import */ var _common_blocks_technology_unit_technology_unit_css__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ../common.blocks/technology-unit/technology-unit.css */ \"./common.blocks/technology-unit/technology-unit.css\");\n/* harmony import */ var _common_blocks_theme_toggle_theme_toggle_js__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ../common.blocks/theme-toggle/theme-toggle.js */ \"./common.blocks/theme-toggle/theme-toggle.js\");\n/* harmony import */ var _common_blocks_theme_toggle_theme_toggle_js__WEBPACK_IMPORTED_MODULE_28___default = /*#__PURE__*/__webpack_require__.n(_common_blocks_theme_toggle_theme_toggle_js__WEBPACK_IMPORTED_MODULE_28__);\n/* harmony import */ var _common_blocks_theme_toggle_theme_toggle_css__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ../common.blocks/theme-toggle/theme-toggle.css */ \"./common.blocks/theme-toggle/theme-toggle.css\");\nconst cards = [...document.querySelectorAll(\".promo-card\")];\r\nconst cardsBorders = [...document.querySelectorAll(\".animated-border\")];\r\n\r\nconst cardsButtons = document.getElementsByClassName(\"card-button\");\r\nconst popupOverlay = document.getElementById(\"popup-overlay\");\r\nconst popupOverlayExitButton = document.getElementById(\"overlay-exit-button\");\r\nconst popupPicture = document.getElementById(\"extended-image\");\r\n\r\ncards.forEach(el => {\r\n  el.addEventListener(\"mousemove\", fCardRotate);\r\n  el.addEventListener(\"mouseout\", fCardDefault);\r\n});\r\n\r\nfor (var i = 0; i < cardsButtons.length; i++) {\r\n  cardsButtons[i].addEventListener(\"click\", (e) => {\r\n      let src = e.currentTarget.children[0].src;\r\n      OpenExtendedPictureOverlay(src);\r\n    });\r\n  cardsButtons[i].addEventListener(\"mouseenter\", DisplayAnimatedBorder);\r\n  cardsBorders[i].addEventListener(\"mouseleave\", CloseAnimatedBorder);\r\n}\r\npopupOverlayExitButton.addEventListener(\"click\", ExitExtendedPictureOverlay);\r\n\r\nfunction fCardRotate(ev) {\r\n  this.style.transform = `perspective(2000px) rotatey(${(ev.offsetX - this.offsetWidth / 2) / 6}deg)\r\n    rotatex(${((ev.offsetY - this.offsetHeight / 2) / 6) * -1}deg)`;\r\n}\r\n\r\nfunction fCardDefault() {\r\n  this.style.transform = ``;\r\n}\r\n\r\nfunction DisplayAnimatedBorder(){\r\n  this.setAttribute(\"style\", 'border: 2px solid; border-image: conic-gradient(from var(--angle), red, yellow, lime, aqua, blue, magenta, red) 1;');\r\n}\r\n\r\nfunction CloseAnimatedBorder(){\r\n  this.setAttribute(\"style\", 'border: 0;');\r\n}\r\n\r\nfunction OpenExtendedPictureOverlay(imageSrc){\r\n    popupOverlay.style.display = \"block\";\r\n    popupPicture.setAttribute(\"src\", imageSrc);\r\n}\r\n\r\nfunction ExitExtendedPictureOverlay(){\r\n  popupOverlay.style.display = \"none\";\r\n}\r\n\r\nconst linksArray = {\r\n  \"Unity \": \"https://unity.com/\",\r\n  \"C# \": \"https://learn.microsoft.com/ru-ru/dotnet/csharp/\",\r\n  \"PluginYG \": \"https://ash-message-bf4.notion.site/PluginYG-d457b23eee604b7aa6076116aab647ed#61f1dc643f8046a2815dbd8834035ea7\",\r\n  \"DOTween \": \"https://dotween.demigiant.com/\",\r\n  \"Shader&nbsp;Graphs \": \"https://unity.com/features/shader-graph\",\r\n  \"Particle&nbsp;System \": \"https://docs.unity3d.com/Manual/ParticleSystems.html\",\r\n  \"ASP.Net&nbsp;Core \": \"https://dotnet.microsoft.com/ru-ru/apps/aspnet\",\r\n  \"Blazor \": \"https://learn.microsoft.com/ru-ru/aspnet/core/blazor/?view=aspnetcore-9.0\",\r\n  \"Razor&nbsp;Pages \": \"https://learn.microsoft.com/ru-ru/aspnet/core/razor-pages/?view=aspnetcore-9.0&tabs=visual-studio\",\r\n  \"WebGL \": \"https://www.khronos.org/webgl/wiki/Main_Page\",\r\n  \"HTML5 \": \"https://doka.guide/html/\",\r\n  \"CSS3 \": \"https://doka.guide/css/\",\r\n  \"JavaScript \" : \"https://learn.javascript.ru/\",\r\n  \"Webpack \": \"https://webpack.js.org/\",\r\n  \"BEM \": \"https://ru.bem.info/\",\r\n  \"Blender \": \"https://www.blender.org/\",\r\n  \"Photoshop \": \"https://www.adobe.com/ru/products/photoshop.html\",\r\n  \"Sony&nbsp;Vegas&nbsp;Pro\" : \"https://www.vegascreativesoftware.com/ru/\",\r\n  \"Python \": \"https://www.python.org/\",\r\n  \"Tkinter&nbsp;(отрисовка&nbsp;UI) \": \"https://docs.python.org/3/library/tkinter.html\",\r\n  \"Simplaudio&nbsp;(воспроизведение&nbsp;звука) \": \"https://simpleaudio.readthedocs.io/en/latest/\",\r\n};\r\n\r\nconst technologies = {\r\n  Csharp: \"C# \",\r\n  Unity: \"Unity \",\r\n  PluginYG: \"PluginYG \",\r\n  DOTween: \"DOTween \",\r\n  ShaderGraphs: \"Shader&nbsp;Graphs \",\r\n  ParticleSystem: \"Particle&nbsp;System \",\r\n  ASPNetCore: \"ASP.Net&nbsp;Core \",\r\n  Blazor: \"Blazor \",\r\n  RazorPages: \"Razor&nbsp;Pages \",\r\n  WebGL: \"WebGL \",\r\n  HTML5: \"HTML5 \",\r\n  CSS3: \"CSS3 \",\r\n  Webpack: \"Webpack \",\r\n  BEM: \"BEM \",\r\n  JavaScript: \"JavaScript \",\r\n  Blender: \"Blender \",\r\n  Photoshop: \"Photoshop \",\r\n  SonyVegasPro: \"Sony&nbsp;Vegas&nbsp;Pro \",\r\n  Python: \"Python \",\r\n  Tkinter: \"Tkinter&nbsp;(отрисовка&nbsp;UI) \",\r\n  Simplaudio: \"Simplaudio&nbsp;(воспроизведение&nbsp;звука) \"\r\n};\r\n\r\nconst exolab = [technologies[\"Python\"], technologies[\"Tkinter\"], technologies[\"Simplaudio\"]];\r\n\r\nconst multiverseMemes = [\r\n  technologies[\"Csharp\"], technologies[\"Unity\"], technologies[\"PluginYG\"],\r\n  technologies[\"DOTween\"], technologies[\"ShaderGraphs\"], technologies[\"ParticleSystem\"],\r\n  technologies[\"Blender\"], technologies[\"SonyVegasPro\"]\r\n];\r\n\r\nconst minecraftIndustrialization = [\r\n  technologies[\"Csharp\"], technologies[\"Unity\"], technologies[\"PluginYG\"],\r\n  technologies[\"DOTween\"], technologies[\"ShaderGraphs\"], technologies[\"ParticleSystem\"],\r\n  technologies[\"Photoshop\"]\r\n];\r\n\r\nconst furnitureShop = [\r\n  technologies[\"Csharp\"], technologies[\"ASPNetCore\"], technologies[\"Blazor\"],\r\n  technologies[\"RazorPages\"], technologies[\"Unity\"], technologies[\"WebGL\"],\r\n  technologies[\"HTML5\"], technologies[\"CSS3\"]\r\n];\r\n\r\nconst characterMenuConcept = [\r\n  technologies[\"Csharp\"], technologies[\"Unity\"],\r\n  technologies[\"DOTween\"], technologies[\"Photoshop\"]\r\n];\r\n\r\nconst portfolioSite = [\r\n  technologies[\"HTML5\"], technologies[\"CSS3\"],\r\n  technologies[\"JavaScript\"], technologies[\"Webpack\"],\r\n  technologies[\"BEM\"]\r\n]\r\n\r\nconst allProjects = [exolab, multiverseMemes,\r\n  minecraftIndustrialization, furnitureShop,\r\n  characterMenuConcept, portfolioSite\r\n];\r\n\r\nconst stackContainers = [\r\n  document.getElementById(\"Exolab\"),\r\n  document.getElementById(\"Multiverse memes\"),\r\n  document.getElementById(\"Minecraft: Industrialization\"),\r\n  document.getElementById(\"Furniture shop\"),\r\n  document.getElementById(\"Character menu concept\"),\r\n  document.getElementById(\"Portfolio site\"),\r\n];\r\n\r\nlet iteration = 0;\r\nallProjects.forEach(project =>{\r\n  project.forEach(element => {\r\n    let link = document.createElement(\"a\");\r\n    link.innerHTML = element;\r\n    link.className = \"stack-link\";\r\n    link.href = GetLinkAddress(element);\r\n    link.target = \"_blank\";\r\n  \r\n    let unit = document.createElement(\"p\");\r\n    unit.className = \"technology-unit\";\r\n    unit.appendChild(link);\r\n\r\n    stackContainers[iteration].appendChild(unit);\r\n  });\r\n\r\n  iteration++;\r\n});\r\n\r\nfunction GetLinkAddress(technology){\r\n  for (var key in linksArray) {\r\n    if (key == technology){\r\n      return linksArray[key];\r\n    }\r\n  }\r\n}\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n// import \"../common.blocks/project-description-container/\";\r\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack://my-portfolio/./js/index.js?");
 
 /***/ }),
 
@@ -63,14 +63,58 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 
 /***/ }),
 
-/***/ "./common.blocks/difficult-tag/difficult-tag.css":
-/*!*******************************************************!*\
-  !*** ./common.blocks/difficult-tag/difficult-tag.css ***!
-  \*******************************************************/
+/***/ "./common.blocks/difficulty-tag/_theme_easy/difficulty-tag_theme_easy.css":
+/*!********************************************************************************!*\
+  !*** ./common.blocks/difficulty-tag/_theme_easy/difficulty-tag_theme_easy.css ***!
+  \********************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://my-portfolio/./common.blocks/difficult-tag/difficult-tag.css?");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://my-portfolio/./common.blocks/difficulty-tag/_theme_easy/difficulty-tag_theme_easy.css?");
+
+/***/ }),
+
+/***/ "./common.blocks/difficulty-tag/_theme_hard/difficulty-tag_theme_hard.css":
+/*!********************************************************************************!*\
+  !*** ./common.blocks/difficulty-tag/_theme_hard/difficulty-tag_theme_hard.css ***!
+  \********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://my-portfolio/./common.blocks/difficulty-tag/_theme_hard/difficulty-tag_theme_hard.css?");
+
+/***/ }),
+
+/***/ "./common.blocks/difficulty-tag/_theme_medium/difficulty-tag_theme_medium.css":
+/*!************************************************************************************!*\
+  !*** ./common.blocks/difficulty-tag/_theme_medium/difficulty-tag_theme_medium.css ***!
+  \************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://my-portfolio/./common.blocks/difficulty-tag/_theme_medium/difficulty-tag_theme_medium.css?");
+
+/***/ }),
+
+/***/ "./common.blocks/difficulty-tag/_theme_very-hard/difficulty-tag_theme_very-hard.css":
+/*!******************************************************************************************!*\
+  !*** ./common.blocks/difficulty-tag/_theme_very-hard/difficulty-tag_theme_very-hard.css ***!
+  \******************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://my-portfolio/./common.blocks/difficulty-tag/_theme_very-hard/difficulty-tag_theme_very-hard.css?");
+
+/***/ }),
+
+/***/ "./common.blocks/difficulty-tag/difficulty-tag.css":
+/*!*********************************************************!*\
+  !*** ./common.blocks/difficulty-tag/difficulty-tag.css ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://my-portfolio/./common.blocks/difficulty-tag/difficulty-tag.css?");
 
 /***/ }),
 
@@ -85,6 +129,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 
 /***/ }),
 
+/***/ "./common.blocks/footer/__header/footer__header.css":
+/*!**********************************************************!*\
+  !*** ./common.blocks/footer/__header/footer__header.css ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://my-portfolio/./common.blocks/footer/__header/footer__header.css?");
+
+/***/ }),
+
 /***/ "./common.blocks/footer/footer.css":
 /*!*****************************************!*\
   !*** ./common.blocks/footer/footer.css ***!
@@ -93,17 +148,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://my-portfolio/./common.blocks/footer/footer.css?");
-
-/***/ }),
-
-/***/ "./common.blocks/header/header.css":
-/*!*****************************************!*\
-  !*** ./common.blocks/header/header.css ***!
-  \*****************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://my-portfolio/./common.blocks/header/header.css?");
 
 /***/ }),
 
@@ -126,6 +170,39 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://my-portfolio/./common.blocks/image-content-grid/image-content-grid.css?");
+
+/***/ }),
+
+/***/ "./common.blocks/info-container/__header/info-container__header.css":
+/*!**************************************************************************!*\
+  !*** ./common.blocks/info-container/__header/info-container__header.css ***!
+  \**************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://my-portfolio/./common.blocks/info-container/__header/info-container__header.css?");
+
+/***/ }),
+
+/***/ "./common.blocks/info-container/__inner-element/info-container__inner-element.css":
+/*!****************************************************************************************!*\
+  !*** ./common.blocks/info-container/__inner-element/info-container__inner-element.css ***!
+  \****************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://my-portfolio/./common.blocks/info-container/__inner-element/info-container__inner-element.css?");
+
+/***/ }),
+
+/***/ "./common.blocks/info-container/info-container.css":
+/*!*********************************************************!*\
+  !*** ./common.blocks/info-container/info-container.css ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://my-portfolio/./common.blocks/info-container/info-container.css?");
 
 /***/ }),
 
@@ -173,6 +250,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 
 /***/ }),
 
+/***/ "./common.blocks/project-type/project-type.css":
+/*!*****************************************************!*\
+  !*** ./common.blocks/project-type/project-type.css ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://my-portfolio/./common.blocks/project-type/project-type.css?");
+
+/***/ }),
+
 /***/ "./common.blocks/technology-unit/technology-unit.css":
 /*!***********************************************************!*\
   !*** ./common.blocks/technology-unit/technology-unit.css ***!
@@ -206,6 +294,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 
 /***/ }),
 
+/***/ "./styles/roots/borders.css":
+/*!**********************************!*\
+  !*** ./styles/roots/borders.css ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://my-portfolio/./styles/roots/borders.css?");
+
+/***/ }),
+
 /***/ "./styles/roots/colors.css":
 /*!*********************************!*\
   !*** ./styles/roots/colors.css ***!
@@ -225,6 +324,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://my-portfolio/./styles/roots/fonts.css?");
+
+/***/ }),
+
+/***/ "./styles/roots/offsets.css":
+/*!**********************************!*\
+  !*** ./styles/roots/offsets.css ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://my-portfolio/./styles/roots/offsets.css?");
 
 /***/ }),
 

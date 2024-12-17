@@ -1,8 +1,18 @@
 .theme-toggle{
     display: flex;
+    box-sizing: border-box;
     width: 45px;
     height: 45px;
     margin-left: 10px;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+
+    transition: padding var(--animation-duration-03s);
+}
+
+.theme-toggle:hover{
+    padding: 2px;
+    border: 1px solid var(--text-color);
+    border-radius: var(--average-border-radius);
 }

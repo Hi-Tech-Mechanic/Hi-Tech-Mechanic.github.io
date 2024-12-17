@@ -171,21 +171,40 @@ import "../styles/main.css";
 import "../styles/roots/colors.css";
 import "../styles/roots/fonts.css";
 import "../styles/roots/transitions.css";
+import "../styles/roots/offsets.css";
+import "../styles/roots/borders.css";
 
 import "../common.blocks/body/body.css";
 import "../common.blocks/brand/brand.css";
 import "../common.blocks/button/button.css";
-import "../common.blocks/difficult-tag/difficult-tag.css";
+
+import "../common.blocks/difficulty-tag/difficulty-tag.css";
+import "../common.blocks/difficulty-tag/_theme_easy/difficulty-tag_theme_easy.css";
+import "../common.blocks/difficulty-tag/_theme_medium/difficulty-tag_theme_medium.css";
+import "../common.blocks/difficulty-tag/_theme_hard/difficulty-tag_theme_hard.css";
+import "../common.blocks/difficulty-tag/_theme_very-hard/difficulty-tag_theme_very-hard.css";
+
 import "../common.blocks/exit-button/exit-button.css";
+
 import "../common.blocks/footer/footer.css";
-import "../common.blocks/header/header.css";
+import "../common.blocks/footer/__header/footer__header.css";
+
 import "../common.blocks/icon/icon.css";
 import "../common.blocks/image-content-grid/image-content-grid.css";
+
+import "../common.blocks/info-container/info-container.css";
+import "../common.blocks/info-container/__inner-element/info-container__inner-element.css";
+import "../common.blocks/info-container/__header/info-container__header.css";
+
 import "../common.blocks/link/link.css";
 import "../common.blocks/navigation/navigation.css";
+
 import "../common.blocks/popup-overlay/popup-overlay.css";
 import "../common.blocks/popup-overlay/__popup/popup-overlay__popup.css";
-import "../common.blocks/technology-unit/technology-unit.css";
 
+// import "../common.blocks/project-description-container/";
+import "../common.blocks/project-type/project-type.css";
+
+import "../common.blocks/technology-unit/technology-unit.css";
 import "../common.blocks/theme-toggle/theme-toggle.js";
 import "../common.blocks/theme-toggle/theme-toggle.css";

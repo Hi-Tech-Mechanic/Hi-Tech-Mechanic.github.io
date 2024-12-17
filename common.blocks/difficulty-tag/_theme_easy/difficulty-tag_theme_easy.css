@@ -1,0 +1,9 @@
+.difficulty-tag_theme_easy{
+    background-color: var(--difficulty-easy);
+    border-color: hsl(from var(--difficulty-easy) h s calc(l - 30));
+    box-shadow: 0 0 var(--offset-10px) hsl(from var(--difficulty-easy) h s calc(l - 30));
+}
+
+.difficulty-tag_theme_easy::after{
+    content: "Easy";
+}

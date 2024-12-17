@@ -1,0 +1,15 @@
+.difficulty-tag{
+    display: inline;
+    position: absolute;
+    padding: 5px;
+    right: var(--offset-10px);
+
+    font-size: large;
+    text-align: center;
+
+    color: #000;
+    background-color: #ccc;
+    border: 2px solid #333;
+    border-radius: var(--average-border-radius);
+    box-shadow: 2px 2px 5px #fff;
+}

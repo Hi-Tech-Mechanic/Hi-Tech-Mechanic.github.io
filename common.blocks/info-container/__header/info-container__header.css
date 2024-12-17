@@ -1,0 +1,6 @@
+.info-container__header{
+    margin-top: var(--offset-40px);
+    
+    font-size: var(--font-size-26px);
+    font-weight: 600;
+}
