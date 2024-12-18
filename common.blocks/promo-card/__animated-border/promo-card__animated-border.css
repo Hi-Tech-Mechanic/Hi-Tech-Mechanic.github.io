@@ -1,0 +1,19 @@
+.promo-card__animated-border {
+    display: flex;
+    margin-bottom: 5px;
+    --angle: 0deg;
+
+    animation: 10s rotate linear infinite;
+}
+
+@keyframes rotate {
+    to {
+        --angle: 360deg;
+    }
+}
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}

@@ -1,7 +1,0 @@
-.info-container__inner-element{
-    padding: 8px;
-    margin: 5px;
-
-    border: 1px solid var(--border-color);
-    border-radius: var(--average-border-radius);
-}

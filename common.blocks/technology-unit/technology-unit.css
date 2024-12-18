@@ -1,16 +1,15 @@
 .technology-unit{
     display: inline;
-    text-align: center;
+    margin: 0px 4px;
     padding-left: 10px;
     padding-right: 6px;
-    margin: 0px 4px;
+    
+    text-align: center;
+    font-weight: 600;
     line-height: 35px;
 
-    font-weight: 600;
-    background-color: var(--stack-background-color);
-    border: var(--border-thickness-medium) solid var(--stack-border-color);
+    border: var(--border-thickness-medium) solid;
     border-radius: var(--average-border-radius);
-    box-shadow: 0 0 var(--offset-8px) var(--brend-color);
     
     cursor: pointer;
     transition: font-size var(--animation-duration-03s);

@@ -1,0 +1,18 @@
+.info-container__summary{
+    margin-bottom: 10px;
+    padding-right: 120px;
+    
+    font-size: larger;
+    font-weight: 600;
+    
+    cursor: pointer;
+    transition: font-size var(--animation-duration-03s);
+}
+
+.details-summary:hover{
+    font-size: 24px;
+}
+
+.details-summary:focus{
+    font-size: 24px;
+}

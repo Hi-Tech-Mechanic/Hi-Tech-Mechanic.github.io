@@ -1,17 +1,18 @@
 :root{
     --text-color: white;
     --border-color: grey;
-    --background-color: rgb(15, 15, 15);
+    --background-color: hsl(0, 0%, 5%);
     --button-border-color: grey;
-    --button-background-color: rgb(32, 32, 32);
-    --brend-color: rgb(0, 255, 255);
+    --button-background-color: hsl(0, 0%, 15%);
+    --brend-color: hsl(180, 100%, 50%);
 
-    --stack-text-color: aquamarine;
-    --stack-background-color: rgb(0, 136, 102);
-    --stack-border-color: rgb(8, 168, 160);
+    --difficulty-easy: hsl(120, 100%, 70%);
+    --difficulty-medium: hsl(70, 100%, 70%);
+    --difficulty-hard: hsl(35, 100%, 70%);
+    --difficulty-very-hard: hsl(0, 100%, 70%);
 
-    --difficulty-easy: rgb(104, 255, 124);
-    --difficulty-medium: rgb(227, 255, 104);
-    --difficulty-hard: rgb(255, 190, 104);
-    --difficulty-very-hard: rgb(255, 104, 104);
+    --technology-languages: hsl(120, 80%, 50%);
+    --technology-frameworks: hsl(200, 80%, 50%);
+    --technology-work-environment: hsl(250, 80%, 50%);
+    --technology-methodologyes: hsl(285, 80%, 50%);
 }

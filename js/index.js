@@ -1,25 +1,28 @@
 const cards = [...document.querySelectorAll(".promo-card")];
-const cardsBorders = [...document.querySelectorAll(".animated-border")];
+const cardsBorders = [...document.querySelectorAll(".promo-card__animated-border")];
 
-const cardsButtons = document.getElementsByClassName("card-button");
+// const cardsButtons = document.getElementsByClassName("card-button");
 const popupOverlay = document.getElementById("popup-overlay");
-const popupOverlayExitButton = document.getElementById("overlay-exit-button");
 const popupPicture = document.getElementById("extended-image");
+const popupOverlayExitButton = document.getElementById("overlay-exit-button");
 
 cards.forEach(el => {
   el.addEventListener("mousemove", fCardRotate);
   el.addEventListener("mouseout", fCardDefault);
+  // el.addEventListener("mouseenter", displayAnimatedBorder);
+  // el.addEventListener("mouseleave", closeAnimatedBorder);
 });
 
-for (var i = 0; i < cardsButtons.length; i++) {
-  cardsButtons[i].addEventListener("click", (e) => {
-      let src = e.currentTarget.children[0].src;
-      OpenExtendedPictureOverlay(src);
-    });
-  cardsButtons[i].addEventListener("mouseenter", DisplayAnimatedBorder);
-  cardsBorders[i].addEventListener("mouseleave", CloseAnimatedBorder);
+for (var i = 0; i < cardsBorders.length; i++) 
+{
+  cardsBorders[i].addEventListener("click", (element) => {
+      let src = element.currentTarget.children[0].src;
+      openExtendedPictureOverlay(src);
+  });
+  cardsBorders[i].addEventListener("mouseenter", displayAnimatedBorder);
+  cardsBorders[i].addEventListener("mouseleave", closeAnimatedBorder);
 }
-popupOverlayExitButton.addEventListener("click", ExitExtendedPictureOverlay);
+popupOverlayExitButton.addEventListener("click", exitExtendedPictureOverlay);
 
 function fCardRotate(ev) {
   this.style.transform = `perspective(2000px) rotatey(${(ev.offsetX - this.offsetWidth / 2) / 6}deg)
@@ -30,100 +33,164 @@ function fCardDefault() {
   this.style.transform = ``;
 }
 
-function DisplayAnimatedBorder(){
+function displayAnimatedBorder(){
   this.setAttribute("style", 'border: 2px solid; border-image: conic-gradient(from var(--angle), red, yellow, lime, aqua, blue, magenta, red) 1;');
 }
 
-function CloseAnimatedBorder(){
+function closeAnimatedBorder(){
   this.setAttribute("style", 'border: 0;');
 }
 
-function OpenExtendedPictureOverlay(imageSrc){
-    popupOverlay.style.display = "block";
-    popupPicture.setAttribute("src", imageSrc);
+function openExtendedPictureOverlay(imageSrc){
+  popupOverlay.style.display = "block";
+  popupPicture.setAttribute("src", imageSrc);
 }
 
-function ExitExtendedPictureOverlay(){
+function exitExtendedPictureOverlay(){
   popupOverlay.style.display = "none";
 }
 
 const linksArray = {
-  "Unity ": "https://unity.com/",
   "C# ": "https://learn.microsoft.com/ru-ru/dotnet/csharp/",
-  "PluginYG ": "https://ash-message-bf4.notion.site/PluginYG-d457b23eee604b7aa6076116aab647ed#61f1dc643f8046a2815dbd8834035ea7",
-  "DOTween ": "https://dotween.demigiant.com/",
-  "Shader&nbsp;Graphs ": "https://unity.com/features/shader-graph",
-  "Particle&nbsp;System ": "https://docs.unity3d.com/Manual/ParticleSystems.html",
+  "JavaScript ": "https://learn.javascript.ru/",
+  "HTML ": "https://doka.guide/html/",
+  "CSS ": "https://doka.guide/css/",
+  "SQL ": "https://www.w3schools.com/sql/default.asp",
+  "PHP ": "https://www.php.net/",
+  "Python ": "https://www.python.org/",
+
   "ASP.Net&nbsp;Core ": "https://dotnet.microsoft.com/ru-ru/apps/aspnet",
   "Blazor ": "https://learn.microsoft.com/ru-ru/aspnet/core/blazor/?view=aspnetcore-9.0",
   "Razor&nbsp;Pages ": "https://learn.microsoft.com/ru-ru/aspnet/core/razor-pages/?view=aspnetcore-9.0&tabs=visual-studio",
-  "WebGL ": "https://www.khronos.org/webgl/wiki/Main_Page",
-  "HTML5 ": "https://doka.guide/html/",
-  "CSS3 ": "https://doka.guide/css/",
-  "JavaScript " : "https://learn.javascript.ru/",
   "Webpack ": "https://webpack.js.org/",
-  "BEM ": "https://ru.bem.info/",
-  "Blender ": "https://www.blender.org/",
-  "Photoshop ": "https://www.adobe.com/ru/products/photoshop.html",
-  "Sony&nbsp;Vegas&nbsp;Pro" : "https://www.vegascreativesoftware.com/ru/",
-  "Python ": "https://www.python.org/",
+  "DOTween ": "https://dotween.demigiant.com/",
+  "PluginYG ": "https://ash-message-bf4.notion.site/PluginYG-d457b23eee604b7aa6076116aab647ed#61f1dc643f8046a2815dbd8834035ea7",
+  "WebGL ": "https://www.khronos.org/webgl/wiki/Main_Page",
+  "Shader&nbsp;Graphs ": "https://unity.com/features/shader-graph",
+  "Particle&nbsp;System ": "https://docs.unity3d.com/Manual/ParticleSystems.html",
   "Tkinter&nbsp;(отрисовка&nbsp;UI) ": "https://docs.python.org/3/library/tkinter.html",
   "Simplaudio&nbsp;(воспроизведение&nbsp;звука) ": "https://simpleaudio.readthedocs.io/en/latest/",
+
+  "Microsoft&nbsp;Visual&nbsp;Studio ": "https://visualstudio.microsoft.com/ru/",
+  "Visual&nbsp;Studio&nbsp;Code ": "https://code.visualstudio.com/",
+  "Unity ": "https://unity.com/",
+  "MySQL" : "https://metanit.com/sql/mysql/",
+  "Blender ": "https://www.blender.org/",
+  "Photoshop ": "https://www.adobe.com/ru/products/photoshop.html",
+  "Sony&nbsp;Vegas&nbsp;Pro ": "https://www.vegascreativesoftware.com/ru/",
+
+  "Adaptive&nbsp;UI ": "https://docs.unity3d.com/ru/2021.1/Manual/HOWTO-UIMultiResolution.html",
+  "Adaptive&nbsp;Web&nbsp;Design ": "https://alistapart.com/article/responsive-web-design/",
+  "BEM ": "https://ru.bem.info/",
+  "MVC ": "https://ru.wikipedia.org/wiki/Model-View-Controller",
+  "MVP ": "https://ru.wikipedia.org/wiki/Model-View-Presenter",
+  "MVVM ": "https://ru.wikipedia.org/wiki/Model-View-ViewModel",
 };
 
-const technologies = {
+const languages = {
   Csharp: "C# ",
-  Unity: "Unity ",
-  PluginYG: "PluginYG ",
-  DOTween: "DOTween ",
-  ShaderGraphs: "Shader&nbsp;Graphs ",
-  ParticleSystem: "Particle&nbsp;System ",
+  JavaScript: "JavaScript ",
+  HTML: "HTML ",
+  CSS: "CSS ",
+  SQL: "SQL ",
+  PHP: "PHP ",
+  Python: "Python ",
+}
+
+const frameworksLibrariesPlugins = {
   ASPNetCore: "ASP.Net&nbsp;Core ",
   Blazor: "Blazor ",
   RazorPages: "Razor&nbsp;Pages ",
-  WebGL: "WebGL ",
-  HTML5: "HTML5 ",
-  CSS3: "CSS3 ",
   Webpack: "Webpack ",
-  BEM: "BEM ",
-  JavaScript: "JavaScript ",
+  DOTween: "DOTween ",
+  PluginYG: "PluginYG ",
+  WebGL: "WebGL ",
+  ShaderGraphs: "Shader&nbsp;Graphs ",
+  ParticleSystem: "Particle&nbsp;System ",
+  Tkinter: "Tkinter&nbsp;(отрисовка&nbsp;UI) ",
+  Simplaudio: "Simplaudio&nbsp;(воспроизведение&nbsp;звука) "
+}
+
+const workEnvironment = {
+  MicrosoftVisualStudio: "Microsoft&nbsp;Visual&nbsp;Studio ",
+  VisualStudioCode: "Visual&nbsp;Studio&nbsp;Code ",
+  Unity: "Unity ",
+  MySQL: "MySQL",
   Blender: "Blender ",
   Photoshop: "Photoshop ",
   SonyVegasPro: "Sony&nbsp;Vegas&nbsp;Pro ",
-  Python: "Python ",
-  Tkinter: "Tkinter&nbsp;(отрисовка&nbsp;UI) ",
-  Simplaudio: "Simplaudio&nbsp;(воспроизведение&nbsp;звука) "
-};
+}
 
-const exolab = [technologies["Python"], technologies["Tkinter"], technologies["Simplaudio"]];
+const methodologies = {
+  AdaptiveUI: "Adaptive&nbsp;UI ",
+  AdaptiveWebDesign: "Adaptive&nbsp;Web&nbsp;Design ",
+  BEM: "BEM ",
+  MVC: "MVC ",
+  MVP: "MVP ",
+  MVVM: "MVVM ",
+}
+
+const exolab = [languages["Python"], frameworksLibrariesPlugins["Tkinter"],
+  frameworksLibrariesPlugins["Simplaudio"]
+];
 
 const multiverseMemes = [
-  technologies["Csharp"], technologies["Unity"], technologies["PluginYG"],
-  technologies["DOTween"], technologies["ShaderGraphs"], technologies["ParticleSystem"],
-  technologies["Blender"], technologies["SonyVegasPro"]
+  languages["Csharp"],
+  frameworksLibrariesPlugins["WebGL"],
+  frameworksLibrariesPlugins["DOTween"],
+  frameworksLibrariesPlugins["PluginYG"],
+  frameworksLibrariesPlugins["ParticleSystem"],
+  workEnvironment["Unizty"],
+  workEnvironment["MicrosoftVisualStudio"],
+  workEnvironment["Blender"],
+  workEnvironment["Photoshop"],
+  workEnvironment["SonyVegasPro"],
+  methodologies["AdaptiveUI"],
+  methodologies["MVC"],
 ];
 
 const minecraftIndustrialization = [
-  technologies["Csharp"], technologies["Unity"], technologies["PluginYG"],
-  technologies["DOTween"], technologies["ShaderGraphs"], technologies["ParticleSystem"],
-  technologies["Photoshop"]
+  languages["Csharp"],
+  frameworksLibrariesPlugins["DOTween"],
+  frameworksLibrariesPlugins["ShaderGraphs"],
+  frameworksLibrariesPlugins["ParticleSystem"],
+  frameworksLibrariesPlugins["PluginYG"],
+  workEnvironment["Unity"],
+  workEnvironment["MicrosoftVisualStudio"],
+  workEnvironment["Photoshop"],
+  methodologies["AdaptiveUI"],
 ];
 
 const furnitureShop = [
-  technologies["Csharp"], technologies["ASPNetCore"], technologies["Blazor"],
-  technologies["RazorPages"], technologies["Unity"], technologies["WebGL"],
-  technologies["HTML5"], technologies["CSS3"]
+  languages["Csharp"],
+  languages["HTML"],
+  languages["CSS"],
+  frameworksLibrariesPlugins["ASPNetCore"],
+  frameworksLibrariesPlugins["Blazor"],
+  frameworksLibrariesPlugins["RazorPages"],
+  frameworksLibrariesPlugins["WebGL"],
+  workEnvironment["MicrosoftVisualStudio"],
+  workEnvironment["Unity"],
 ];
 
 const characterMenuConcept = [
-  technologies["Csharp"], technologies["Unity"],
-  technologies["DOTween"], technologies["Photoshop"]
+  languages["Csharp"],
+  frameworksLibrariesPlugins["DOTween"],
+  workEnvironment["Unity"],
+  workEnvironment["MicrosoftVisualStudio"],
+  workEnvironment["Photoshop"],
+  methodologies["AdaptiveUI"],
+  methodologies["MVC"]
 ];
 
 const portfolioSite = [
-  technologies["HTML5"], technologies["CSS3"],
-  technologies["JavaScript"], technologies["Webpack"],
-  technologies["BEM"]
+  languages["HTML"],
+  languages["CSS"],
+  languages["JavaScript"],
+  frameworksLibrariesPlugins["Webpack"],
+  workEnvironment["VisualStudioCode"],
+  methodologies["BEM"],
+  methodologies["AdaptiveWebDesign"],
 ]
 
 const allProjects = [exolab, multiverseMemes,
@@ -141,23 +208,67 @@ const stackContainers = [
 ];
 
 let iteration = 0;
-allProjects.forEach(project =>{
+let languagesValues = Object.values(languages);
+let frameworksValues = Object.values(frameworksLibrariesPlugins);
+let workEnvironmentValues = Object.values(workEnvironment);
+let methodologiesValues = Object.values(methodologies);
+allProjects.forEach(project => {
   project.forEach(element => {
-    let link = document.createElement("a");
-    link.innerHTML = element;
-    link.className = "stack-link";
-    link.href = GetLinkAddress(element);
-    link.target = "_blank";
-  
-    let unit = document.createElement("p");
-    unit.className = "technology-unit";
-    unit.appendChild(link);
-
-    stackContainers[iteration].appendChild(unit);
+    if (languagesValues.includes(element)){
+      createStackElement(element, stackContainers[iteration], "technology-unit_theme_languages");
+    }
+    else if (frameworksValues.includes(element)){
+      createStackElement(element, stackContainers[iteration], "technology-unit_theme_frameworks");
+    }
+    else if (workEnvironmentValues.includes(element)){
+      createStackElement(element, stackContainers[iteration], "technology-unit_theme_work-environment");
+    }
+    else if (methodologiesValues.includes(element)){
+      createStackElement(element, stackContainers[iteration], "technology-unit_theme_methodologyes");
+    }
   });
 
   iteration++;
 });
+
+const languagesBlock = document.getElementById("Languages");
+const frameworksLibrariesPluginsBlock = document.getElementById("Frameworks Libraries Plugins");
+const workEnvironmentBlock = document.getElementById("Work environment");
+const methodologiesBlock = document.getElementById("Methodologies");
+
+for (let key in languages){
+  createStackElement(languages[key], languagesBlock, "technology-unit_theme_languages");
+}
+
+for (let key in workEnvironment){
+  createStackElement(workEnvironment[key], workEnvironmentBlock, "technology-unit_theme_work-environment");
+}
+
+for (let key in methodologies){
+  createStackElement(methodologies[key], methodologiesBlock, "technology-unit_theme_methodologyes");
+}
+
+let frameworksTemp = frameworksLibrariesPlugins;
+delete frameworksTemp.Tkinter;
+delete frameworksTemp.Simplaudio;
+for (let key in frameworksTemp){
+  createStackElement(frameworksTemp[key], frameworksLibrariesPluginsBlock, "technology-unit_theme_frameworks");
+}
+
+function createStackElement(value, parent, modifier){
+  let link = document.createElement("a");
+  link.innerHTML = value;
+  link.className = "link_stack";
+  link.href = GetLinkAddress(value);
+  link.target = "_blank";
+
+  let unit = document.createElement("p");
+  unit.className = "technology-unit";
+  unit.classList.add(modifier);
+  unit.appendChild(link);
+
+  parent.appendChild(unit);
+}
 
 function GetLinkAddress(technology){
   for (var key in linksArray) {
@@ -173,6 +284,7 @@ import "../styles/roots/fonts.css";
 import "../styles/roots/transitions.css";
 import "../styles/roots/offsets.css";
 import "../styles/roots/borders.css";
+import "../styles/roots/content-size.css";
 
 import "../common.blocks/body/body.css";
 import "../common.blocks/brand/brand.css";
@@ -193,18 +305,42 @@ import "../common.blocks/icon/icon.css";
 import "../common.blocks/image-content-grid/image-content-grid.css";
 
 import "../common.blocks/info-container/info-container.css";
-import "../common.blocks/info-container/__inner-element/info-container__inner-element.css";
 import "../common.blocks/info-container/__header/info-container__header.css";
+import "../common.blocks/info-container/__description/info-container__description.css";
+import "../common.blocks/info-container/__summary/info-container__summary.css";
 
 import "../common.blocks/link/link.css";
+import "../common.blocks/link/_contact/link_contact.css";
+import "../common.blocks/link/_stack/link_stack.css";
+import "../common.blocks/link/_inner/link_inner.css";
+import "../common.blocks/link/_theme_dashed/link_theme_dashed.css";
+
 import "../common.blocks/navigation/navigation.css";
 
 import "../common.blocks/popup-overlay/popup-overlay.css";
 import "../common.blocks/popup-overlay/__popup/popup-overlay__popup.css";
+import "../common.blocks/popup-overlay/__extended-image/popup-overlay__extended-image.css";
 
 // import "../common.blocks/project-description-container/";
 import "../common.blocks/project-type/project-type.css";
 
+import "../common.blocks/stack-description/stack-description.css";
+import "../common.blocks/stack-description/_theme_languages/stack-description_theme_languages.css";
+import "../common.blocks/stack-description/_theme_frameworks/stack-description_theme_frameworks.css";
+import "../common.blocks/stack-description/_theme_work-environment/stack-description_theme_work-environment.css";
+import "../common.blocks/stack-description/_theme_methodologyes/stack-description_theme_methodologyes.css";
+
 import "../common.blocks/technology-unit/technology-unit.css";
+import "../common.blocks/technology-unit/_theme_frameworks/technology-unit_theme_frameworks.css";
+import "../common.blocks/technology-unit/_theme_languages/technology-unit_theme_languages.css";
+import "../common.blocks/technology-unit/_theme_work-environment/technology-unit_theme_work-environment.css";
+import "../common.blocks/technology-unit/_theme_methodologyes/technology-unit_theme_methodologyes.css";
+
 import "../common.blocks/theme-toggle/theme-toggle.js";
 import "../common.blocks/theme-toggle/theme-toggle.css";
+
+import "../common.blocks/stack-container/stack-container.css"
+import "../common.blocks/promo-card/promo-card.css"
+import "../common.blocks/promo-card/__animated-border/promo-card__animated-border.css"
+
+import "../common.blocks/image/image.css"

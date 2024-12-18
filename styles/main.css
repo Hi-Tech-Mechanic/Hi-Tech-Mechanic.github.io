@@ -1,8 +1,3 @@
-:root{
-    --content-max-width: 1200px;
-    --content-min-width: auto;
-}
-
 *{
     margin: 0;
     padding: 0;
@@ -16,129 +11,9 @@
     font-weight: 400;
 } */
 
-
-.project-description-container{
-    margin: var(--offset-10px);
-}
-
-.stack-description{
-    display: inline-block;
-    color: var(--stack-text-color);
-    font-size: larger;
-    font-weight: 600;
-    line-height: 30px;
-    text-wrap: stable;
-}
-
-.stack-container{
-    display: inline-block;
-}
-
-
-
-
-
-    .promo-card{
-        display: flex;
-        flex-direction: column;
-        transform: perspective(2000px) rotatey(0deg) rotatex(0deg);
-
-        text-align: center;
-        background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(255, 255 ,255 , 0.3));
-
-        padding: 8px;
-        margin: 5px;
-    
-        border: 1px solid var(--border-color);
-        border-radius: var(--average-border-radius);
-
-        transition: 
-        filter var(--animation-duration-05s),
-        transform var(--animation-duration-03s) ease;
-    }
-
-    .card-button{
-        cursor: pointer;
-    }
-
-    .promo-card:hover{
-        filter: drop-shadow(0 0 0.75rem white); 
-    }
-
-    .promo-card:focus{
-        filter: drop-shadow(0 0 0.75rem white); 
-    }
-
     .multiverse-memes-font{
         font-family: 'zarubkaType-Regular', sans-serif;
     }
-
-    .animated-border {
-        display: flex;
-        margin-bottom: 5px;
-        --angle: 0deg;
-
-        animation: 10s rotate linear infinite;
-    }
-    
-    @keyframes rotate {
-        to {
-            --angle: 360deg;
-        }
-    }
-    
-    @property --angle {
-      syntax: '<angle>';
-      initial-value: 0deg;
-      inherits: false;
-    }
-
-  .extended-image{
-    /* width: 100%; */
-    /* height: 100%; */
-    max-width: 100%;
-    max-height: 1000px;
-  }
-
-
-.text-decoration-style_dashed{
-    text-decoration: underline;
-    text-decoration-style: dashed;
-}
-
-.inner-link{
-    font-weight: 600;
-    font-size: var(--font-size-20px);
-}
-
-.contacts-link{
-    display: flex;
-    align-items: center;
-    font-size: large;
-}
-
-.stack-link{
-    color: var(--text-color);
-    text-decoration: none;
-}
-
-.details-summary{
-    font-size: larger;
-    font-weight: 600;
-    margin-bottom: 10px;
-    cursor: pointer;
-    padding-right: 120px;
-
-    transition: font-size var(--animation-duration-03s);
-}
-
-.details-summary:hover{
-    font-size: 24px;
-}
-
-.details-summary:focus{
-    font-size: 24px;
-}
 
 details summary ~ div{
     overflow: hidden;
@@ -152,24 +27,3 @@ details summary ~ div{
     from {max-height:0;}
     to {max-height:2500px;}
     }
-
-.left-padding-10px{
-    padding-left: 10px;
-}
-
-.padding-top-10px{
-    padding-top: 10px;
-}
-
-.padding-bottom-10px{
-    padding-bottom: 10px;
-}
-
-.image{
-    max-width: 100%;
-    max-height: 100%;
-}
-
-.transition-none{
-    transition: all;
-}

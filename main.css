@@ -1,11 +1,6 @@
 /*!*******************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./styles/main.css ***!
   \*******************************************************************/
-:root{
-    --content-max-width: 1200px;
-    --content-min-width: auto;
-}
-
 *{
     margin: 0;
     padding: 0;
@@ -19,129 +14,9 @@
     font-weight: 400;
 } */
 
-
-.project-description-container{
-    margin: var(--offset-10px);
-}
-
-.stack-description{
-    display: inline-block;
-    color: var(--stack-text-color);
-    font-size: larger;
-    font-weight: 600;
-    line-height: 30px;
-    text-wrap: stable;
-}
-
-.stack-container{
-    display: inline-block;
-}
-
-
-
-
-
-    .promo-card{
-        display: flex;
-        flex-direction: column;
-        transform: perspective(2000px) rotatey(0deg) rotatex(0deg);
-
-        text-align: center;
-        background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(255, 255 ,255 , 0.3));
-
-        padding: 8px;
-        margin: 5px;
-    
-        border: 1px solid var(--border-color);
-        border-radius: var(--average-border-radius);
-
-        transition: 
-        filter var(--animation-duration-05s),
-        transform var(--animation-duration-03s) ease;
-    }
-
-    .card-button{
-        cursor: pointer;
-    }
-
-    .promo-card:hover{
-        filter: drop-shadow(0 0 0.75rem white); 
-    }
-
-    .promo-card:focus{
-        filter: drop-shadow(0 0 0.75rem white); 
-    }
-
     .multiverse-memes-font{
         font-family: 'zarubkaType-Regular', sans-serif;
     }
-
-    .animated-border {
-        display: flex;
-        margin-bottom: 5px;
-        --angle: 0deg;
-
-        animation: 10s rotate linear infinite;
-    }
-    
-    @keyframes rotate {
-        to {
-            --angle: 360deg;
-        }
-    }
-    
-    @property --angle {
-      syntax: '<angle>';
-      initial-value: 0deg;
-      inherits: false;
-    }
-
-  .extended-image{
-    /* width: 100%; */
-    /* height: 100%; */
-    max-width: 100%;
-    max-height: 1000px;
-  }
-
-
-.text-decoration-style_dashed{
-    text-decoration: underline;
-    text-decoration-style: dashed;
-}
-
-.inner-link{
-    font-weight: 600;
-    font-size: var(--font-size-20px);
-}
-
-.contacts-link{
-    display: flex;
-    align-items: center;
-    font-size: large;
-}
-
-.stack-link{
-    color: var(--text-color);
-    text-decoration: none;
-}
-
-.details-summary{
-    font-size: larger;
-    font-weight: 600;
-    margin-bottom: 10px;
-    cursor: pointer;
-    padding-right: 120px;
-
-    transition: font-size var(--animation-duration-03s);
-}
-
-.details-summary:hover{
-    font-size: 24px;
-}
-
-.details-summary:focus{
-    font-size: 24px;
-}
 
 details summary ~ div{
     overflow: hidden;
@@ -155,46 +30,26 @@ details summary ~ div{
     from {max-height:0;}
     to {max-height:2500px;}
     }
-
-.left-padding-10px{
-    padding-left: 10px;
-}
-
-.padding-top-10px{
-    padding-top: 10px;
-}
-
-.padding-bottom-10px{
-    padding-bottom: 10px;
-}
-
-.image{
-    max-width: 100%;
-    max-height: 100%;
-}
-
-.transition-none{
-    transition: all;
-}
 /*!***************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./styles/roots/colors.css ***!
   \***************************************************************************/
 :root{
     --text-color: white;
     --border-color: grey;
-    --background-color: rgb(15, 15, 15);
+    --background-color: hsl(0, 0%, 5%);
     --button-border-color: grey;
-    --button-background-color: rgb(32, 32, 32);
-    --brend-color: rgb(0, 255, 255);
+    --button-background-color: hsl(0, 0%, 15%);
+    --brend-color: hsl(180, 100%, 50%);
 
-    --stack-text-color: aquamarine;
-    --stack-background-color: rgb(0, 136, 102);
-    --stack-border-color: rgb(8, 168, 160);
+    --difficulty-easy: hsl(120, 100%, 70%);
+    --difficulty-medium: hsl(70, 100%, 70%);
+    --difficulty-hard: hsl(35, 100%, 70%);
+    --difficulty-very-hard: hsl(0, 100%, 70%);
 
-    --difficulty-easy: rgb(104, 255, 124);
-    --difficulty-medium: rgb(227, 255, 104);
-    --difficulty-hard: rgb(255, 190, 104);
-    --difficulty-very-hard: rgb(255, 104, 104);
+    --technology-languages: hsl(120, 80%, 50%);
+    --technology-frameworks: hsl(200, 80%, 50%);
+    --technology-work-environment: hsl(250, 80%, 50%);
+    --technology-methodologyes: hsl(285, 80%, 50%);
 }
 /*!**************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./styles/roots/fonts.css ***!
@@ -241,6 +96,13 @@ details summary ~ div{
     --average-border-radius: 10px;
     --big-border-radius: 15px;
 }
+/*!*********************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./styles/roots/content-size.css ***!
+  \*********************************************************************************/
+:root{
+    --content-max-width: 1200px;
+    --content-min-width: auto;
+}
 /*!*******************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./common.blocks/body/body.css ***!
   \*******************************************************************************/
@@ -255,8 +117,8 @@ details summary ~ div{
     font-weight: 400;
     font-size: large;
     font-style: normal;
+    
     color: var(--text-color);
-
     background-color: var(--background-color);
 }
 /*!*********************************************************************************!*\
@@ -473,16 +335,6 @@ details summary ~ div{
     margin: var(--offset-10px);
     margin-left: 0;
 }
-/*!**********************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./common.blocks/info-container/__inner-element/info-container__inner-element.css ***!
-  \**********************************************************************************************************************************/
-.info-container__inner-element{
-    padding: 8px;
-    margin: 5px;
-
-    border: 1px solid var(--border-color);
-    border-radius: var(--average-border-radius);
-}
 /*!********************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./common.blocks/info-container/__header/info-container__header.css ***!
   \********************************************************************************************************************/
@@ -491,6 +343,33 @@ details summary ~ div{
     
     font-size: var(--font-size-26px);
     font-weight: 600;
+}
+/*!******************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./common.blocks/info-container/__description/info-container__description.css ***!
+  \******************************************************************************************************************************/
+.info-container__description{
+    margin: var(--offset-10px);
+}
+/*!**********************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./common.blocks/info-container/__summary/info-container__summary.css ***!
+  \**********************************************************************************************************************/
+.info-container__summary{
+    margin-bottom: 10px;
+    padding-right: 120px;
+    
+    font-size: larger;
+    font-weight: 600;
+    
+    cursor: pointer;
+    transition: font-size var(--animation-duration-03s);
+}
+
+.details-summary:hover{
+    font-size: 24px;
+}
+
+.details-summary:focus{
+    font-size: 24px;
 }
 /*!*******************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./common.blocks/link/link.css ***!
@@ -508,6 +387,35 @@ details summary ~ div{
 
 .link:focus{
     font-size: calc(1em + 4px);
+}
+/*!************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./common.blocks/link/_contact/link_contact.css ***!
+  \************************************************************************************************/
+.link_contact{
+    display: flex;
+    align-items: center;
+    font-size: large;
+}
+/*!********************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./common.blocks/link/_stack/link_stack.css ***!
+  \********************************************************************************************/
+.link_stack{
+    color: var(--text-color);
+    text-decoration: none;
+}
+/*!********************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./common.blocks/link/_inner/link_inner.css ***!
+  \********************************************************************************************/
+.link_inner{
+    font-weight: 600;
+    font-size: var(--font-size-20px);
+}
+/*!**********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./common.blocks/link/_theme_dashed/link_theme_dashed.css ***!
+  \**********************************************************************************************************/
+.link_theme_dashed{
+    text-decoration: underline;
+    text-decoration-style: dashed;
 }
 /*!*******************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./common.blocks/navigation/navigation.css ***!
@@ -549,21 +457,31 @@ details summary ~ div{
   !*** css ./node_modules/css-loader/dist/cjs.js!./common.blocks/popup-overlay/__popup/popup-overlay__popup.css ***!
   \****************************************************************************************************************/
 .popup-overlay__popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     top: 50%;
     left: 50%;
-  
-    /* width: 100%; */
-    /* height: 100%; */
-    max-width: var(--content-max-width);
-    max-height: 90%;
-    padding: 15px;
+    width: calc(100% - var(--offset-40px));
+    margin: 0 auto;
+    padding: var(--offset-10px);
     transform: translate(-50%, -50%);
   
     background-color: var(--button-background-color);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-    border-radius: 1em;
+    border-radius: var(--average-border-radius);
+    
     object-fit: contain;
+}
+/*!**********************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./common.blocks/popup-overlay/__extended-image/popup-overlay__extended-image.css ***!
+  \**********************************************************************************************************************************/
+.popup-overlay__extended-image{
+    /* width: 100%; */
+    /* height: 100%; */
+    max-width: 100%;
+    max-height: 1000px;
   }
 /*!***********************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./common.blocks/project-type/project-type.css ***!
@@ -571,22 +489,55 @@ details summary ~ div{
 .project-type{
     margin-left: var(--offset-10px);
 }
+/*!*********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./common.blocks/stack-description/stack-description.css ***!
+  \*********************************************************************************************************/
+.stack-description{
+    display: inline;
+
+    font-size: larger;
+    font-weight: 600;
+    line-height: 30px;
+}
+/*!******************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./common.blocks/stack-description/_theme_languages/stack-description_theme_languages.css ***!
+  \******************************************************************************************************************************************/
+.stack-description_theme_languages{
+    color: var(--technology-languages);
+}
+/*!********************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./common.blocks/stack-description/_theme_frameworks/stack-description_theme_frameworks.css ***!
+  \********************************************************************************************************************************************/
+.stack-description_theme_frameworks{
+    color: var(--technology-frameworks);
+}
+/*!********************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./common.blocks/stack-description/_theme_work-environment/stack-description_theme_work-environment.css ***!
+  \********************************************************************************************************************************************************/
+.stack-description_theme_work-environment{
+    color: var(--technology-work-environment);
+}
+/*!**************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./common.blocks/stack-description/_theme_methodologyes/stack-description_theme_methodologyes.css ***!
+  \**************************************************************************************************************************************************/
+.stack-description_theme_methodologyes{
+    color: var(--technology-methodologyes);
+}
 /*!*****************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./common.blocks/technology-unit/technology-unit.css ***!
   \*****************************************************************************************************/
 .technology-unit{
     display: inline;
-    text-align: center;
+    margin: 0px 4px;
     padding-left: 10px;
     padding-right: 6px;
-    margin: 0px 4px;
+    
+    text-align: center;
+    font-weight: 600;
     line-height: 35px;
 
-    font-weight: 600;
-    background-color: var(--stack-background-color);
-    border: var(--border-thickness-medium) solid var(--stack-border-color);
+    border: var(--border-thickness-medium) solid;
     border-radius: var(--average-border-radius);
-    box-shadow: 0 0 var(--offset-8px) var(--brend-color);
     
     cursor: pointer;
     transition: font-size var(--animation-duration-03s);
@@ -598,6 +549,38 @@ details summary ~ div{
 
 .technology-unit:focus{
     font-size: larger;
+}
+/*!****************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./common.blocks/technology-unit/_theme_frameworks/technology-unit_theme_frameworks.css ***!
+  \****************************************************************************************************************************************/
+.technology-unit_theme_frameworks{
+    background-color: var(--technology-frameworks);
+    box-shadow: 0 0 var(--offset-5px) var(--technology-frameworks);
+    border-color: hsl(from var(--technology-frameworks) h s calc(l - 10));
+}
+/*!**************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./common.blocks/technology-unit/_theme_languages/technology-unit_theme_languages.css ***!
+  \**************************************************************************************************************************************/
+.technology-unit_theme_languages{
+    background-color: var(--technology-languages);
+    box-shadow: 0 0 var(--offset-5px) var(--technology-languages);
+    border-color: hsl(from var(--technology-languages) h s calc(l - 10));
+}
+/*!****************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./common.blocks/technology-unit/_theme_work-environment/technology-unit_theme_work-environment.css ***!
+  \****************************************************************************************************************************************************/
+.technology-unit_theme_work-environment{
+    background-color: var(--technology-work-environment);
+    box-shadow: 0 0 var(--offset-5px) var(--technology-work-environment);
+    border-color: hsl(from var(--technology-work-environment) h s calc(l - 10));
+}
+/*!**********************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./common.blocks/technology-unit/_theme_methodologyes/technology-unit_theme_methodologyes.css ***!
+  \**********************************************************************************************************************************************/
+.technology-unit_theme_methodologyes{
+    background-color: var(--technology-methodologyes);
+    box-shadow: 0 0 var(--offset-5px) var(--technology-methodologyes);
+    border-color: hsl(from var(--technology-methodologyes) h s calc(l - 10));
 }
 /*!***********************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./common.blocks/theme-toggle/theme-toggle.css ***!
@@ -619,4 +602,68 @@ details summary ~ div{
     padding: 2px;
     border: 1px solid var(--text-color);
     border-radius: var(--average-border-radius);
+}
+/*!*****************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./common.blocks/stack-container/stack-container.css ***!
+  \*****************************************************************************************************/
+.stack-container{
+    display: inline-block;
+}
+/*!*******************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./common.blocks/promo-card/promo-card.css ***!
+  \*******************************************************************************************/
+.promo-card{
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    margin: 5px;
+    transform: perspective(2000px) rotatey(0deg) rotatex(0deg);
+
+    text-align: center;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(255, 255 ,255 , 0.3));
+
+    border: 1px solid var(--border-color);
+    border-radius: var(--average-border-radius);
+
+    cursor: pointer;
+    transition: 
+    filter var(--animation-duration-05s),
+    transform var(--animation-duration-03s) ease;
+}
+
+.promo-card:hover{
+    filter: drop-shadow(0 0 0.75rem white); 
+}
+
+.promo-card:focus{
+    filter: drop-shadow(0 0 0.75rem white); 
+}
+/*!******************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./common.blocks/promo-card/__animated-border/promo-card__animated-border.css ***!
+  \******************************************************************************************************************************/
+.promo-card__animated-border {
+    display: flex;
+    margin-bottom: 5px;
+    --angle: 0deg;
+
+    animation: 10s rotate linear infinite;
+}
+
+@keyframes rotate {
+    to {
+        --angle: 360deg;
+    }
+}
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+/*!*********************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./common.blocks/image/image.css ***!
+  \*********************************************************************************/
+.image{
+    max-width: 100%;
+    max-height: 100%;
 }

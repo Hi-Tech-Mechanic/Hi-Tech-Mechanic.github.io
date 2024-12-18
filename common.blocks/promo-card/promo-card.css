@@ -1,0 +1,26 @@
+.promo-card{
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    margin: 5px;
+    transform: perspective(2000px) rotatey(0deg) rotatex(0deg);
+
+    text-align: center;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(255, 255 ,255 , 0.3));
+
+    border: 1px solid var(--border-color);
+    border-radius: var(--average-border-radius);
+
+    cursor: pointer;
+    transition: 
+    filter var(--animation-duration-05s),
+    transform var(--animation-duration-03s) ease;
+}
+
+.promo-card:hover{
+    filter: drop-shadow(0 0 0.75rem white); 
+}
+
+.promo-card:focus{
+    filter: drop-shadow(0 0 0.75rem white); 
+}
