@@ -40,6 +40,7 @@ details summary ~ div{
     --button-border-color: grey;
     --button-background-color: hsl(0, 0%, 15%);
     --brend-color: hsl(180, 100%, 50%);
+    --brend-shadow-color: hsl(210, 100%, 50%);
 
     --difficulty-easy: hsl(120, 100%, 70%);
     --difficulty-medium: hsl(70, 100%, 70%);
@@ -61,6 +62,8 @@ details summary ~ div{
     --font-size-22px: 22px;
     --font-size-24px: 24px;
     --font-size-26px: 26px;
+    --font-size-34px: 34px;
+    --font-size-40px: 40px;
 }
 /*!********************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./styles/roots/transitions.css ***!
@@ -125,22 +128,24 @@ details summary ~ div{
   !*** css ./node_modules/css-loader/dist/cjs.js!./common.blocks/brand/brand.css ***!
   \*********************************************************************************/
 .brand{
-    text-shadow: 2px 2px 5rem rgb(0, 162, 255);
-    margin-right: 2rem;
-    color: var(--brend-color);
-    font-size: 2rem;
+    margin-right: var(--offset-40px);
+
+    font-size: var(--font-size-34px);
     font-weight: 900;
     text-decoration: none;
+    text-shadow: 0 0 5rem var(--brend-shadow-color);
+    
+    color: var(--brend-color);
 
     transition: text-shadow var(--animation-duration-05s);
 }
 
 .brand:hover{
-    text-shadow: 2px 2px 2rem rgb(0, 162, 255);
+    text-shadow: 0 0 2rem var(--brend-shadow-color);
 }
 
 .brand:focus{
-    text-shadow: 2px 2px 2rem rgb(0, 162, 255);
+    text-shadow: 0 0 2rem var(--brend-shadow-color);
 }
 /*!***********************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./common.blocks/button/button.css ***!
@@ -235,22 +240,56 @@ details summary ~ div{
 .difficulty-tag_theme_very-hard::after{
     content: "Very hard";
 }
+/*!***************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./common.blocks/dropdown/dropdown.css ***!
+  \***************************************************************************************/
+.dropdown {
+    display: none;
+    position: relative;
+}
+
+.dropdown:hover .dropdown__content {display: flex;}
+/*!**********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./common.blocks/dropdown/__content/dropdown__content.css ***!
+  \**********************************************************************************************************/
+.dropdown__content{
+    display: none;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    right: 0;
+    padding: var(--offset-10px);
+    gap: var(--offset-10px);
+
+    border: var(--border-thickness-thin) solid var(--border-color);
+    border-radius: var(--average-border-radius);
+
+    background-color: var(--background-color);
+    box-shadow: 0px 4px var(--offset-10px) 0px var(--text-color);
+
+    z-index: 1;
+}
 /*!*********************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./common.blocks/exit-button/exit-button.css ***!
   \*********************************************************************************************/
 .exit-button{
     display: block;
     position: fixed;
+    width: 35px;
+    height: 35px;
     right: 0;
     top: 0;
     margin: 5px;
-    width: 35px;
-    height: 35px;
 
-    font-weight: 600;
-    font-size: large;
+    /* color: var(--text-color); todo */
     color: white;
-    background-color: var(--button-background-color);
+    font-size: larger;
+    line-height: 35px;
+    font-weight: 600;
+    /* background-color: var(--background-color); todo */
+    background-color: black;
+    /* border-color: var(--text-color); todo */
     border-color: white;
     border-radius: var(--average-border-radius);
 
@@ -258,13 +297,13 @@ details summary ~ div{
     background-color var(--animation-duration-03s);
 }
 
-    .exit-button:hover{
-        background-color: lch(from var(--button-background-color) calc(l - 15) c h);
-    }
+.exit-button:hover{
+    background-color: lch(from var(--background-color) calc(l - 15) c h);
+}
 
-    .exit-button:focus{
-        background-color: lch(from var(--button-background-color) calc(l - 15) c h);
-    }
+.exit-button:focus{
+    background-color: lch(from var(--background-color) calc(l - 15) c h);
+}
 /*!***********************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./common.blocks/footer/footer.css ***!
   \***********************************************************************************/
@@ -371,6 +410,19 @@ details summary ~ div{
 .details-summary:focus{
     font-size: 24px;
 }
+/*!******************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./common.blocks/info-container/__video/info-container__video.css ***!
+  \******************************************************************************************************************/
+.info-container__video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: var(--offset-20px);
+
+    border: var(--border-thickness-thin) solid var(--border-color);
+    border-radius: var(--average-border-radius);
+    box-shadow: 0 0 var(--offset-15px) var(--text-color);
+}
 /*!*******************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./common.blocks/link/link.css ***!
   \*******************************************************************************/
@@ -400,7 +452,7 @@ details summary ~ div{
   !*** css ./node_modules/css-loader/dist/cjs.js!./common.blocks/link/_stack/link_stack.css ***!
   \********************************************************************************************/
 .link_stack{
-    color: var(--text-color);
+    color: white;
     text-decoration: none;
 }
 /*!********************************************************************************************!*\
@@ -434,10 +486,17 @@ details summary ~ div{
     justify-content: center;
     align-items: center;
 
-    z-index: 1;
     color: var(--text-color);
     border-bottom: 1px solid var(--border-color);
     background-color: var(--background-color);
+    
+    z-index: 1;
+}
+/*!********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./common.blocks/navigation/__menu/navigation__menu.css ***!
+  \********************************************************************************************************/
+.navigation__menu{
+    display: flex;
 }
 /*!*************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./common.blocks/popup-overlay/popup-overlay.css ***!
@@ -458,18 +517,18 @@ details summary ~ div{
   \****************************************************************************************************************/
 .popup-overlay__popup {
     display: flex;
+    position: absolute;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    width: calc(100% - var(--offset-40px));
     top: 50%;
     left: 50%;
-    width: calc(100% - var(--offset-40px));
     margin: 0 auto;
     padding: var(--offset-10px);
     transform: translate(-50%, -50%);
   
-    background-color: var(--button-background-color);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    background-color: hsla(0, 0%, 0%, 0.7);
+    box-shadow: 0 0 var(--offset-20px) var(--text-color);
     border-radius: var(--average-border-radius);
     
     object-fit: contain;
@@ -620,7 +679,7 @@ details summary ~ div{
     transform: perspective(2000px) rotatey(0deg) rotatex(0deg);
 
     text-align: center;
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(255, 255 ,255 , 0.3));
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0), var(--button-border-color));
 
     border: 1px solid var(--border-color);
     border-radius: var(--average-border-radius);
@@ -632,11 +691,11 @@ details summary ~ div{
 }
 
 .promo-card:hover{
-    filter: drop-shadow(0 0 0.75rem white); 
+    filter: drop-shadow(0 0 0.75rem var(--text-color)); 
 }
 
 .promo-card:focus{
-    filter: drop-shadow(0 0 0.75rem white); 
+    filter: drop-shadow(0 0 0.75rem var(--text-color)); 
 }
 /*!******************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./common.blocks/promo-card/__animated-border/promo-card__animated-border.css ***!

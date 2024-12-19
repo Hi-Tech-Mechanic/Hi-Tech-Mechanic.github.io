@@ -1,18 +1,20 @@
 .brand{
-    text-shadow: 2px 2px 5rem rgb(0, 162, 255);
-    margin-right: 2rem;
-    color: var(--brend-color);
-    font-size: 2rem;
+    margin-right: var(--offset-40px);
+
+    font-size: var(--font-size-34px);
     font-weight: 900;
     text-decoration: none;
+    text-shadow: 0 0 5rem var(--brend-shadow-color);
+    
+    color: var(--brend-color);
 
     transition: text-shadow var(--animation-duration-05s);
 }
 
 .brand:hover{
-    text-shadow: 2px 2px 2rem rgb(0, 162, 255);
+    text-shadow: 0 0 2rem var(--brend-shadow-color);
 }
 
 .brand:focus{
-    text-shadow: 2px 2px 2rem rgb(0, 162, 255);
+    text-shadow: 0 0 2rem var(--brend-shadow-color);
 }

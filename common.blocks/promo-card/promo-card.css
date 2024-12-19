@@ -6,7 +6,7 @@
     transform: perspective(2000px) rotatey(0deg) rotatex(0deg);
 
     text-align: center;
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(255, 255 ,255 , 0.3));
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0), var(--button-border-color));
 
     border: 1px solid var(--border-color);
     border-radius: var(--average-border-radius);
@@ -18,9 +18,9 @@
 }
 
 .promo-card:hover{
-    filter: drop-shadow(0 0 0.75rem white); 
+    filter: drop-shadow(0 0 0.75rem var(--text-color)); 
 }
 
 .promo-card:focus{
-    filter: drop-shadow(0 0 0.75rem white); 
+    filter: drop-shadow(0 0 0.75rem var(--text-color)); 
 }

@@ -1,55 +1,3 @@
-const cards = [...document.querySelectorAll(".promo-card")];
-const cardsBorders = [...document.querySelectorAll(".promo-card__animated-border")];
-
-// const cardsButtons = document.getElementsByClassName("card-button");
-const popupOverlay = document.getElementById("popup-overlay");
-const popupPicture = document.getElementById("extended-image");
-const popupOverlayExitButton = document.getElementById("overlay-exit-button");
-
-cards.forEach(el => {
-  el.addEventListener("mousemove", fCardRotate);
-  el.addEventListener("mouseout", fCardDefault);
-  // el.addEventListener("mouseenter", displayAnimatedBorder);
-  // el.addEventListener("mouseleave", closeAnimatedBorder);
-});
-
-for (var i = 0; i < cardsBorders.length; i++) 
-{
-  cardsBorders[i].addEventListener("click", (element) => {
-      let src = element.currentTarget.children[0].src;
-      openExtendedPictureOverlay(src);
-  });
-  cardsBorders[i].addEventListener("mouseenter", displayAnimatedBorder);
-  cardsBorders[i].addEventListener("mouseleave", closeAnimatedBorder);
-}
-popupOverlayExitButton.addEventListener("click", exitExtendedPictureOverlay);
-
-function fCardRotate(ev) {
-  this.style.transform = `perspective(2000px) rotatey(${(ev.offsetX - this.offsetWidth / 2) / 6}deg)
-    rotatex(${((ev.offsetY - this.offsetHeight / 2) / 6) * -1}deg)`;
-}
-
-function fCardDefault() {
-  this.style.transform = ``;
-}
-
-function displayAnimatedBorder(){
-  this.setAttribute("style", 'border: 2px solid; border-image: conic-gradient(from var(--angle), red, yellow, lime, aqua, blue, magenta, red) 1;');
-}
-
-function closeAnimatedBorder(){
-  this.setAttribute("style", 'border: 0;');
-}
-
-function openExtendedPictureOverlay(imageSrc){
-  popupOverlay.style.display = "block";
-  popupPicture.setAttribute("src", imageSrc);
-}
-
-function exitExtendedPictureOverlay(){
-  popupOverlay.style.display = "none";
-}
-
 const linksArray = {
   "C# ": "https://learn.microsoft.com/ru-ru/dotnet/csharp/",
   "JavaScript ": "https://learn.javascript.ru/",
@@ -63,6 +11,7 @@ const linksArray = {
   "Blazor ": "https://learn.microsoft.com/ru-ru/aspnet/core/blazor/?view=aspnetcore-9.0",
   "Razor&nbsp;Pages ": "https://learn.microsoft.com/ru-ru/aspnet/core/razor-pages/?view=aspnetcore-9.0&tabs=visual-studio",
   "Webpack ": "https://webpack.js.org/",
+  "NPM ": "https://www.npmjs.com/",
   "DOTween ": "https://dotween.demigiant.com/",
   "PluginYG ": "https://ash-message-bf4.notion.site/PluginYG-d457b23eee604b7aa6076116aab647ed#61f1dc643f8046a2815dbd8834035ea7",
   "WebGL ": "https://www.khronos.org/webgl/wiki/Main_Page",
@@ -79,6 +28,11 @@ const linksArray = {
   "Photoshop ": "https://www.adobe.com/ru/products/photoshop.html",
   "Sony&nbsp;Vegas&nbsp;Pro ": "https://www.vegascreativesoftware.com/ru/",
 
+  "OOP ": "https://en.wikipedia.org/wiki/Object-oriented_programming",
+  "SOLID ": "https://ru.wikipedia.org/wiki/SOLID_(%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5)",
+  "DRY ": "https://ru.wikipedia.org/wiki/Don%E2%80%99t_repeat_yourself",
+  "GRASP ": "https://ru.wikipedia.org/wiki/GRASP",
+  "KISS ": "https://ru.wikipedia.org/wiki/KISS_(%D0%BF%D1%80%D0%B8%D0%BD%D1%86%D0%B8%D0%BF)",
   "Adaptive&nbsp;UI ": "https://docs.unity3d.com/ru/2021.1/Manual/HOWTO-UIMultiResolution.html",
   "Adaptive&nbsp;Web&nbsp;Design ": "https://alistapart.com/article/responsive-web-design/",
   "BEM ": "https://ru.bem.info/",
@@ -102,6 +56,7 @@ const frameworksLibrariesPlugins = {
   Blazor: "Blazor ",
   RazorPages: "Razor&nbsp;Pages ",
   Webpack: "Webpack ",
+  NPM: "NPM ",
   DOTween: "DOTween ",
   PluginYG: "PluginYG ",
   WebGL: "WebGL ",
@@ -122,12 +77,17 @@ const workEnvironment = {
 }
 
 const methodologies = {
+  SOLID: "SOLID ",
+  OOP: "OOP ",
   AdaptiveUI: "Adaptive&nbsp;UI ",
   AdaptiveWebDesign: "Adaptive&nbsp;Web&nbsp;Design ",
   BEM: "BEM ",
   MVC: "MVC ",
   MVP: "MVP ",
   MVVM: "MVVM ",
+  DRY: "DRY ",
+  KISS: "KISS ",
+  GRASP: "GRASP ",
 }
 
 const exolab = [languages["Python"], frameworksLibrariesPlugins["Tkinter"],
@@ -147,6 +107,8 @@ const multiverseMemes = [
   workEnvironment["SonyVegasPro"],
   methodologies["AdaptiveUI"],
   methodologies["MVC"],
+  methodologies["OOP"],
+  methodologies["DRY"],
 ];
 
 const minecraftIndustrialization = [
@@ -158,6 +120,8 @@ const minecraftIndustrialization = [
   workEnvironment["Unity"],
   workEnvironment["MicrosoftVisualStudio"],
   workEnvironment["Photoshop"],
+  methodologies["OOP"],
+  methodologies["SOLID"],
   methodologies["AdaptiveUI"],
 ];
 
@@ -171,6 +135,9 @@ const furnitureShop = [
   frameworksLibrariesPlugins["WebGL"],
   workEnvironment["MicrosoftVisualStudio"],
   workEnvironment["Unity"],
+  methodologies["AdaptiveUI"],
+  methodologies["DRY"],
+  methodologies["KISS"],
 ];
 
 const characterMenuConcept = [
@@ -179,8 +146,11 @@ const characterMenuConcept = [
   workEnvironment["Unity"],
   workEnvironment["MicrosoftVisualStudio"],
   workEnvironment["Photoshop"],
+  methodologies["OOP"],
+  methodologies["SOLID"],
   methodologies["AdaptiveUI"],
-  methodologies["MVC"]
+  methodologies["MVC"],
+  methodologies["DRY"],
 ];
 
 const portfolioSite = [
@@ -188,9 +158,12 @@ const portfolioSite = [
   languages["CSS"],
   languages["JavaScript"],
   frameworksLibrariesPlugins["Webpack"],
+  frameworksLibrariesPlugins["NPM"],
   workEnvironment["VisualStudioCode"],
   methodologies["BEM"],
   methodologies["AdaptiveWebDesign"],
+  methodologies["DRY"],
+  methodologies["KISS"],
 ]
 
 const allProjects = [exolab, multiverseMemes,
@@ -296,6 +269,9 @@ import "../common.blocks/difficulty-tag/_theme_medium/difficulty-tag_theme_mediu
 import "../common.blocks/difficulty-tag/_theme_hard/difficulty-tag_theme_hard.css";
 import "../common.blocks/difficulty-tag/_theme_very-hard/difficulty-tag_theme_very-hard.css";
 
+import "../common.blocks/dropdown/dropdown.css";
+import "../common.blocks/dropdown/__content/dropdown__content.css";
+
 import "../common.blocks/exit-button/exit-button.css";
 
 import "../common.blocks/footer/footer.css";
@@ -308,6 +284,7 @@ import "../common.blocks/info-container/info-container.css";
 import "../common.blocks/info-container/__header/info-container__header.css";
 import "../common.blocks/info-container/__description/info-container__description.css";
 import "../common.blocks/info-container/__summary/info-container__summary.css";
+import "../common.blocks/info-container/__video/info-container__video.css";
 
 import "../common.blocks/link/link.css";
 import "../common.blocks/link/_contact/link_contact.css";
@@ -316,12 +293,13 @@ import "../common.blocks/link/_inner/link_inner.css";
 import "../common.blocks/link/_theme_dashed/link_theme_dashed.css";
 
 import "../common.blocks/navigation/navigation.css";
+import "../common.blocks/navigation/navigation.js";
+import "../common.blocks/navigation/__menu/navigation__menu.css";
 
 import "../common.blocks/popup-overlay/popup-overlay.css";
 import "../common.blocks/popup-overlay/__popup/popup-overlay__popup.css";
 import "../common.blocks/popup-overlay/__extended-image/popup-overlay__extended-image.css";
 
-// import "../common.blocks/project-description-container/";
 import "../common.blocks/project-type/project-type.css";
 
 import "../common.blocks/stack-description/stack-description.css";
@@ -341,6 +319,15 @@ import "../common.blocks/theme-toggle/theme-toggle.css";
 
 import "../common.blocks/stack-container/stack-container.css"
 import "../common.blocks/promo-card/promo-card.css"
+import "../common.blocks/promo-card/promo-card.js"
 import "../common.blocks/promo-card/__animated-border/promo-card__animated-border.css"
 
 import "../common.blocks/image/image.css"
+
+///////////////////////////////////////////////////////////////
+
+// import "../videos/multiverse-memes_landscape-video.mp4";
+import "../videos/multiverse-memes_portrait-video.mp4";
+import "../videos/character-menu-concept.mp4";
+import "../videos/character-menu-concept.mpeg";
+import "../videos/character-menu-concept.webm";

@@ -5,6 +5,7 @@
     --button-border-color: grey;
     --button-background-color: hsl(0, 0%, 15%);
     --brend-color: hsl(180, 100%, 50%);
+    --brend-shadow-color: hsl(210, 100%, 50%);
 
     --difficulty-easy: hsl(120, 100%, 70%);
     --difficulty-medium: hsl(70, 100%, 70%);

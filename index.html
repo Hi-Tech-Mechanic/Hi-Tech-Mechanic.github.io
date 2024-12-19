@@ -10,15 +10,30 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kelly+Slab&family=Orbitron&display=swap">
     <!-- <link rel="stylesheet" href="./fonts/zarubkaType-Regular.ttf"> -->
     <title>Faceless</title>
-    <!-- <script defer src="bundle.js"></script><link href="main.css" rel="stylesheet"> -->
+    <script defer src="bundle.js"></script><link href="main.css" rel="stylesheet">
 </head>
 
 <header>
     <nav class="navigation">
         <a class="brand" href="#top">Faceless</a>
-        <div class="button"><a class="link link_inner" href="#body">Projects</a></div>
-        <div class="button"><a class="link link_inner" href="#footer">About me</a></div>
-        <div class="theme-toggle" id="theme toggle" index="1"><img class="image" src="images/other/sun.avif" alt="theme toggle"></div>
+        <div class="navigation__menu" id="navigation-menu">
+            <button class="button"><a class="link link_inner" href="#body">Projects</a></button>
+            <button class="button"><a class="link link_inner" href="#footer">About me</a></button>
+            <div class="theme-toggle" index="1">
+                <img class="image" src="images/other/sun.avif" alt="theme toggle">
+            </div>
+        </div>
+
+        <button class="button dropdown" id="dropdown-button">
+            <img class="image" src="images/other/меню.svg">
+            <div class="dropdown__content">
+                <div class="button"><a class="link link_inner" href="#body">Projects</a></div>
+                <div class="button"><a class="link link_inner" href="#footer">About me</a></div>
+                <div class="theme-toggle" index="1">
+                    <img class="image" src="images/other/sun.avif" alt="theme toggle">
+                </div>
+            </div>
+        </button>
     </nav>
 </header>
 
@@ -32,9 +47,10 @@
                     <div class="difficulty-tag difficulty-tag_theme_easy" title="Сложность проекта"></div>
                 </summary>
                 <div class="info-container__description">
-                    <p class="stack-description">Используемые технологии: </p>
+                    <p class="stack-description">Используемый стек: </p>
                     <div class="stack-container" id="Exolab">
                     </div><br><br>
+
                     <p>Это задача для курсовой работы.</p>
                     <p>Пошаговая ролевая игра для Windows.</p>
                     <p>Особенности: фиксированное разрешение 1920-1080px. Плюс это первый проект и код там плохой, его я не рефакторил.</p>
@@ -79,10 +95,11 @@
                         <p class="stack-description">Используемый стек: </p>
                         <div class="stack-container" id="Multiverse memes">
                         </div><br><br>
+                        
                         <p>Мультивселенная мемов — юмористический айдл-кликер с элементами РПГ, перемещайтесь между мемными вселенными,
                             изучайте их мироустройство, освобождайте земли Древнерусов, прокачивайте доход, покупая все новые и новые мемы со звуковыми приколами.</p>
                            <br><p><b>Об игре</b></p><br>
-                           <p> События разворачиваются в разных вселенных, где каждый мем возведён в абсолют. Вам предстоит делать различные локальные улучшения,
+                           <p> События разворачиваются в разных вселенных (всего их 9), где каждый мем возведён в абсолют. Вам предстоит делать различные локальные улучшения,
                                 как связанные с конкретным миром, так и глобальные, которые влияют на все остальные вселенные. Приобретайте различные звуковые приколы,
                                относящиеся к выбранной тематике. Наслаждайтесь смешными эффектами и музыкой, исследуйте различные уголки вселенной, полной мемов и веселья.</p>
                            <p>Во вселенной Русов против Ящеров начинается уже РПГ, где вам предстоит сражаться с коварными ящерами, которые стремятся захватить земли Гипербореи. Улучшайте свой славянский арсенал, используя Древнерусскую веру, открывайте различные комплекты брони и мощное вооружение, которое можно улучшать,
@@ -92,6 +109,15 @@
                            <p>Управление интуитивно понятное, оно происходит посредством нажатия на элементы интерфейса рукой, либо мышкой.</p>
                            <p>* Обучение реализовано внутри игры.</p><br>
                     </div>
+                </div>
+
+                <div class="info-container__video">
+                    <video controls poster="images/multiverse-memes/1.avif" width="100%" height="700px">
+                        <source src="videos/multiverse-memes_portrait-video.mp4" type="video/mp4">
+                        Ваш браузер не поддерживает видео.
+                        Попробуйте скачать видео <a href="videos/multiverse-memes_portrait-video.mp4">по этой ссылке</a>
+                        и открыть его на своём устройстве.
+                    </video>
                 </div>
 
                 <div class="image-content-grid multiverse-memes-font">
@@ -173,6 +199,12 @@
                         </div>
                         <span>Геймплей в обычном мире</span>
                     </div>
+                    <div class="promo-card">
+                        <div class="promo-card__animated-border">
+                            <img class="image" src="images/multiverse-memes/14.avif" alt="">
+                        </div>
+                        <span>Меню улучшений</span>
+                    </div>
                 </div>
             </details>
         </div>            
@@ -241,10 +273,9 @@
                     <div class="difficulty-tag difficulty-tag_theme_medium" title="Сложность проекта"></div>
                 </summary>
                 <div class="info-container__description">
-                    <p class="stack-description">Используемый стек: 
-                        <div class="stack-container" id="Furniture shop">
-                        </div>
-                    </p><br><br>
+                    <p class="stack-description">Используемый стек: </p>
+                    <div class="stack-container" id="Furniture shop">
+                    </div><br><br>
                     <p>Это задача для курсовой работы.</p>
                 </div>
                 <div class="image-content-grid-2-columns">
@@ -307,11 +338,9 @@
                 </summary>
 
                 <div class="info-container__description">
-                    <p class="stack-description">Используемый стек: 
-                        <div class="stack-container" id="Portfolio site">
-                        </div>
-                    </p><br><br>
-                    <p></p>
+                    <p class="stack-description">Используемый стек: </p>
+                    <div class="stack-container" id="Portfolio site">
+                    </div><br><br>
                 </div>
             </details>
 
@@ -334,6 +363,18 @@
                     <p>Инвентарь и игровые механики в стиле SCI-FI RPG.</p>
                     <p>Для запуска нужно скачать всю папку с билдом.</p>
                 </div>
+
+                <div class="info-container__video">
+                    <video controls poster="images/character-menu-concept/1.avif" width="100%" height="100%">
+                        <source src="videos/character-menu-concept.webm" type="video/webm">
+                        <source src="videos/character-menu-concept.mpeg" type="video/mpeg">
+                        <source src="videos/character-menu-concept.mp4" type="video/mp4">
+                        Ваш браузер не поддерживает видео.
+                        Попробуйте скачать видео <a href="videos/character-menu-concept.mp4">по этой ссылке</a>
+                        и открыть его на своём устройстве.
+                    </video>
+                </div>
+
                 <div class="image-content-grid-2-columns">
                     <div class="promo-card">
                         <div class="promo-card__animated-border">
@@ -403,5 +444,5 @@
     </a>
 </footer>
 
-<!-- <script src="js/bundle.js"></script> -->
+<script src="js/bundle.js"></script>
 </html>
