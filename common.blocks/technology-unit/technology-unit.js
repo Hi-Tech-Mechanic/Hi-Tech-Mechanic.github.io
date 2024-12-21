@@ -22,10 +22,11 @@ const linksArray = {
   "Tkinter&nbsp;(отрисовка&nbsp;UI) ": "https://docs.python.org/3/library/tkinter.html",
   "Simplaudio&nbsp;(воспроизведение&nbsp;звука) ": "https://simpleaudio.readthedocs.io/en/latest/",
 
+  "Git ": "https://git-scm.com/",
   "Microsoft&nbsp;Visual&nbsp;Studio ": "https://visualstudio.microsoft.com/ru/",
   "Visual&nbsp;Studio&nbsp;Code ": "https://code.visualstudio.com/",
   "Unity ": "https://unity.com/",
-  MySQL: "https://metanit.com/sql/mysql/",
+  "MySQL ": "https://metanit.com/sql/mysql/",
   "Blender ": "https://www.blender.org/",
   "Photoshop ": "https://www.adobe.com/ru/products/photoshop.html",
   "Sony&nbsp;Vegas&nbsp;Pro ": "https://www.vegascreativesoftware.com/ru/",
@@ -70,6 +71,7 @@ const frameworksLibrariesPlugins = {
 };
 
 const workEnvironment = {
+  Git: "Git ",
   MicrosoftVisualStudio: "Microsoft&nbsp;Visual&nbsp;Studio ",
   VisualStudioCode: "Visual&nbsp;Studio&nbsp;Code ",
   Unity: "Unity ",
@@ -124,6 +126,7 @@ const minecraftIndustrialization = [
   frameworksLibrariesPlugins["PluginYG"],
   workEnvironment["Unity"],
   workEnvironment["MicrosoftVisualStudio"],
+  workEnvironment["Git"],
   workEnvironment["Photoshop"],
   methodologies["OOP"],
   methodologies["SOLID"],
@@ -140,6 +143,7 @@ const furnitureShop = [
   frameworksLibrariesPlugins["WebGL"],
   workEnvironment["MicrosoftVisualStudio"],
   workEnvironment["Unity"],
+  workEnvironment["Git"],
   methodologies["AdaptiveUI"],
   methodologies["DRY"],
   methodologies["KISS"],
@@ -150,6 +154,7 @@ const characterMenuConcept = [
   frameworksLibrariesPlugins["DOTween"],
   workEnvironment["Unity"],
   workEnvironment["MicrosoftVisualStudio"],
+  workEnvironment["Git"],
   workEnvironment["Photoshop"],
   methodologies["OOP"],
   methodologies["SOLID"],
@@ -165,6 +170,7 @@ const portfolioSite = [
   frameworksLibrariesPlugins["Webpack"],
   frameworksLibrariesPlugins["NPM"],
   workEnvironment["VisualStudioCode"],
+  workEnvironment["Git"],
   methodologies["BEM"],
   methodologies["AdaptiveWebDesign"],
   methodologies["DRY"],
