@@ -2,12 +2,14 @@ class dark{
   static textColor = "white";
   static backgroundColor = "hsla(0, 0%, 5%, 0.3)";
   static buttonBackgroundColor = "hsla(0, 0%, 15%, 0.5)";
+  static backgroundImage = 'url("images/backgrounds/dark/mesh-294.png")';
 }
 
 class light{
   static textColor = "black";
   static backgroundColor = "hsla(0, 0%, 95%, 0.3)";
   static buttonBackgroundColor = "hsla(0, 0%, 65%, 0.5)";
+  static backgroundImage = 'url("images/backgrounds/light/mesh-776.png")';
 }
 
 const darkTheme = {
@@ -34,7 +36,7 @@ themeToggle.forEach((element) => {
         for (let key in darkTheme) {
           document.documentElement.style.setProperty(key, darkTheme[key]);
         }
-        body.style.backgroundImage = 'url("images/backgrounds/dark/mesh-294.png")';
+        changeBackgroundImage(dark.backgroundImage);
         themeToggle[i].children[0].src = "images/other/sun.avif";
         themeToggle[i].index = 1;
 
@@ -50,8 +52,7 @@ themeToggle.forEach((element) => {
           document.documentElement.style.setProperty(key, lightTheme[key]);
           // localStorage.setItem(key, lightTheme[key]);
         }
-
-        body.style.backgroundImage = 'url("images/backgrounds/light/mesh-776.png")';
+        changeBackgroundImage(light.backgroundImage);
         themeToggle[i].children[0].src = "images/other/moon.avif";
         themeToggle[i].index = 2;
 
@@ -63,7 +64,11 @@ themeToggle.forEach((element) => {
 });
 
 function init(){
-  body.style.backgroundImage = 'url("images/backgrounds/dark/mesh-294.png")';
+  changeBackgroundImage(dark.backgroundImage);
+}
+
+function changeBackgroundImage(imgSrc){
+  body.style.backgroundImage = imgSrc;
 }
 
 // themeToggle.forEach((element) => {

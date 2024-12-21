@@ -506,6 +506,7 @@ details summary ~ div{
     color: var(--text-color);
     border-bottom: 1px solid var(--border-color);
     background-color: var(--background-color);
+    backdrop-filter: blur(var(--offset-10px));
     
     z-index: 1;
 }
