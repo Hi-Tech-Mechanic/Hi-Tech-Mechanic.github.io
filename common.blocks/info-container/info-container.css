@@ -5,4 +5,8 @@
     padding: var(--offset-10px);
     margin: var(--offset-10px);
     margin-left: 0;
+
+    /* background-color: hsla(from var(--background-color) h s l calc(a - 0.7)); */
+    /* background-color: hsla(0, 0%, 0%, 0.5); */
+    background-color: var(--background-color);
 }

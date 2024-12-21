@@ -41,9 +41,9 @@ details summary ~ div{
 :root{
     --text-color: white;
     --border-color: grey;
-    --background-color: hsl(0, 0%, 5%);
+    --background-color: hsla(0, 0%, 5%, 0.3);
     --button-border-color: grey;
-    --button-background-color: hsl(0, 0%, 15%);
+    --button-background-color: hsla(0, 0%, 15%, 0.5);
     --brend-color: hsl(180, 100%, 50%);
     --brend-shadow-color: hsl(210, 100%, 50%);
 
@@ -385,6 +385,10 @@ details summary ~ div{
     padding: var(--offset-10px);
     margin: var(--offset-10px);
     margin-left: 0;
+
+    /* background-color: hsla(from var(--background-color) h s l calc(a - 0.7)); */
+    /* background-color: hsla(0, 0%, 0%, 0.5); */
+    background-color: var(--background-color);
 }
 /*!********************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./common.blocks/info-container/__header/info-container__header.css ***!

@@ -1,13 +1,13 @@
 class dark{
   static textColor = "white";
-  static backgroundColor = "hsl(0, 0%, 5%)";
-  static buttonBackgroundColor = "hsl(0, 0%, 15%)";
+  static backgroundColor = "hsla(0, 0%, 5%, 0.3)";
+  static buttonBackgroundColor = "hsla(0, 0%, 15%, 0.5)";
 }
 
 class light{
   static textColor = "black";
-  static backgroundColor = "hsl(0, 0%, 95%)";
-  static buttonBackgroundColor = "hsl(0, 0%, 65%)";
+  static backgroundColor = "hsla(0, 0%, 95%, 0.3)";
+  static buttonBackgroundColor = "hsla(0, 0%, 65%, 0.5)";
 }
 
 const darkTheme = {
