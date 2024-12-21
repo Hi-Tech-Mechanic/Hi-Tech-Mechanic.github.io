@@ -17,7 +17,8 @@
     /* border-color: var(--text-color); todo */
     border-color: white;
     border-radius: var(--average-border-radius);
-
+    
+    cursor: pointer;
     transition: 
     background-color var(--animation-duration-03s);
 }

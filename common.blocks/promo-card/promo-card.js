@@ -1,3 +1,5 @@
+const body = document.getElementById("body");
+
 const cards = [...document.querySelectorAll(".promo-card")];
 const cardsBorders = [...document.querySelectorAll(".promo-card__animated-border")];
 
@@ -5,6 +7,7 @@ const popupOverlay = document.getElementById("popup-overlay");
 const popupPicture = document.getElementById("extended-image");
 const popupOverlayExitButton = document.getElementById("overlay-exit-button");
 
+popupOverlay.addEventListener("click", exitExtendedPictureOverlay);
 popupOverlayExitButton.addEventListener("click", exitExtendedPictureOverlay);
 
 cards.forEach((el) => {
@@ -44,9 +47,11 @@ function closeAnimatedBorder() {
 
 function openExtendedPictureOverlay(imageSrc) {
   popupOverlay.style.display = "block";
+  popupOverlay.style.backdropFilter = "blur(5px)";
   popupPicture.setAttribute("src", imageSrc);
 }
 
 function exitExtendedPictureOverlay() {
   popupOverlay.style.display = "none";
+  popupOverlay.style.backdropFilter = "none";
 }

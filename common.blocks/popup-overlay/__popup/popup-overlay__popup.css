@@ -4,15 +4,17 @@
     justify-content: center;
     align-items: center;
     width: calc(100% - var(--offset-40px));
+    
     top: 50%;
     left: 50%;
     margin: 0 auto;
     padding: var(--offset-10px);
     transform: translate(-50%, -50%);
   
-    background-color: hsla(0, 0%, 0%, 0.7);
-    box-shadow: 0 0 var(--offset-20px) var(--text-color);
+    background-color: hsla(0, 0%, 0%, 0.5);
+    box-shadow: 0 0 var(--offset-10px) white;
     border-radius: var(--average-border-radius);
     
-    object-fit: contain;
+    z-index: 2;
+    object-fit: cover;
 }

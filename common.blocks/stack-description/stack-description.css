@@ -1,5 +1,7 @@
 .stack-description{
-    display: inline;
+    display: inline-block;
+    margin-top: var(--offset-10px);
+    margin-bottom: var(--offset-20px);
 
     font-size: larger;
     font-weight: 600;

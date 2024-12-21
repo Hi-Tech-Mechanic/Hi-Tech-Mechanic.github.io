@@ -1,15 +1,19 @@
-.body{
-    max-width: var(--content-max-width);
-    min-width: var(--content-min-width);
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 80px;
+.body {
+  max-width: var(--content-max-width);
+  min-width: var(--content-min-width);
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 80px;
 
-    font-family:  "Kelly Slab", sans-serif;
-    font-weight: 400;
-    font-size: large;
-    font-style: normal;
-    
-    color: var(--text-color);
-    background-color: var(--background-color);
+  font-weight: 400;
+  font-size: large;
+  font-style: normal;
+
+  color: var(--text-color);
+  background-color: var(--background-color);
+  background-image: none;
+  background-repeat: space;
+  background-size: 100% 100%;
+
+  backdrop-filter: none;
 }

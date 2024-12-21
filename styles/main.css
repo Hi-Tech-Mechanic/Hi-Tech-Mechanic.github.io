@@ -1,19 +1,10 @@
 *{
     margin: 0;
     padding: 0;
-    scroll-behavior: smooth;
     box-sizing: content-box;
+    font-family:  "Kelly Slab", sans-serif;
+    scroll-behavior: smooth;
 }
-
-/* @font-face {
-    font-family: "zarubkaType-Regular";
-    src: url('fonts/zarubkaType-Regular.ttf') format('ttf');
-    font-weight: 400;
-} */
-
-    .multiverse-memes-font{
-        font-family: 'zarubkaType-Regular', sans-serif;
-    }
 
 details summary ~ div{
     overflow: hidden;

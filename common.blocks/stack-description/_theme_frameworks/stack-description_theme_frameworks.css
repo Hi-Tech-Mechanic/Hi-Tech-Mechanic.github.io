@@ -1,3 +1,4 @@
 .stack-description_theme_frameworks{
+    margin: var(--offset-10px) 0;
     color: var(--technology-frameworks);
 }

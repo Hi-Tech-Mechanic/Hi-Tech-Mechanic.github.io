@@ -1,3 +1,4 @@
 .stack-description_theme_languages{
+    margin: var(--offset-5px) 0 var(--offset-10px) 0;
     color: var(--technology-languages);
 }

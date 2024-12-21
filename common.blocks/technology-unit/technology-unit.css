@@ -4,6 +4,7 @@
     padding-left: 10px;
     padding-right: 6px;
     
+    font-size: var(--font-size-18px);
     text-align: center;
     font-weight: 600;
     line-height: 35px;
@@ -16,9 +17,9 @@
 }
 
 .technology-unit:hover{
-    font-size: larger;
+    font-size:  var(--font-size-22px);
 }
 
 .technology-unit:focus{
-    font-size: larger;
+    font-size: var(--font-size-22px);
 }

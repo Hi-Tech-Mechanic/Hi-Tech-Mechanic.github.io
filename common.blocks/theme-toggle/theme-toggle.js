@@ -23,6 +23,9 @@ const lightTheme = {
 };
 
 const themeToggle = [...document.querySelectorAll(".theme-toggle")];
+const body = document.getElementById("body");
+
+init();
 
 themeToggle.forEach((element) => {
   element.addEventListener("click", function () {
@@ -31,8 +34,7 @@ themeToggle.forEach((element) => {
         for (let key in darkTheme) {
           document.documentElement.style.setProperty(key, darkTheme[key]);
         }
-
-        console.log(themeToggle[i].lastChild);
+        body.style.backgroundImage = 'url("images/backgrounds/dark/mesh-294.png")';
         themeToggle[i].children[0].src = "images/other/sun.avif";
         themeToggle[i].index = 1;
 
@@ -49,7 +51,7 @@ themeToggle.forEach((element) => {
           // localStorage.setItem(key, lightTheme[key]);
         }
 
-        console.log(themeToggle[i].lastChild.src);
+        body.style.backgroundImage = 'url("images/backgrounds/light/mesh-776.png")';
         themeToggle[i].children[0].src = "images/other/moon.avif";
         themeToggle[i].index = 2;
 
@@ -59,6 +61,10 @@ themeToggle.forEach((element) => {
     }
   });
 });
+
+function init(){
+  body.style.backgroundImage = 'url("images/backgrounds/dark/mesh-294.png")';
+}
 
 // themeToggle.forEach((element) => {
 //   element

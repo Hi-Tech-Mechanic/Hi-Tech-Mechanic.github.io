@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: var(--offset-20px);
     margin-bottom: var(--offset-20px);
 
     border: var(--border-thickness-thin) solid var(--border-color);
