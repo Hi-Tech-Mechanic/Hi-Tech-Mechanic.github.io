@@ -56,5 +56,6 @@ module.exports = {
         open: true,
     },
 
-    mode: "development",
+    // mode: "development",
+    mode: "production",
 }
