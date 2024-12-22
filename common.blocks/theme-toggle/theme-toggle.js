@@ -2,14 +2,14 @@ class dark{
   static textColor = "white";
   static backgroundColor = "hsla(0, 0%, 5%, 0.3)";
   static buttonBackgroundColor = "hsla(0, 0%, 15%, 0.5)";
-  static backgroundImage = 'url("images/backgrounds/dark/mesh-294.png")';
+  static backgroundImage = 'url("images/backgrounds/dark/mesh-294.avif")';
 }
 
 class light{
   static textColor = "black";
   static backgroundColor = "hsla(0, 0%, 95%, 0.3)";
   static buttonBackgroundColor = "hsla(0, 0%, 65%, 0.5)";
-  static backgroundImage = 'url("images/backgrounds/light/mesh-776.png")';
+  static backgroundImage = 'url("images/backgrounds/light/mesh-776.avif")';
 }
 
 const darkTheme = {
@@ -64,6 +64,7 @@ themeToggle.forEach((element) => {
 });
 
 function init(){
+  document.documentElement.style.setProperty("--background-color", dark.backgroundColor);
   changeBackgroundImage(dark.backgroundImage);
 }
 

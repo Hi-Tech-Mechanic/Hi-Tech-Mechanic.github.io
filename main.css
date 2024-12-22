@@ -41,7 +41,7 @@ details summary ~ div{
 :root{
     --text-color: white;
     --border-color: grey;
-    --background-color: hsla(0, 0%, 5%, 0.3);
+    --background-color: hsla(0, 0%, 5%, 1);
     --button-border-color: grey;
     --button-background-color: hsla(0, 0%, 15%, 0.5);
     --brend-color: hsl(180, 100%, 50%);
@@ -346,7 +346,7 @@ details summary ~ div{
 .icon{
     width: 40px;
     height: 40px;
-    margin-right: 5px;
+    margin-right: var(--offset-5px);
     border-radius: 50%;
 }
 /*!***********************************************************************************************************!*\

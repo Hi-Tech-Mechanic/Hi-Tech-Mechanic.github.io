@@ -1,7 +1,7 @@
 :root{
     --text-color: white;
     --border-color: grey;
-    --background-color: hsla(0, 0%, 5%, 0.3);
+    --background-color: hsla(0, 0%, 5%, 1);
     --button-border-color: grey;
     --button-background-color: hsla(0, 0%, 15%, 0.5);
     --brend-color: hsl(180, 100%, 50%);
