@@ -6,13 +6,13 @@
     font-weight: 600;
     
     cursor: pointer;
-    transition: font-size var(--animation-duration-03s);
+    transition: color var(--animation-duration-03s);
 }
 
-.details-summary:hover{
-    font-size: 24px;
+.info-container__summary:hover{
+    color: var(--brend-color);
 }
 
-.details-summary:focus{
-    font-size: 24px;
+.info-container__summary:focus{
+    color: rgb(111, 230, 0)
 }

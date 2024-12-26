@@ -18,3 +18,37 @@ details summary ~ div{
     from {max-height:0;}
     to {max-height:2500px;}
     }
+/* 
+    .link-test {
+        position: relative;
+      }
+      
+      .link-test::before,
+      .link-test::after {
+        content: "";
+        height: 2px;
+        width: 2px;
+        position: absolute;
+        transition: all 0.6s;
+      }
+      
+      .link-test::before {
+        top: 0;
+        left: 0;
+        border-top: 4px solid #ffffff;
+        border-left: 4px solid #ffffff;
+      }
+      
+      .link-test::after {
+        bottom: 0;
+        right: 0;
+        border-bottom: 4px solid #ffffff;
+        border-right: 4px solid #ffffff;
+      }
+      
+      .link-test:hover::before,
+      .link-test:hover::after {
+        width: calc(100% - 4px);
+        height: calc(100% - 4px);
+        transition: all 0.3s;
+      } */

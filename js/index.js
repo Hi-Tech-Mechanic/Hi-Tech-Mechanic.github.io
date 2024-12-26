@@ -26,6 +26,7 @@ import "../common.blocks/footer/footer.css";
 import "../common.blocks/footer/__header/footer__header.css";
 
 import "../common.blocks/icon/icon.css";
+import "../common.blocks/icon/_square/icon_square.css";
 import "../common.blocks/image-content-grid/image-content-grid.css";
 
 import "../common.blocks/info-container/info-container.css";
