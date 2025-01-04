@@ -1,0 +1,10 @@
+.info-container__name {
+  display: inline-block;
+  /* margin-left: 50px; */
+
+  transition: color var(--animation-duration-03s);
+}
+
+.info-container__name:hover {
+  color: var(--brend-color);
+}

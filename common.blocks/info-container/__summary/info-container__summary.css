@@ -1,18 +1,9 @@
 .info-container__summary{
-    margin-bottom: 10px;
+    position: relative;
     padding-right: 120px;
     
     font-size: larger;
     font-weight: 600;
-    
+
     cursor: pointer;
-    transition: color var(--animation-duration-03s);
-}
-
-.info-container__summary:hover{
-    color: var(--brend-color);
-}
-
-.info-container__summary:focus{
-    color: rgb(111, 230, 0)
 }

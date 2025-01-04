@@ -1,0 +1,15 @@
+.bulb {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: gold;
+  box-shadow: 0 0 2px gold;
+  animation: bulb-pulsate 2s infinite alternate;
+}
+
+@keyframes bulb-pulsate {
+  to {
+    box-shadow: 0 0 10px gold;
+  }
+}

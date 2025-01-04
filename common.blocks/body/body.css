@@ -10,7 +10,7 @@
   font-style: normal;
 
   color: var(--text-color);
-  background-color: var(--background-color);
+  background-color: var(--window-background-color);
   background-image: none;
   background-repeat: space;
   background-size: 100% 100%;

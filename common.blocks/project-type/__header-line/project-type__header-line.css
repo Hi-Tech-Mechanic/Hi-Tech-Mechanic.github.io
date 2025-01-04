@@ -1,0 +1,15 @@
+.project-type__header-line {
+  display: block;
+  height: 2px;
+  margin-right: 10px;
+
+  background-color: rgba(0, 247, 255, 0.1);
+  animation: box-pulsate 5s infinite alternate;
+}
+
+@keyframes box-pulsate {
+  to {
+    box-shadow: 0 0 var(--offset-10px) var(--brend-color);
+    background-color: rgba(0, 195, 255, 0.575);
+  }
+}

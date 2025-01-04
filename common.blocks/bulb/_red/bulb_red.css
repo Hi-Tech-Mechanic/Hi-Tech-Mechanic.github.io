@@ -1,0 +1,11 @@
+.bulb_red {
+  background: red;
+  box-shadow: 0 0 2px red;
+  animation: bulb-pulsate_red 2s infinite alternate;
+}
+
+@keyframes bulb-pulsate_red {
+  to {
+    box-shadow: 0 0 10px rgb(255, 0, 0);
+  }
+}

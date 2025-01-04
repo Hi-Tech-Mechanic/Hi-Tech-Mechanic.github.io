@@ -2,9 +2,11 @@
     display: inline;
     position: absolute;
     padding: 5px;
-    right: var(--offset-10px);
+    top: 0;
+    right: 0;
 
     font-size: large;
+    font-weight: 600;
     text-align: center;
 
     color: #000;

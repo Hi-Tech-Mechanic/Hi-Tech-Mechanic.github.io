@@ -1,54 +1,24 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: content-box;
-    font-family:  "Kelly Slab", sans-serif;
-    scroll-behavior: smooth;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+  font-family: "Kelly Slab", sans-serif;
+  scroll-behavior: smooth;
 }
 
-details summary ~ div{
-    overflow: hidden;
+*::selection {
+  background-color: var(--brend-color);
+  color: black;
 }
 
-    details[open] summary ~ div{ 
-        animation: sweep-open 2s ease-in-out;
-    }
+div.detailts-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1s ease-out;
+}
 
-    @keyframes sweep-open {
-    from {max-height:0;}
-    to {max-height:2500px;}
-    }
-/* 
-    .link-test {
-        position: relative;
-      }
-      
-      .link-test::before,
-      .link-test::after {
-        content: "";
-        height: 2px;
-        width: 2px;
-        position: absolute;
-        transition: all 0.6s;
-      }
-      
-      .link-test::before {
-        top: 0;
-        left: 0;
-        border-top: 4px solid #ffffff;
-        border-left: 4px solid #ffffff;
-      }
-      
-      .link-test::after {
-        bottom: 0;
-        right: 0;
-        border-bottom: 4px solid #ffffff;
-        border-right: 4px solid #ffffff;
-      }
-      
-      .link-test:hover::before,
-      .link-test:hover::after {
-        width: calc(100% - 4px);
-        height: calc(100% - 4px);
-        transition: all 0.3s;
-      } */
+details[open] + div.detailts-content {
+  max-height: 4000px;
+  border-color: #888;
+  transition: max-height 2s ease-out;
+}

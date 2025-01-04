@@ -1,6 +1,7 @@
 class dark{
   static textColor = "white";
   static backgroundColor = "hsla(0, 0%, 5%, 0.3)";
+  static windowBackgroundColor = "hsl(0, 0%, 5%)";
   static buttonBackgroundColor = "hsla(0, 0%, 15%, 0.5)";
   static backgroundImage = 'url("images/backgrounds/dark/mesh-294.avif")';
 }
@@ -8,6 +9,7 @@ class dark{
 class light{
   static textColor = "black";
   static backgroundColor = "hsla(0, 0%, 95%, 0.3)";
+  static windowBackgroundColor = "hsl(0, 0%, 95%)";
   static buttonBackgroundColor = "hsla(0, 0%, 65%, 0.5)";
   static backgroundImage = 'url("images/backgrounds/light/mesh-776.avif")';
 }
@@ -15,12 +17,14 @@ class light{
 const darkTheme = {
   "--text-color": dark.textColor,
   "--background-color": dark.backgroundColor,
+  "--window-background-color": dark.windowBackgroundColor,
   "--button-background-color": dark.buttonBackgroundColor,
 };
 
 const lightTheme = {
   "--text-color": light.textColor,
   "--background-color": light.backgroundColor,
+  "--window-background-color": light.windowBackgroundColor,
   "--button-background-color": light.buttonBackgroundColor,
 };
 

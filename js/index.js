@@ -11,6 +11,10 @@ import "../common.blocks/body/body.css";
 import "../common.blocks/brand/brand.css";
 import "../common.blocks/button/button.css";
 
+import "../common.blocks/bulb/bulb.css";
+import "../common.blocks/bulb/_green/bulb_green.css";
+import "../common.blocks/bulb/_red/bulb_red.css";
+
 import "../common.blocks/difficulty-tag/difficulty-tag.css";
 import "../common.blocks/difficulty-tag/_theme_easy/difficulty-tag_theme_easy.css";
 import "../common.blocks/difficulty-tag/_theme_medium/difficulty-tag_theme_medium.css";
@@ -30,8 +34,8 @@ import "../common.blocks/icon/_square/icon_square.css";
 import "../common.blocks/image-content-grid/image-content-grid.css";
 
 import "../common.blocks/info-container/info-container.css";
-import "../common.blocks/info-container/__header/info-container__header.css";
 import "../common.blocks/info-container/__description/info-container__description.css";
+import "../common.blocks/info-container/__name/info-container__name.css";
 import "../common.blocks/info-container/__summary/info-container__summary.css";
 import "../common.blocks/info-container/__video/info-container__video.css";
 
@@ -50,6 +54,8 @@ import "../common.blocks/popup-overlay/__popup/popup-overlay__popup.css";
 import "../common.blocks/popup-overlay/__extended-image/popup-overlay__extended-image.css";
 
 import "../common.blocks/project-type/project-type.css";
+import "../common.blocks/project-type/__header/project-type__header.css";
+import "../common.blocks/project-type/__header-line/project-type__header-line.css";
 
 import "../common.blocks/stack-description/stack-description.css";
 import "../common.blocks/stack-description/_theme_languages/stack-description_theme_languages.css";
@@ -70,6 +76,8 @@ import "../common.blocks/theme-toggle/theme-toggle.css";
 import "../common.blocks/promo-card/promo-card.css"
 import "../common.blocks/promo-card/promo-card.js"
 import "../common.blocks/promo-card/__animated-border/promo-card__animated-border.css"
+
+import "../common.blocks/recursive-mirror/recursive-mirror.css"
 
 import "../common.blocks/image/image.css"
 

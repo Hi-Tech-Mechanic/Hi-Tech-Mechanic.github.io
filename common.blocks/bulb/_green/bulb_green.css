@@ -1,0 +1,11 @@
+.bulb_green {
+  background: greenyellow;
+  box-shadow: 0 0 2px greenyellow;
+  animation: bulb-pulsate_green 2s infinite alternate;
+}
+
+@keyframes bulb-pulsate_green {
+  to {
+    box-shadow: 0 0 10px greenyellow;
+  }
+}
