@@ -1,57 +1,28 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: content-box;
-    font-family:  "Kelly Slab", sans-serif;
-    scroll-behavior: smooth;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+  font-family: "Kelly Slab", sans-serif;
+  scroll-behavior: smooth;
 }
 
-details summary ~ div{
-    overflow: hidden;
+*::selection {
+  background-color: var(--brend-color);
+  color: black;
 }
 
-    details[open] summary ~ div{ 
-        animation: sweep-open 2s ease-in-out;
-    }
+div.detailts-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1s ease-out;
+}
 
-    @keyframes sweep-open {
-    from {max-height:0;}
-    to {max-height:2500px;}
-    }
-/* 
-    .link-test {
-        position: relative;
-      }
-      
-      .link-test::before,
-      .link-test::after {
-        content: "";
-        height: 2px;
-        width: 2px;
-        position: absolute;
-        transition: all 0.6s;
-      }
-      
-      .link-test::before {
-        top: 0;
-        left: 0;
-        border-top: 4px solid #ffffff;
-        border-left: 4px solid #ffffff;
-      }
-      
-      .link-test::after {
-        bottom: 0;
-        right: 0;
-        border-bottom: 4px solid #ffffff;
-        border-right: 4px solid #ffffff;
-      }
-      
-      .link-test:hover::before,
-      .link-test:hover::after {
-        width: calc(100% - 4px);
-        height: calc(100% - 4px);
-        transition: all 0.3s;
-      } */
+details[open] + div.detailts-content {
+  max-height: 4000px;
+  border-color: #888;
+  transition: max-height 2s ease-out;
+}
+
 .cormorant-regular p, b{
     font-family: "Cormorant Infant", sans-serif;
     font-size: var(--font-size-30px);
@@ -66,6 +37,7 @@ details summary ~ div{
 :root{
     --text-color: white;
     --border-color: grey;
+    --window-background-color: hsl(0, 0%, 5%);
     --background-color: hsla(0, 0%, 5%, 1);
     --button-border-color: grey;
     --button-background-color: hsla(0, 0%, 15%, 0.5);
@@ -134,7 +106,7 @@ details summary ~ div{
   font-style: normal;
 
   color: var(--text-color);
-  background-color: var(--background-color);
+  background-color: var(--window-background-color);
   background-image: none;
   background-repeat: space;
   background-size: 100% 100%;
@@ -186,13 +158,55 @@ details summary ~ div{
 .button:focus{
     background-color: lch(from var(--button-background-color) calc(l + 20) c h);
 }
+.bulb {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: gold;
+  box-shadow: 0 0 2px gold;
+  animation: bulb-pulsate 2s infinite alternate;
+}
+
+@keyframes bulb-pulsate {
+  to {
+    box-shadow: 0 0 10px gold;
+  }
+}
+
+.bulb_green {
+  background: greenyellow;
+  box-shadow: 0 0 2px greenyellow;
+  animation: bulb-pulsate_green 2s infinite alternate;
+}
+
+@keyframes bulb-pulsate_green {
+  to {
+    box-shadow: 0 0 10px greenyellow;
+  }
+}
+
+.bulb_red {
+  background: red;
+  box-shadow: 0 0 2px red;
+  animation: bulb-pulsate_red 2s infinite alternate;
+}
+
+@keyframes bulb-pulsate_red {
+  to {
+    box-shadow: 0 0 10px rgb(255, 0, 0);
+  }
+}
+
 .difficulty-tag{
     display: inline;
     position: absolute;
     padding: 5px;
-    right: var(--offset-10px);
+    top: 0;
+    right: 0;
 
     font-size: large;
+    font-weight: 600;
     text-align: center;
 
     color: #000;
@@ -308,18 +322,22 @@ details summary ~ div{
     border-radius: var(--average-border-radius);
 }
 .footer__header{
+    display: flex;
+    gap: var(--offset-5px);
+
     font-size: larger;
     font-weight: 600;
 }
 .icon{
     width: 40px;
     height: 40px;
-    margin-right: var(--offset-5px);
     border-radius: 50%;
 }
 .icon_square{
-    height: 35px;
-    width: 35px;
+    height: 30px;
+    width: 30px;
+
+    background-color: var(--window-background-color);
     border-radius: 25%;
 }
 .image-content-grid{
@@ -353,43 +371,36 @@ details summary ~ div{
     margin: var(--offset-10px);
     margin-left: 0;
 
-    /* background-color: hsla(from var(--background-color) h s l calc(a - 0.7)); */
-    /* background-color: hsla(0, 0%, 0%, 0.5); */
     background-color: var(--background-color);
-}
-.info-container__header{
-    margin-top: var(--offset-40px);
-    
-    font-size: var(--font-size-26px);
-    font-weight: 600;
 }
 .info-container__description{
     margin: var(--offset-10px);
 }
+.info-container__name {
+  display: inline-block;
+  /* margin-left: 50px; */
+
+  transition: color var(--animation-duration-03s);
+}
+
+.info-container__name:hover {
+  color: var(--brend-color);
+}
+
 .info-container__summary{
-    margin-bottom: 10px;
+    position: relative;
     padding-right: 120px;
     
     font-size: larger;
     font-weight: 600;
-    
+
     cursor: pointer;
-    transition: color var(--animation-duration-03s);
-}
-
-.info-container__summary:hover{
-    color: var(--brend-color);
-}
-
-.info-container__summary:focus{
-    color: rgb(111, 230, 0)
 }
 .info-container__video{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: var(--offset-20px);
-    margin-bottom: var(--offset-20px);
+    margin: var(--offset-20px) var(--offset-10px);
 
     border: var(--border-thickness-thin) solid var(--border-color);
     border-radius: var(--average-border-radius);
@@ -412,6 +423,8 @@ details summary ~ div{
 .link_contact{
     display: flex;
     align-items: center;
+    gap: var(--offset-5px);
+
     font-size: large;
 }
 .link_stack{
@@ -487,8 +500,39 @@ details summary ~ div{
     max-height: 1000px;
   }
 .project-type{
+    margin-top: var(--offset-40px);
     margin-left: var(--offset-10px);
 }
+.project-type__header {
+    font-size: var(--font-size-26px);
+    font-weight: 600;
+    text-align: center;
+
+    animation: text-pulsate 5s infinite alternate;
+}
+
+@keyframes text-pulsate {
+    to {
+        text-shadow: 0 0 30px var(--brend-color);
+    }
+}
+
+.project-type__header-line {
+  display: block;
+  height: 2px;
+  margin-right: 10px;
+
+  background-color: rgba(0, 247, 255, 0.1);
+  animation: box-pulsate 5s infinite alternate;
+}
+
+@keyframes box-pulsate {
+  to {
+    box-shadow: 0 0 var(--offset-10px) var(--brend-color);
+    background-color: rgba(0, 195, 255, 0.575);
+  }
+}
+
 .stack-description{
     display: inline-block;
     margin-top: var(--offset-10px);
@@ -496,7 +540,7 @@ details summary ~ div{
 
     font-size: larger;
     font-weight: 600;
-    line-height: 30px;
+    line-height: 40px;
 }
 .stack-description_theme_languages{
     margin: var(--offset-5px) 0 var(--offset-10px) 0;
@@ -511,7 +555,7 @@ details summary ~ div{
     color: var(--technology-work-environment);
 }
 .stack-description_theme_methodologyes{
-    margin: var(--offset-10px) 0 var(--offset-5px) 0;
+    margin: var(--offset-10px) 0;
     color: var(--technology-methodologyes);
 }
 .technology-unit{
@@ -622,6 +666,21 @@ details summary ~ div{
   initial-value: 0deg;
   inherits: false;
 }
+.recursive-mirror {
+  display: inline-flex;
+  padding: 4px;
+  gap: 5px;
+  background-color: rgba(0, 255, 221, 0.1);
+  border: 1px solid rgba(11, 149, 184, 0.671);
+  border-radius: 10px;
+
+  transition: padding 0.3s;
+}
+
+.recursive-mirror:hover {
+  padding: 3px;
+}
+
 .image{
     max-width: 100%;
     max-height: 100%;
