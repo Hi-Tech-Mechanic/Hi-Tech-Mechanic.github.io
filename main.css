@@ -124,7 +124,7 @@ details[open] + div.detailts-content {
     font-size: var(--font-size-34px);
     font-weight: 900;
     text-decoration: none;
-    text-shadow: 0 0 5rem var(--brend-shadow-color);
+    text-shadow: 0 0 40px var(--brend-shadow-color);
     
     color: var(--brend-color);
 
@@ -132,11 +132,11 @@ details[open] + div.detailts-content {
 }
 
 .brand:hover{
-    text-shadow: 0 0 2rem var(--brend-shadow-color);
+    text-shadow: 0 0 20px var(--brend-shadow-color);
 }
 
 .brand:focus{
-    text-shadow: 0 0 2rem var(--brend-shadow-color);
+    text-shadow: 0 0 20px var(--brend-shadow-color);
 }
 .button {
   padding: var(--offset-5px);
@@ -166,9 +166,6 @@ details[open] + div.detailts-content {
   color: var(--text-color);
   text-decoration: none;
 }
-
-
-
 .button_header {
   padding: var(--offset-10px);
 

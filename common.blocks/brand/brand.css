@@ -4,7 +4,7 @@
     font-size: var(--font-size-34px);
     font-weight: 900;
     text-decoration: none;
-    text-shadow: 0 0 5rem var(--brend-shadow-color);
+    text-shadow: 0 0 40px var(--brend-shadow-color);
     
     color: var(--brend-color);
 
@@ -12,9 +12,9 @@
 }
 
 .brand:hover{
-    text-shadow: 0 0 2rem var(--brend-shadow-color);
+    text-shadow: 0 0 20px var(--brend-shadow-color);
 }
 
 .brand:focus{
-    text-shadow: 0 0 2rem var(--brend-shadow-color);
+    text-shadow: 0 0 20px var(--brend-shadow-color);
 }
