@@ -1,0 +1,6 @@
+.button_header {
+  padding: var(--offset-10px);
+
+  font-size: large;
+  font-weight: 600;
+}

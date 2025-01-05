@@ -10,6 +10,8 @@ import "../styles/roots/content-size.css";
 import "../common.blocks/body/body.css";
 import "../common.blocks/brand/brand.css";
 import "../common.blocks/button/button.css";
+import "../common.blocks/button/_link/button_link.css";
+import "../common.blocks/button/_header/button_header.css";
 
 import "../common.blocks/bulb/bulb.css";
 import "../common.blocks/bulb/_green/bulb_green.css";
@@ -38,6 +40,7 @@ import "../common.blocks/info-container/__description/info-container__descriptio
 import "../common.blocks/info-container/__name/info-container__name.css";
 import "../common.blocks/info-container/__summary/info-container__summary.css";
 import "../common.blocks/info-container/__video/info-container__video.css";
+import "../common.blocks/info-container/__other-skills/info-container__other-skills.css";
 
 import "../common.blocks/link/link.css";
 import "../common.blocks/link/_contact/link_contact.css";
