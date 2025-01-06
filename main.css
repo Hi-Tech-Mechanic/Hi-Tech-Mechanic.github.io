@@ -19,11 +19,11 @@ svg{
 div.detailts-content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 1s ease-out;
+  transition: max-height 0.5s ease-out;
 }
 
 details[open] + div.detailts-content {
-  max-height: 4000px;
+  max-height: 5500px;
   transition: max-height 2s ease-out;
 }
 
@@ -54,9 +54,9 @@ details[open] + div.detailts-content {
     --difficulty-very-hard: hsl(0, 100%, 70%);
 
     --technology-languages: hsl(120, 80%, 50%);
-    --technology-frameworks: hsl(200, 80%, 50%);
+    --technology-frameworks: hsl(190, 80%, 50%);
     --technology-work-environment: hsl(250, 80%, 50%);
-    --technology-methodologyes: hsl(285, 80%, 50%);
+    --technology-methodologyes: hsl(335, 80%, 50%);
 }
 :root{
     --font-size-16px: 16px;
@@ -139,7 +139,10 @@ details[open] + div.detailts-content {
     text-shadow: 0 0 20px var(--brend-shadow-color);
 }
 .button {
+  display: inline flex;
   padding: var(--offset-5px);
+  align-items: center;
+  gap: var(--offset-5px);
 
   text-align: center;
   background-color: var(--button-background-color);
@@ -158,10 +161,6 @@ details[open] + div.detailts-content {
 }
 
 .button_link {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--offset-5px);
-
   font-size: large;
   color: var(--text-color);
   text-decoration: none;
@@ -173,6 +172,16 @@ details[open] + div.detailts-content {
   font-weight: 600;
 }
 
+.button_non-effect{
+    display: inline flex;
+    padding: var(--offset-5px);
+    gap: var(--offset-5px);
+  
+    text-align: center;
+    background-color: var(--button-background-color);
+    border: 1px solid var(--button-border-color);
+    border-radius: var(--average-border-radius);
+}
 .bulb {
   display: block;
   width: 10px;
@@ -325,20 +334,22 @@ details[open] + div.detailts-content {
 .exit-button:focus{
     background-color: lch(from var(--background-color) calc(l - 15) c h);
 }
-.footer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: calc(100% - 20px);
-    min-width: var(--content-min-width);
-    margin: var(--offset-20px) auto var(--offset-10px) auto;
-    padding: var(--offset-10px) 0;
+.footer {
+  width: 100%;
+  min-width: var(--content-min-width);
+  margin: var(--offset-20px) auto var(--offset-10px) auto;
+  padding: var(--offset-10px) 0;
 
-    background-color: var(--button-background-color);
-    border: 1px solid var(--border-color);
-    border-radius: var(--average-border-radius);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--button-background-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--average-border-radius);
 }
+
 .footer__header{
     display: flex;
     gap: var(--offset-5px);
@@ -386,8 +397,7 @@ details[open] + div.detailts-content {
     border: 1px solid var(--border-color);
     border-radius: var(--average-border-radius);
     padding: var(--offset-10px);
-    margin: var(--offset-10px);
-    margin-left: 0;
+    margin: var(--offset-10px) 0;
 
     background-color: var(--background-color);
 }
@@ -426,10 +436,10 @@ details[open] + div.detailts-content {
 }
 .info-container__other-skills {
   display: flex;
-  margin-bottom: var(--offset-10px);
+  flex-direction: row;
   align-items: center;
-  gap: var(--offset-5px);
   flex-wrap: wrap;
+  gap: var(--offset-5px);
 }
 
 .link{
@@ -528,7 +538,6 @@ details[open] + div.detailts-content {
   }
 .project-type{
     margin-top: var(--offset-40px);
-    margin-left: var(--offset-10px);
 }
 .project-type__header {
     font-size: var(--font-size-26px);
@@ -547,7 +556,8 @@ details[open] + div.detailts-content {
 .project-type__header-line {
   display: block;
   height: 2px;
-  margin-right: 10px;
+  width: 100%;
+  margin: 0 auto;
 
   background-color: rgba(0, 247, 255, 0.1);
   animation: box-pulsate 5s infinite alternate;
@@ -560,15 +570,19 @@ details[open] + div.detailts-content {
   }
 }
 
-.stack-description{
-    display: inline-block;
-    margin-top: var(--offset-10px);
-    margin-bottom: var(--offset-20px);
+.stack-description {
+  display: inline-flex;
+  margin-top: var(--offset-10px);
+  margin-bottom: var(--offset-20px);
+  flex-wrap: wrap;
+  align-items: center;
+  row-gap: 5px;
 
-    font-size: larger;
-    font-weight: 600;
-    line-height: 40px;
+  font-size: larger;
+  font-weight: 600;
+  line-height: var(--offset-40px);
 }
+
 .stack-description_theme_languages{
     margin: var(--offset-5px) 0 var(--offset-10px) 0;
     color: var(--technology-languages);
@@ -585,31 +599,32 @@ details[open] + div.detailts-content {
     margin: var(--offset-10px) 0;
     color: var(--technology-methodologyes);
 }
-.technology-unit{
-    display: inline;
-    margin: 0px 4px;
-    padding-left: 10px;
-    padding-right: 6px;
-    
-    font-size: var(--font-size-18px);
-    text-align: center;
-    font-weight: 600;
-    line-height: 35px;
+.technology-unit {
+  display: inline;
+  margin: 0px 4px;
+  height: 25px;
+  padding: 0 var(--offset-10px);
 
-    border: var(--border-thickness-medium) solid;
-    border-radius: var(--average-border-radius);
-    
-    cursor: pointer;
-    transition: font-size var(--animation-duration-03s);
+  font-size: var(--font-size-18px);
+  text-align: center;
+  font-weight: 600;
+  line-height: 25px;
+
+  border: var(--border-thickness-medium) solid;
+  border-radius: 8px;
+
+  cursor: pointer;
+  transition: font-size var(--animation-duration-03s);
 }
 
-.technology-unit:hover{
-    font-size:  var(--font-size-22px);
+.technology-unit:hover {
+  font-size: var(--font-size-22px);
 }
 
-.technology-unit:focus{
-    font-size: var(--font-size-22px);
+.technology-unit:focus {
+  font-size: var(--font-size-22px);
 }
+
 .technology-unit_theme_frameworks{
     background-color: var(--technology-frameworks);
     box-shadow: 0 0 var(--offset-5px) var(--technology-frameworks);
@@ -694,9 +709,7 @@ details[open] + div.detailts-content {
   inherits: false;
 }
 .recursive-mirror {
-  display: inline-flex;
   padding: 4px;
-  gap: 5px;
   background-color: rgba(0, 255, 221, 0.1);
   border: 1px solid rgba(11, 149, 184, 0.671);
   border-radius: 10px;
@@ -708,6 +721,9 @@ details[open] + div.detailts-content {
   padding: 3px;
 }
 
+.recursive-mirror_full-width{
+    width: calc(100% - var(--offset-10px))
+}
 .image{
     max-width: 100%;
     max-height: 100%;
