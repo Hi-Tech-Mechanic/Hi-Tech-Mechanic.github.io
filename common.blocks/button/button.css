@@ -1,5 +1,8 @@
 .button {
+  display: inline flex;
   padding: var(--offset-5px);
+  align-items: center;
+  gap: var(--offset-5px);
 
   text-align: center;
   background-color: var(--button-background-color);

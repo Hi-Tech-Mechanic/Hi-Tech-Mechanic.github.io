@@ -19,10 +19,10 @@ svg{
 div.detailts-content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 1s ease-out;
+  transition: max-height 0.5s ease-out;
 }
 
 details[open] + div.detailts-content {
-  max-height: 4000px;
+  max-height: 5500px;
   transition: max-height 2s ease-out;
 }

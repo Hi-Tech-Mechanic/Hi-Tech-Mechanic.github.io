@@ -1,7 +1,7 @@
 .info-container__other-skills {
   display: flex;
-  margin-bottom: var(--offset-10px);
+  flex-direction: row;
   align-items: center;
-  gap: var(--offset-5px);
   flex-wrap: wrap;
+  gap: var(--offset-5px);
 }

@@ -1,98 +1,95 @@
 const linksArray = {
-  "C# ": "https://learn.microsoft.com/ru-ru/dotnet/csharp/",
-  "JavaScript ": "https://learn.javascript.ru/",
-  "HTML ": "https://doka.guide/html/",
-  "CSS ": "https://doka.guide/css/",
-  "SQL ": "https://www.w3schools.com/sql/default.asp",
-  "PHP ": "https://www.php.net/",
-  "Python ": "https://www.python.org/",
+  "C#": "https://learn.microsoft.com/ru-ru/dotnet/csharp/",
+  JavaScript: "https://learn.javascript.ru/",
+  HTML: "https://doka.guide/html/",
+  CSS: "https://doka.guide/css/",
+  SQL: "https://www.w3schools.com/sql/default.asp",
+  PHP: "https://www.php.net/",
+  Python: "https://www.python.org/",
 
-  "ASP.Net&nbsp;Core ": "https://dotnet.microsoft.com/ru-ru/apps/aspnet",
-  "Blazor ": "https://learn.microsoft.com/ru-ru/aspnet/core/blazor/?view=aspnetcore-9.0",
-  "Razor&nbsp;Pages ":
-    "https://learn.microsoft.com/ru-ru/aspnet/core/razor-pages/?view=aspnetcore-9.0&tabs=visual-studio",
-  "Webpack ": "https://webpack.js.org/",
-  "NPM ": "https://www.npmjs.com/",
-  "DOTween ": "https://dotween.demigiant.com/",
-  "PluginYG ":
-    "https://ash-message-bf4.notion.site/PluginYG-d457b23eee604b7aa6076116aab647ed#61f1dc643f8046a2815dbd8834035ea7",
-  "WebGL ": "https://www.khronos.org/webgl/wiki/Main_Page",
-  "Shader&nbsp;Graphs ": "https://unity.com/features/shader-graph",
-  "Particle&nbsp;System ": "https://docs.unity3d.com/Manual/ParticleSystems.html",
-  "Tkinter&nbsp;(отрисовка&nbsp;UI) ": "https://docs.python.org/3/library/tkinter.html",
-  "Simplaudio&nbsp;(воспроизведение&nbsp;звука) ": "https://simpleaudio.readthedocs.io/en/latest/",
+  "ASP.Net Core": "https://dotnet.microsoft.com/ru-ru/apps/aspnet",
+  Blazor: "https://learn.microsoft.com/ru-ru/aspnet/core/blazor/?view=aspnetcore-9.0",
+  "Razor Pages": "https://learn.microsoft.com/ru-ru/aspnet/core/razor-pages/?view=aspnetcore-9.0&tabs=visual-studio",
+  Webpack: "https://webpack.js.org/",
+  NPM: "https://www.npmjs.com/",
+  DOTween: "https://dotween.demigiant.com/",
+  PluginYG: "https://ash-message-bf4.notion.site/PluginYG-d457b23eee604b7aa6076116aab647ed#61f1dc643f8046a2815dbd8834035ea7",
+  WebGL: "https://www.khronos.org/webgl/wiki/Main_Page",
+  "Shader Graphs": "https://unity.com/features/shader-graph",
+  "Particle System": "https://docs.unity3d.com/Manual/ParticleSystems.html",
+  "Tkinter (отрисовка UI)": "https://docs.python.org/3/library/tkinter.html",
+  "Simplaudio (воспроизведение звука)": "https://simpleaudio.readthedocs.io/en/latest/",
 
-  "Git ": "https://git-scm.com/",
-  "Microsoft&nbsp;Visual&nbsp;Studio ": "https://visualstudio.microsoft.com/ru/",
-  "Visual&nbsp;Studio&nbsp;Code ": "https://code.visualstudio.com/",
-  "Unity ": "https://unity.com/",
-  "MySQL ": "https://metanit.com/sql/mysql/",
-  "Blender ": "https://www.blender.org/",
-  "Photoshop ": "https://www.adobe.com/ru/products/photoshop.html",
-  "Sony&nbsp;Vegas&nbsp;Pro ": "https://www.vegascreativesoftware.com/ru/",
+  Git: "https://git-scm.com/",
+  "Microsoft Visual Studio": "https://visualstudio.microsoft.com/ru/",
+  "Visual Studio Code": "https://code.visualstudio.com/",
+  Unity: "https://unity.com/",
+  MySQL: "https://metanit.com/sql/mysql/",
+  Blender: "https://www.blender.org/",
+  Photoshop: "https://www.adobe.com/ru/products/photoshop.html",
+  "Sony Vegas Pro": "https://www.vegascreativesoftware.com/ru/",
 
-  "OOP ": "https://en.wikipedia.org/wiki/Object-oriented_programming",
-  "SOLID ":
-    "https://ru.wikipedia.org/wiki/SOLID_(%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5)",
-  "DRY ": "https://ru.wikipedia.org/wiki/Don%E2%80%99t_repeat_yourself",
-  "GRASP ": "https://ru.wikipedia.org/wiki/GRASP",
-  "KISS ": "https://ru.wikipedia.org/wiki/KISS_(%D0%BF%D1%80%D0%B8%D0%BD%D1%86%D0%B8%D0%BF)",
-  "Adaptive&nbsp;UI ": "https://docs.unity3d.com/ru/2021.1/Manual/HOWTO-UIMultiResolution.html",
-  "Adaptive&nbsp;Web&nbsp;Design ": "https://alistapart.com/article/responsive-web-design/",
-  "BEM ": "https://ru.bem.info/",
-  "MVC ": "https://ru.wikipedia.org/wiki/Model-View-Controller",
-  "MVP ": "https://ru.wikipedia.org/wiki/Model-View-Presenter",
-  "MVVM ": "https://ru.wikipedia.org/wiki/Model-View-ViewModel",
+  OOP: "https://en.wikipedia.org/wiki/Object-oriented_programming",
+  SOLID: "https://ru.wikipedia.org/wiki/SOLID_(%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5)",
+  DRY: "https://ru.wikipedia.org/wiki/Don%E2%80%99t_repeat_yourself",
+  GRASP: "https://ru.wikipedia.org/wiki/GRASP",
+  KISS: "https://ru.wikipedia.org/wiki/KISS_(%D0%BF%D1%80%D0%B8%D0%BD%D1%86%D0%B8%D0%BF)",
+  "Adaptive UI": "https://docs.unity3d.com/ru/2021.1/Manual/HOWTO-UIMultiResolution.html",
+  "Adaptive Web Design": "https://alistapart.com/article/responsive-web-design/",
+  BEM: "https://ru.bem.info/",
+  MVC: "https://ru.wikipedia.org/wiki/Model-View-Controller",
+  MVP: "https://ru.wikipedia.org/wiki/Model-View-Presenter",
+  MVVM: "https://ru.wikipedia.org/wiki/Model-View-ViewModel",
 };
 
 const languages = {
-  Csharp: "C# ",
-  JavaScript: "JavaScript ",
-  HTML: "HTML ",
-  CSS: "CSS ",
-  SQL: "SQL ",
-  PHP: "PHP ",
-  Python: "Python ",
+  Csharp: "C#",
+  JavaScript: "JavaScript",
+  HTML: "HTML",
+  CSS: "CSS",
+  SQL: "SQL",
+  PHP: "PHP",
+  Python: "Python",
 };
 
 const frameworksLibrariesPlugins = {
-  ASPNetCore: "ASP.Net&nbsp;Core ",
-  Blazor: "Blazor ",
-  RazorPages: "Razor&nbsp;Pages ",
-  Webpack: "Webpack ",
-  NPM: "NPM ",
-  DOTween: "DOTween ",
-  PluginYG: "PluginYG ",
-  WebGL: "WebGL ",
-  ShaderGraphs: "Shader&nbsp;Graphs ",
-  ParticleSystem: "Particle&nbsp;System ",
-  Tkinter: "Tkinter&nbsp;(отрисовка&nbsp;UI) ",
-  Simplaudio: "Simplaudio&nbsp;(воспроизведение&nbsp;звука) ",
+  ASPNetCore: "ASP.Net Core",
+  Blazor: "Blazor",
+  RazorPages: "Razor Pages",
+  Webpack: "Webpack",
+  NPM: "NPM",
+  DOTween: "DOTween",
+  PluginYG: "PluginYG",
+  WebGL: "WebGL",
+  ShaderGraphs: "Shader Graphs",
+  ParticleSystem: "Particle System",
+  Tkinter: "Tkinter (отрисовка UI)",
+  Simplaudio: "Simplaudio (воспроизведение звука)",
 };
 
 const workEnvironment = {
-  Git: "Git ",
-  MicrosoftVisualStudio: "Microsoft&nbsp;Visual&nbsp;Studio ",
-  VisualStudioCode: "Visual&nbsp;Studio&nbsp;Code ",
-  Unity: "Unity ",
+  Git: "Git",
+  MicrosoftVisualStudio: "Microsoft Visual Studio",
+  VisualStudioCode: "Visual Studio Code",
+  Unity: "Unity",
   MySQL: "MySQL",
-  Blender: "Blender ",
-  Photoshop: "Photoshop ",
-  SonyVegasPro: "Sony&nbsp;Vegas&nbsp;Pro ",
+  Blender: "Blender",
+  Photoshop: "Photoshop",
+  SonyVegasPro: "Sony Vegas Pro",
 };
 
 const methodologies = {
-  SOLID: "SOLID ",
-  OOP: "OOP ",
-  AdaptiveUI: "Adaptive&nbsp;UI ",
-  AdaptiveWebDesign: "Adaptive&nbsp;Web&nbsp;Design ",
-  BEM: "BEM ",
-  MVC: "MVC ",
-  MVP: "MVP ",
-  MVVM: "MVVM ",
-  DRY: "DRY ",
-  KISS: "KISS ",
-  GRASP: "GRASP ",
+  SOLID: "SOLID",
+  OOP: "OOP",
+  AdaptiveUI: "Adaptive UI",
+  AdaptiveWebDesign: "Adaptive Web Design",
+  BEM: "BEM",
+  MVC: "MVC",
+  MVP: "MVP",
+  MVVM: "MVVM",
+  DRY: "DRY",
+  KISS: "KISS",
+  GRASP: "GRASP",
 };
 
 const exolab = [
@@ -259,16 +256,12 @@ for (let key in frameworksTemp) {
 function createStackElement(value, parent, modifier) {
   let link = document.createElement("a");
   link.innerHTML = value;
-  link.className = "link_stack";
+  link.className = "link_stack technology-unit";
+  link.classList.add(modifier);
   link.href = GetLinkAddress(value);
   link.target = "_blank";
-
-  let unit = document.createElement("p");
-  unit.className = "technology-unit";
-  unit.classList.add(modifier);
-  unit.appendChild(link);
-
-  parent.appendChild(unit);
+  
+  parent.appendChild(link);
 }
 
 function GetLinkAddress(technology) {

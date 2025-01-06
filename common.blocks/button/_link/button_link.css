@@ -1,8 +1,4 @@
 .button_link {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--offset-5px);
-
   font-size: large;
   color: var(--text-color);
   text-decoration: none;

@@ -1,9 +1,12 @@
-.stack-description{
-    display: inline-block;
-    margin-top: var(--offset-10px);
-    margin-bottom: var(--offset-20px);
+.stack-description {
+  display: inline-flex;
+  margin-top: var(--offset-10px);
+  margin-bottom: var(--offset-20px);
+  flex-wrap: wrap;
+  align-items: center;
+  row-gap: 5px;
 
-    font-size: larger;
-    font-weight: 600;
-    line-height: 40px;
+  font-size: larger;
+  font-weight: 600;
+  line-height: var(--offset-40px);
 }

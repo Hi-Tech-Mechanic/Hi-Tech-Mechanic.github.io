@@ -1,7 +1,8 @@
 .project-type__header-line {
   display: block;
   height: 2px;
-  margin-right: 10px;
+  width: 100%;
+  margin: 0 auto;
 
   background-color: rgba(0, 247, 255, 0.1);
   animation: box-pulsate 5s infinite alternate;
