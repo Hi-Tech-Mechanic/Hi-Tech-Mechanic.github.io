@@ -1,5 +1,5 @@
 .technology-unit_theme_languages{
-    background-color: var(--technology-languages);
-    box-shadow: 0 0 var(--offset-5px) var(--technology-languages);
-    border-color: hsl(from var(--technology-languages) h s calc(l - 10));
+    background-color: hsl(from var(--technology-languages) h s calc(l - 20));
+    border-color: hsl(from var(--technology-languages) h s calc(l + 10));
+    box-shadow: 0 0 var(--offset-15px) var(--technology-languages);
 }
