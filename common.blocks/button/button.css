@@ -13,9 +13,9 @@
 }
 
 .button:hover {
-  background-color: lch(from var(--button-background-color) calc(l + 20) c h);
+  background-color: lch(from var(--button-background-color) calc(l + 30) c h);
 }
 
 .button:focus {
-  background-color: lch(from var(--button-background-color) calc(l + 20) c h);
+  background-color: lch(from var(--button-background-color) calc(l + 30) c h);
 }

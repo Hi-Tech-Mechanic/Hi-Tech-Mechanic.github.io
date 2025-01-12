@@ -11,8 +11,11 @@ import "../common.blocks/body/body.css";
 import "../common.blocks/brand/brand.css";
 import "../common.blocks/button/button.css";
 import "../common.blocks/button/_link/button_link.css";
+import "../common.blocks/button/_certificate/button_certificate.css";
 import "../common.blocks/button/_header/button_header.css";
 import "../common.blocks/button/_non-effect/button_non-effect.css";
+
+import "../common.blocks/centerer/centerer.css";
 
 import "../common.blocks/bulb/bulb.css";
 import "../common.blocks/bulb/_green/bulb_green.css";
@@ -31,6 +34,9 @@ import "../common.blocks/exit-button/exit-button.css";
 
 import "../common.blocks/footer/footer.css";
 import "../common.blocks/footer/__header/footer__header.css";
+
+import "../common.blocks/glare-of-light/glare-of-light.css";
+import "../common.blocks/glare-of-light/_small/glare-of-light_small.css";
 
 import "../common.blocks/icon/icon.css";
 import "../common.blocks/icon/_square/icon_square.css";
@@ -61,6 +67,8 @@ import "../common.blocks/project-type/project-type.css";
 import "../common.blocks/project-type/__header/project-type__header.css";
 import "../common.blocks/project-type/__header-line/project-type__header-line.css";
 
+import "../common.blocks/project-version/project-version.css";
+
 import "../common.blocks/stack-description/stack-description.css";
 import "../common.blocks/stack-description/_theme_languages/stack-description_theme_languages.css";
 import "../common.blocks/stack-description/_theme_frameworks/stack-description_theme_frameworks.css";
@@ -74,17 +82,20 @@ import "../common.blocks/technology-unit/_theme_languages/technology-unit_theme_
 import "../common.blocks/technology-unit/_theme_work-environment/technology-unit_theme_work-environment.css";
 import "../common.blocks/technology-unit/_theme_methodologyes/technology-unit_theme_methodologyes.css";
 
+import "../common.blocks/terminal-code/terminal-code.css";
+import "../common.blocks/terminal-code/terminal-code.js";
+
 import "../common.blocks/theme-toggle/theme-toggle.js";
 import "../common.blocks/theme-toggle/theme-toggle.css";
 
-import "../common.blocks/promo-card/promo-card.css"
-import "../common.blocks/promo-card/promo-card.js"
-import "../common.blocks/promo-card/__animated-border/promo-card__animated-border.css"
+import "../common.blocks/promo-card/promo-card.css";
+import "../common.blocks/promo-card/promo-card.js";
+import "../common.blocks/promo-card/__animated-border/promo-card__animated-border.css";
 
-import "../common.blocks/recursive-mirror/recursive-mirror.css"
-import "../common.blocks/recursive-mirror/_full-width/recursive-mirror_full-width.css"
+import "../common.blocks/recursive-mirror/recursive-mirror.css";
+import "../common.blocks/recursive-mirror/_full-width/recursive-mirror_full-width.css";
 
-import "../common.blocks/image/image.css"
+import "../common.blocks/image/image.css";
 
 ///////////////////////////////////////////////////////////////
 

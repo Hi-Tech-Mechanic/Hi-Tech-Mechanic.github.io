@@ -256,7 +256,7 @@ for (let key in frameworksTemp) {
 function createStackElement(value, parent, modifier) {
   let link = document.createElement("a");
   link.innerHTML = value;
-  link.className = "link_stack technology-unit";
+  link.className = "link_stack technology-unit glare-of-light glare-of-light_small";
   link.classList.add(modifier);
   link.href = GetLinkAddress(value);
   link.target = "_blank";

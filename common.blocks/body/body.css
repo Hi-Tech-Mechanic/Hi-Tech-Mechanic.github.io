@@ -1,9 +1,10 @@
 .body {
   max-width: var(--content-max-width);
   min-width: var(--content-min-width);
+  margin-top: 80px;
   margin-right: auto;
   margin-left: auto;
-  margin-top: 80px;
+  padding: 0 10px;
 
   font-weight: 400;
   font-size: large;

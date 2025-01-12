@@ -1,0 +1,15 @@
+.glare-of-light {
+  position: relative;
+}
+
+.glare-of-light::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--angular-gradient-of-light-70);
+  pointer-events: none;
+}

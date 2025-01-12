@@ -1,7 +1,7 @@
 .footer {
   width: 100%;
   min-width: var(--content-min-width);
-  margin: var(--offset-20px) auto var(--offset-10px) auto;
+  margin: 0 auto var(--offset-10px) auto;
   padding: var(--offset-10px) 0;
 
   display: flex;

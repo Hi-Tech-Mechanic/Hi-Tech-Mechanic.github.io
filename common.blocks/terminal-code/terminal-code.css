@@ -1,0 +1,8 @@
+.terminal-code {
+  margin-top: var(--offset-5px);
+  padding: 0 var(--offset-5px);
+
+  color: rgb(0, 255, 0);
+  background-color: black;
+  border-radius: var(--small-border-radius);
+}
