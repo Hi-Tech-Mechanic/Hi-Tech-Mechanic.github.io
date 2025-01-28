@@ -1,0 +1,14 @@
+.button_open-theme {
+  color: black;
+  background-color: var(--brend-color);
+}
+
+.button_open-theme:hover {
+  font-size: 20px;
+  background-color: lch(from var(--brend-color) calc(l + 30) c h);
+}
+
+.button_open-theme:focus {
+  font-size: 20px;
+  background-color: lch(from var(--brend-color) calc(l + 30) c h);
+}

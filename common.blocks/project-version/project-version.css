@@ -1,5 +1,6 @@
 .project-version {
   padding: 5px;
+  margin-bottom: var(--offset-20px);
 
   color: var(--text-color);
   background-color: var(--background-color);

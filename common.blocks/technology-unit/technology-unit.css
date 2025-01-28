@@ -13,7 +13,7 @@
   border-radius: 8px;
 
   cursor: pointer;
-  transition: font-size var(--animation-duration-03s);
+  transition: font-size var(--animation-duration-05s);
 }
 
 .technology-unit:hover {

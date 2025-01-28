@@ -14,6 +14,7 @@ import "../common.blocks/button/_link/button_link.css";
 import "../common.blocks/button/_certificate/button_certificate.css";
 import "../common.blocks/button/_header/button_header.css";
 import "../common.blocks/button/_non-effect/button_non-effect.css";
+import "../common.blocks/button/_open-theme/button_open-theme.css";
 
 import "../common.blocks/centerer/centerer.css";
 
@@ -40,6 +41,7 @@ import "../common.blocks/glare-of-light/_small/glare-of-light_small.css";
 
 import "../common.blocks/icon/icon.css";
 import "../common.blocks/icon/_square/icon_square.css";
+import "../common.blocks/icon/_light-theme/icon_light-theme.css";
 import "../common.blocks/image-content-grid/image-content-grid.css";
 
 import "../common.blocks/info-container/info-container.css";

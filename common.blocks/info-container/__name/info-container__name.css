@@ -1,6 +1,6 @@
 .info-container__name {
   display: inline-block;
-  /* margin-left: 50px; */
+  font-size: 22px;
 
   transition: color var(--animation-duration-03s);
 }

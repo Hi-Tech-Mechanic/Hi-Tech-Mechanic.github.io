@@ -6,6 +6,7 @@ const linksArray = {
   SQL: "https://www.w3schools.com/sql/default.asp",
   PHP: "https://www.php.net/",
   Python: "https://www.python.org/",
+  UML: "https://ru.wikipedia.org/wiki/UML",
 
   "ASP.Net Core": "https://dotnet.microsoft.com/ru-ru/apps/aspnet",
   Blazor: "https://learn.microsoft.com/ru-ru/aspnet/core/blazor/?view=aspnetcore-9.0",
@@ -50,6 +51,7 @@ const languages = {
   SQL: "SQL",
   PHP: "PHP",
   Python: "Python",
+  UML: "UML",
 };
 
 const frameworksLibrariesPlugins = {
@@ -104,7 +106,7 @@ const multiverseMemes = [
   frameworksLibrariesPlugins["DOTween"],
   frameworksLibrariesPlugins["PluginYG"],
   frameworksLibrariesPlugins["ParticleSystem"],
-  workEnvironment["Unizty"],
+  workEnvironment["Unity"],
   workEnvironment["MicrosoftVisualStudio"],
   workEnvironment["Blender"],
   workEnvironment["Photoshop"],
@@ -174,6 +176,31 @@ const portfolioSite = [
   methodologies["KISS"],
 ];
 
+const cocomo = [
+  languages["HTML"],
+  languages["CSS"],
+  languages["JavaScript"],
+  languages["UML"],
+  frameworksLibrariesPlugins["Webpack"],
+  frameworksLibrariesPlugins["NPM"],
+  workEnvironment["VisualStudioCode"],
+  workEnvironment["Git"],
+  methodologies["BEM"],
+  methodologies["AdaptiveWebDesign"],
+  methodologies["DRY"],
+];
+
+const russianTravel = [
+  languages["HTML"],
+  languages["CSS"],
+  frameworksLibrariesPlugins["Webpack"],
+  frameworksLibrariesPlugins["NPM"],
+  workEnvironment["VisualStudioCode"],
+  workEnvironment["Git"],
+  methodologies["BEM"],
+  methodologies["AdaptiveWebDesign"],
+];
+
 const allProjects = [
   exolab,
   multiverseMemes,
@@ -181,15 +208,19 @@ const allProjects = [
   furnitureShop,
   characterMenuConcept,
   portfolioSite,
+  cocomo,
+  russianTravel,
 ];
 
 const stackContainers = [
-  document.getElementById("Exolab"),
-  document.getElementById("Multiverse memes"),
-  document.getElementById("Minecraft: Industrialization"),
-  document.getElementById("Furniture shop"),
-  document.getElementById("Character menu concept"),
-  document.getElementById("Portfolio site"),
+  document.getElementById("exolab"),
+  document.getElementById("multiverse-memes"),
+  document.getElementById("minecraft-industrialization"),
+  document.getElementById("furniture-shop"),
+  document.getElementById("character-menu-concept"),
+  document.getElementById("portfolio-website"),
+  document.getElementById("cocomo"),
+  document.getElementById("russian-travel"),
 ];
 
 let iteration = 0;

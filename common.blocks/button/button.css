@@ -9,13 +9,15 @@
   border: 1px solid var(--button-border-color);
   border-radius: var(--average-border-radius);
 
-  transition: background-color var(--animation-duration-05s);
+  transition: all var(--animation-duration-05s);
 }
 
 .button:hover {
+  font-size: 20px;
   background-color: lch(from var(--button-background-color) calc(l + 30) c h);
 }
 
 .button:focus {
+  font-size: 20px;
   background-color: lch(from var(--button-background-color) calc(l + 30) c h);
 }

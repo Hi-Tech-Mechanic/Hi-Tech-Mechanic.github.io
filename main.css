@@ -171,14 +171,16 @@ details[open] + div.detailts-content {
   border: 1px solid var(--button-border-color);
   border-radius: var(--average-border-radius);
 
-  transition: background-color var(--animation-duration-05s);
+  transition: all var(--animation-duration-05s);
 }
 
 .button:hover {
+  font-size: 20px;
   background-color: lch(from var(--button-background-color) calc(l + 30) c h);
 }
 
 .button:focus {
+  font-size: 20px;
   background-color: lch(from var(--button-background-color) calc(l + 30) c h);
 }
 
@@ -224,6 +226,21 @@ details[open] + div.detailts-content {
     border: 1px solid var(--button-border-color);
     border-radius: var(--average-border-radius);
 }
+.button_open-theme {
+  color: black;
+  background-color: var(--brend-color);
+}
+
+.button_open-theme:hover {
+  font-size: 20px;
+  background-color: lch(from var(--brend-color) calc(l + 30) c h);
+}
+
+.button_open-theme:focus {
+  font-size: 20px;
+  background-color: lch(from var(--brend-color) calc(l + 30) c h);
+}
+
 .centerer {
   display: flex;
   justify-content: center;
@@ -442,6 +459,11 @@ details[open] + div.detailts-content {
   box-shadow: 0 0 2px black;
   border-radius: 25%;
 }
+.icon_light-theme {
+  background-color: white;
+  box-shadow: 0 0 2px white;
+}
+
 .image-content-grid{
     display: grid;
     justify-content: center;
@@ -479,7 +501,7 @@ details[open] + div.detailts-content {
 }
 .info-container__name {
   display: inline-block;
-  /* margin-left: 50px; */
+  font-size: 22px;
 
   transition: color var(--animation-duration-03s);
 }
@@ -645,6 +667,7 @@ details[open] + div.detailts-content {
 
 .project-version {
   padding: 5px;
+  margin-bottom: var(--offset-20px);
 
   color: var(--text-color);
   background-color: var(--background-color);
@@ -699,7 +722,7 @@ details[open] + div.detailts-content {
   border-radius: 8px;
 
   cursor: pointer;
-  transition: font-size var(--animation-duration-03s);
+  transition: font-size var(--animation-duration-05s);
 }
 
 .technology-unit:hover {
