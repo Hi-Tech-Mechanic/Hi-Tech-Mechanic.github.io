@@ -45,6 +45,7 @@ import "../common.blocks/icon/_light-theme/icon_light-theme.css";
 import "../common.blocks/image-content-grid/image-content-grid.css";
 
 import "../common.blocks/info-container/info-container.css";
+import "../common.blocks/info-container/info-container.js";
 import "../common.blocks/info-container/__description/info-container__description.css";
 import "../common.blocks/info-container/__name/info-container__name.css";
 import "../common.blocks/info-container/__summary/info-container__summary.css";

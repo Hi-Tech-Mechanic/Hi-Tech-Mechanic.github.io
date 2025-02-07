@@ -17,9 +17,9 @@
 }
 
 .technology-unit:hover {
-  font-size: var(--font-size-22px);
+  font-size: var(--font-size-20px);
 }
 
 .technology-unit:focus {
-  font-size: var(--font-size-22px);
+  font-size: var(--font-size-20px);
 }
