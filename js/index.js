@@ -40,6 +40,8 @@ import "../common.blocks/glare-of-light/glare-of-light.css";
 import "../common.blocks/glare-of-light/_small/glare-of-light_small.css";
 
 import "../common.blocks/icon/icon.css";
+import "../common.blocks/icon/_circle/icon_circle.css";
+import "../common.blocks/icon/_small/icon_small.css";
 import "../common.blocks/icon/_square/icon_square.css";
 import "../common.blocks/icon/_light-theme/icon_light-theme.css";
 import "../common.blocks/image-content-grid/image-content-grid.css";
@@ -47,6 +49,7 @@ import "../common.blocks/image-content-grid/image-content-grid.css";
 import "../common.blocks/info-container/info-container.css";
 import "../common.blocks/info-container/info-container.js";
 import "../common.blocks/info-container/__description/info-container__description.css";
+import "../common.blocks/info-container/__list/info-container__list.css";
 import "../common.blocks/info-container/__name/info-container__name.css";
 import "../common.blocks/info-container/__summary/info-container__summary.css";
 import "../common.blocks/info-container/__video/info-container__video.css";
@@ -77,6 +80,10 @@ import "../common.blocks/stack-description/_theme_languages/stack-description_th
 import "../common.blocks/stack-description/_theme_frameworks/stack-description_theme_frameworks.css";
 import "../common.blocks/stack-description/_theme_work-environment/stack-description_theme_work-environment.css";
 import "../common.blocks/stack-description/_theme_methodologyes/stack-description_theme_methodologyes.css";
+
+import "../common.blocks/tag/tag.css";
+import "../common.blocks/tag/__update/tag__update.css";
+import "../common.blocks/tag/__at-work/tag__at-work.css";
 
 import "../common.blocks/technology-unit/technology-unit.css";
 import "../common.blocks/technology-unit/technology-unit.js";

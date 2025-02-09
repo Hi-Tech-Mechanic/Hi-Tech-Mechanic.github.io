@@ -16,7 +16,7 @@ function smoothlyDisplayTechnologyUnit(infoContainer) {
     for (let i = 0; i < childrenCount; i++) {
       setTimeout(() => {
         stackDescription.children[i].style.display = "inline";
-      }, i * getDisplayTime(childrenCount));
+      }, i * getDisplayTime(childrenCount) / 2);
     }
   } else {
     childrenCount = stackDescription.children.length;

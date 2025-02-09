@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" style="min-height: 100%; min-width: 100%">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,37 +18,151 @@
     <link rel="shortcut icon" href="./favicon.png?v=1" type="image/x-icon" />
     <title>Faceless</title>
     <script defer src="bundle.js"></script>
-    <link href="main.css?v=9" rel="stylesheet" />
+    <link href="main.css?v=10" rel="stylesheet" />
   </head>
 
   <body class="body" id="body">
     <header>
       <nav class="navigation">
-        <a class="brand" href="#top">Faceless</a>
-        <div class="navigation__menu" id="navigation-menu">
-          <a class="button button_header link link_inner glare-of-light" href="#body">Projects</a>
-          <a class="button button_header link link_inner glare-of-light" href="#footer">About me</a>
-          <div class="theme-toggle" index="1">
-            <img class="image" src="images/other/sun.avif" alt="theme toggle" />
-          </div>
-        </div>
-
         <div class="button dropdown" id="dropdown-button">
-          <img class="image" src="images/other/menu.svg" alt="menu icon" />
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 16 16"
+            style="width: 32px; height: 32px; fill: currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M1.016 3.05h14v2h-14v-2zm0 4h14v2h-14v-2zm14 4h-14v2h14v-2z"
+            ></path>
+          </svg>
           <div class="dropdown__content">
-            <a class="button button_header link link_inner glare-of-light" href="#body">Projects</a>
-            <a class="button button_header link link_inner glare-of-light" href="#footer"
-              >About me</a
-            >
+            <a
+              class="button button_header link link_inner glare-of-light"
+              href="#main"
+              style="width: 90%"
+              >Projects
+              <svg
+                class="icon icon_small"
+                width="24"
+                height="24"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M14.025 2.008h-12v3.005h1.97v.988h-1.97v3.006h1.97v.995h-1.97v3.006h12v-3.006H11.98v-.995h2.046V6H11.98v-.988h2.046V2.008zm-9.03 3.005h5.984v.988H4.994v-.988zm0 3.994v.995h5.984v-.995H4.994zm7-6.005h1v1.002h-1V3.002zM10.978 7.01h-1v1.002h1V7.01zm1.015 4.009h1v1.002h-1V11.02zm-1.015 0h-1v1.002h1V11.02zm1.015-4.01h1v1.003h-1V7.01zM10.98 3.003h-1v1.002h1V3.002z"
+                ></path>
+              </svg>
+            </a>
+            <a
+              class="button button_header link link_inner glare-of-light"
+              href="#footer"
+              style="width: 90%"
+              >About me
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 16 16"
+                style="width: 24; height: 24; fill: currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M.958 8.003a7 7 0 1114 0 7 7 0 01-14 0zm5.569.314l-.813-.23v-1.29l3.76-.036v4.798l.728.452v1.154H5.775v-1.154l.752-.452V8.317zM7.958 5.64a1.481 1.481 0 100-2.963 1.481 1.481 0 000 2.963z"
+                ></path>
+              </svg>
+            </a>
+            <a
+              class="button button_header link link_inner glare-of-light"
+              style="width: 90%"
+              href="./history.html"
+              target="_self"
+              >History
+              <svg
+                class="icon icon_small"
+                width="24"
+                height="24"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M2.996 1.031h3v1h4v-1h3v1h2v2h-14v-2h2v-1zm-2 4h14v10h-14v-10zm9.306 2.12l1.414 1.414-4.612 4.612-2.829-2.828L5.69 8.935l1.415 1.414 3.198-3.199z"
+                ></path>
+              </svg>
+            </a>
             <div class="theme-toggle" index="1">
               <img class="image" src="images/other/sun.avif" alt="theme toggle" />
             </div>
           </div>
         </div>
+        <a class="brand" href="#top">Faceless</a>
+        <div class="navigation__menu" id="navigation-menu">
+          <a class="button button_header link link_inner glare-of-light" href="#main"
+            >Projects
+            <svg
+              class="icon icon_small"
+              width="24"
+              height="24"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M14.025 2.008h-12v3.005h1.97v.988h-1.97v3.006h1.97v.995h-1.97v3.006h12v-3.006H11.98v-.995h2.046V6H11.98v-.988h2.046V2.008zm-9.03 3.005h5.984v.988H4.994v-.988zm0 3.994v.995h5.984v-.995H4.994zm7-6.005h1v1.002h-1V3.002zM10.978 7.01h-1v1.002h1V7.01zm1.015 4.009h1v1.002h-1V11.02zm-1.015 0h-1v1.002h1V11.02zm1.015-4.01h1v1.003h-1V7.01zM10.98 3.003h-1v1.002h1V3.002z"
+              ></path>
+            </svg>
+          </a>
+          <a class="button button_header link link_inner glare-of-light" href="#footer"
+            >About me
+            <svg
+              class="icon icon_small"
+              width="24"
+              height="24"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M.958 8.003a7 7 0 1114 0 7 7 0 01-14 0zm5.569.314l-.813-.23v-1.29l3.76-.036v4.798l.728.452v1.154H5.775v-1.154l.752-.452V8.317zM7.958 5.64a1.481 1.481 0 100-2.963 1.481 1.481 0 000 2.963z"
+              ></path>
+            </svg>
+          </a>
+          <a
+            class="button button_header link link_inner glare-of-light"
+            href="./history.html"
+            target="_self"
+            >History
+            <svg
+              class="icon icon_small"
+              width="24"
+              height="24"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M2.996 1.031h3v1h4v-1h3v1h2v2h-14v-2h2v-1zm-2 4h14v10h-14v-10zm9.306 2.12l1.414 1.414-4.612 4.612-2.829-2.828L5.69 8.935l1.415 1.414 3.198-3.199z"
+              ></path>
+            </svg>
+          </a>
+          <div class="theme-toggle" index="1">
+            <img class="image" src="images/other/sun.avif" alt="theme toggle" />
+          </div>
+        </div>
       </nav>
     </header>
 
-    <main>
+    <main id="main">
       <article class="project-type">
         <div class="project-type__header-line"></div>
         <h2 class="project-type__header">Игры</h2>
@@ -86,7 +200,6 @@
                   </g>
                 </svg>
               </a>
-
               <a
                 class="button button_link button_open-theme glare-of-light"
                 href="https://yandex.ru/games/app/327984?lang=ru"
@@ -662,7 +775,7 @@
             <br />
             <p>COCOMO применим к трем классам проектов разработки ПО:</p>
             <br />
-            <ul style="margin-left: 20px; margin-bottom: 10px">
+            <ul class="info-container__list">
               <li>
                 Органический (Organic mode) – маленькие команды с хорошим опытом работы и не
                 жесткими требованиями к разработке
@@ -1054,20 +1167,20 @@
         <div class="bulb"></div>
       </div>
       <a class="link link_contact" href="mailto:ruslan.minatullaev-1000@yandex.ru" target="_blank">
-        <div class="icon glare-of-light">
-          <img class="icon" src="images/icons/mail.svg" alt="email link" />
+        <div class="icon icon_circle glare-of-light">
+          <img class="icon icon_circle" src="images/icons/mail.svg" alt="email link" />
         </div>
         <p>ruslan.minatullaev-1000@yandex.ru</p>
       </a>
       <a class="link link_contact" href="https://github.com/Hi-Tech-Mechanic" target="_blank">
-        <div class="icon glare-of-light">
-          <img class="icon" src="images/icons/github.svg" alt="github link" />
+        <div class="icon icon_circle glare-of-light">
+          <img class="icon icon_circle" src="images/icons/github.svg" alt="github link" />
         </div>
         <p>Hi-Tech-Mechanic</p>
       </a>
       <a class="link link_contact" href="https://t.me/HiuPiu" target="_blank">
-        <div class="icon glare-of-light">
-          <img class="icon" src="images/icons/telegram.svg" alt="telegram link" />
+        <div class="icon icon_circle glare-of-light">
+          <img class="icon icon_circle" src="images/icons/telegram.svg" alt="telegram link" />
         </div>
         <p>@HiuPiu</p>
       </a>

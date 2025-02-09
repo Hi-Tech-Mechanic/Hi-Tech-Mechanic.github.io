@@ -1,10 +1,10 @@
-.button_non-effect{
-    display: inline flex;
-    padding: var(--offset-5px);
-    gap: var(--offset-5px);
-  
-    text-align: center;
-    background-color: var(--button-background-color);
-    border: 1px solid var(--button-border-color);
-    border-radius: var(--average-border-radius);
+.button_non-effect {
+  display: inline flex;
+  padding: var(--offset-5px);
+  gap: var(--offset-5px);
+
+  text-align: center;
+  background-color: var(--button-background-color);
+  border: 1px solid var(--button-border-color);
+  border-radius: var(--average-border-radius);
 }

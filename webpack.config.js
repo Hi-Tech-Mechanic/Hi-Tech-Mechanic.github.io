@@ -36,6 +36,12 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: "./index.html",
+            filename: 'index.html',
+        }),
+        new HtmlWebpackPlugin({
+            template: './history.html',
+            filename: 'history.html',
+            inject: false,
         }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin(),

@@ -12,7 +12,12 @@
   color: black;
 }
 
-svg{
+html {
+  min-height: 100%;
+  min-width: 100%;
+}
+
+svg {
   width: 100%;
   height: 100%;
 }
@@ -141,30 +146,32 @@ details[open] + div.detailts-content {
   backdrop-filter: none;
 }
 
-.brand{
-    margin-right: var(--offset-40px);
+.brand {
+  margin: 0 var(--offset-20px);
 
-    font-size: var(--font-size-34px);
-    font-weight: 900;
-    text-decoration: none;
-    text-shadow: 0 0 40px var(--brend-shadow-color);
-    
-    color: var(--brend-color);
+  font-size: var(--font-size-34px);
+  font-weight: 900;
+  text-decoration: none;
+  text-shadow: 0 0 40px var(--brend-shadow-color);
 
-    transition: text-shadow var(--animation-duration-05s);
+  color: var(--brend-color);
+
+  transition: text-shadow var(--animation-duration-05s);
 }
 
-.brand:hover{
-    text-shadow: 0 0 20px var(--brend-shadow-color);
+.brand:hover {
+  text-shadow: 0 0 20px var(--brend-shadow-color);
 }
 
-.brand:focus{
-    text-shadow: 0 0 20px var(--brend-shadow-color);
+.brand:focus {
+  text-shadow: 0 0 20px var(--brend-shadow-color);
 }
+
 .button {
   display: inline flex;
   padding: var(--offset-5px);
   align-items: center;
+  justify-content: center;
   gap: var(--offset-5px);
 
   text-align: center;
@@ -211,22 +218,24 @@ details[open] + div.detailts-content {
 }
 
 .button_header {
-  padding: var(--offset-10px);
+  padding: 5px var(--offset-10px);
 
+  text-wrap: nowrap;
   font-size: large;
   font-weight: 600;
 }
 
-.button_non-effect{
-    display: inline flex;
-    padding: var(--offset-5px);
-    gap: var(--offset-5px);
-  
-    text-align: center;
-    background-color: var(--button-background-color);
-    border: 1px solid var(--button-border-color);
-    border-radius: var(--average-border-radius);
+.button_non-effect {
+  display: inline flex;
+  padding: var(--offset-5px);
+  gap: var(--offset-5px);
+
+  text-align: center;
+  background-color: var(--button-background-color);
+  border: 1px solid var(--button-border-color);
+  border-radius: var(--average-border-radius);
 }
+
 .button_open-theme {
   color: black;
   background-color: var(--brend-color);
@@ -352,6 +361,7 @@ details[open] + div.detailts-content {
 
 .dropdown__content {
   position: absolute;
+  top: 0;
   right: 0;
   z-index: 1;
 
@@ -365,7 +375,7 @@ details[open] + div.detailts-content {
   border: var(--border-thickness-thin) solid var(--border-color);
   border-radius: var(--average-border-radius);
   background-color: var(--window-background-color);
-  box-shadow: 0px 4px var(--offset-10px) 0px var(--text-color);
+  box-shadow: 0 0 var(--offset-10px) 0 var(--text-color);
 }
 
 .exit-button{
@@ -447,7 +457,16 @@ details[open] + div.detailts-content {
   display: inline-block;
   width: 40px;
   height: 40px;
+  fill: currentColor;
+}
+
+.icon_circle {
   border-radius: 50%;
+}
+
+.icon_small {
+  width: 24px;
+  height: 24px;
 }
 
 .icon_square {
@@ -500,6 +519,11 @@ details[open] + div.detailts-content {
 .info-container__description{
     margin: var(--offset-10px);
 }
+.info-container__list {
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
 .info-container__name {
   display: inline-block;
   font-size: 22px;
@@ -580,7 +604,7 @@ details[open] + div.detailts-content {
     left: 0;
     right: 0;
     top: 0;
-    padding: 5px 20px;
+    padding: 5px 0;
 
     justify-content: center;
     align-items: center;
@@ -669,7 +693,6 @@ details[open] + div.detailts-content {
 .project-version {
   text-align: center;
   padding: var(--offset-5px);
-  /* margin-top: var(--offset-20px); */
   margin-bottom: var(--offset-30px);
 
   display: inline flex;
@@ -712,6 +735,35 @@ details[open] + div.detailts-content {
 .stack-description_theme_methodologyes{
     margin: var(--offset-10px) 0;
     color: var(--technology-methodologyes);
+}
+.tag {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid currentColor;
+  border-radius: 14px 5px;
+}
+
+.tag__update {
+  background-color: rgb(0, 173, 92);
+  background: linear-gradient(90deg, #33f1ff, #33ff4e, #33f1ff);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientAnimation 3s linear infinite;
+}
+
+@keyframes gradientAnimation {
+  from {
+    background-position: 0% center;
+  }
+  to {
+    background-position: 200% center;
+  }
+}
+
+.tag__at-work{
+    color: rgb(255, 225, 0);
 }
 .technology-unit {
   display: inline;

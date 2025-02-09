@@ -4,20 +4,19 @@ const dropdownButton = document.getElementById("dropdown-button");
 const navMenuCachedDisplay = navMenu.style.display;
 const dropdownButtonCachedDisplay = dropdownButton.style.display;
 
-const minWidthPoint = 470;
+const minWidthPoint = 630;
 
 checkScreenWidth();
 window.addEventListener("resize", checkScreenWidth);
 
-function checkScreenWidth(){
-    const width = document.body.clientWidth;
+function checkScreenWidth() {
+  const width = document.body.clientWidth;
 
-    if (width <= minWidthPoint){
-        navMenu.style.display = "none";
-        dropdownButton.style.display = "inline-block";
-    }
-    else{
-        navMenu.style.display = navMenuCachedDisplay;
-        dropdownButton.style.display = dropdownButtonCachedDisplay;
-    }
+  if (width <= minWidthPoint) {
+    navMenu.style.display = "none";
+    dropdownButton.style.display = "flex";
+  } else {
+    navMenu.style.display = navMenuCachedDisplay;
+    dropdownButton.style.display = dropdownButtonCachedDisplay;
+  }
 }
