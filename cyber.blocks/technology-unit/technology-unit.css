@@ -1,0 +1,51 @@
+.technology-unit {
+  display: inline;
+  margin: 0px 4px;
+  height: 25px;
+  padding: 0 var(--offset-10px);
+  position: relative;
+
+  font-size: var(--font-size-18px);
+  text-align: center;
+  font-weight: 600;
+  line-height: 25px;
+
+  border: 1px solid;
+  border-radius: 2px;
+
+  cursor: pointer;
+  transition: font-size var(--animation-duration-05s);
+}
+
+.technology-unit::before,
+.technology-unit::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: rgba(255, 255, 255, 0);
+  box-shadow: 0 0 5px white;
+  transition: all 0.3s ease-in-out;
+}
+
+.technology-unit::after {
+  bottom: 80%;
+}
+
+.technology-unit:hover::before {
+  transform: translateY(200%);
+}
+
+.technology-unit:hover::after {
+  transform: translateY(-200%);
+}
+
+.technology-unit:hover {
+  font-size: var(--font-size-20px);
+}
+
+.technology-unit:focus {
+  font-size: var(--font-size-20px);
+}

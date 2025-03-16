@@ -1,0 +1,21 @@
+.navigation{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    min-width: var(--content-min-width);
+    height: 50px;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 5px 0;
+
+    justify-content: center;
+    align-items: center;
+
+    color: var(--text-color);
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--background-color);
+    backdrop-filter: blur(var(--offset-10px));
+    
+    z-index: 1;
+}

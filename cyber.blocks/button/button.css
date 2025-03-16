@@ -1,0 +1,26 @@
+.button {
+  transform: skew(var(--main-skew));
+
+  display: inline flex;
+  margin-left: 5px;
+  padding: var(--offset-5px) var(--offset-10px);
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  background-color: var(--button-background-color);
+  border: 1px solid var(--button-border-color);
+  border-radius: var(--small-border-radius);
+
+  transition: all var(--animation-duration-05s);
+}
+
+.button:hover {
+  font-size: 20px;
+  background-color: lch(from var(--button-background-color) calc(l + 30) c h);
+}
+
+.button:focus {
+  font-size: 20px;
+  background-color: lch(from var(--button-background-color) calc(l + 30) c h);
+}

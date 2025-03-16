@@ -1,0 +1,12 @@
+.technology-unit_theme_work-environment {
+  background-color: hsl(from var(--technology-work-environment) h s calc(l - 20));
+  border-color: hsl(from var(--technology-work-environment) h s calc(l + 10));
+  box-shadow: 0 0 var(--offset-10px) var(--technology-work-environment),
+    3px 3px 0 hsl(from var(--technology-work-environment) h s calc(l - 30)),
+    5px 5px var(--offset-5px) black;
+}
+
+.technology-unit_theme_work-environment:hover::before,
+.technology-unit_theme_work-environment:hover::after {
+  background-color: hsl(from var(--technology-work-environment) h s calc(l + 25));
+}

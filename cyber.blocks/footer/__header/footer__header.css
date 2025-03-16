@@ -1,0 +1,7 @@
+.footer__header{
+    display: flex;
+    gap: var(--offset-5px);
+
+    font-size: larger;
+    font-weight: 600;
+}

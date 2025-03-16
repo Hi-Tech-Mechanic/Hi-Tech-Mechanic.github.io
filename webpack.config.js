@@ -5,10 +5,13 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-    entry: './js/index.js',
-
+    entry: {
+        index: './js/index.js',
+        info: './js/old_index.js',
+    },
+    
     output: {
-        filename: "bundle.js",
+        filename: "[name].bundle.js",
         path: path.resolve(__dirname, "dist"),
     },
 
@@ -37,11 +40,20 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: "./index.html",
             filename: 'index.html',
+            inject: false,
+            minify: false,
+        }),
+        new HtmlWebpackPlugin({
+            template: './old_index.html',
+            filename: 'old_index.html',
+            inject: false,
+            minify: false,
         }),
         new HtmlWebpackPlugin({
             template: './history.html',
             filename: 'history.html',
             inject: false,
+            minify: false,
         }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin(),

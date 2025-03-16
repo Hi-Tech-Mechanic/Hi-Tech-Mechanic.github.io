@@ -1,0 +1,10 @@
+.info-container__video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: var(--offset-20px) var(--offset-20px);
+
+    border: var(--border-thickness-thin) solid var(--border-color);
+    border-radius: var(--average-border-radius);
+    box-shadow: 0 0 var(--offset-15px) var(--text-color);
+}

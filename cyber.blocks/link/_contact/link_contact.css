@@ -1,0 +1,7 @@
+.link_contact{
+    display: flex;
+    align-items: center;
+    gap: var(--offset-5px);
+
+    font-size: large;
+}

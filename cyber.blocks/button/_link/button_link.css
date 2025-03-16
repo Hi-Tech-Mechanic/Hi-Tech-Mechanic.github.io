@@ -1,0 +1,6 @@
+.button_link {
+  font-size: large;
+  color: var(--text-color);
+  text-decoration: none;
+  box-shadow: 1px 1px 2px var(--text-color);
+}

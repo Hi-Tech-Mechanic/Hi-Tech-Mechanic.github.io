@@ -1,0 +1,32 @@
+.exit-button{
+    display: block;
+    position: fixed;
+    width: 35px;
+    height: 35px;
+    right: 0;
+    top: 0;
+    margin: 5px;
+
+    /* color: var(--text-color); todo */
+    color: white;
+    font-size: larger;
+    line-height: 35px;
+    font-weight: 600;
+    /* background-color: var(--background-color); todo */
+    background-color: black;
+    /* border-color: var(--text-color); todo */
+    border-color: white;
+    border-radius: var(--average-border-radius);
+    
+    cursor: pointer;
+    transition: 
+    background-color var(--animation-duration-03s);
+}
+
+.exit-button:hover{
+    background-color: lch(from var(--background-color) calc(l - 15) c h);
+}
+
+.exit-button:focus{
+    background-color: lch(from var(--background-color) calc(l - 15) c h);
+}

@@ -1,0 +1,8 @@
+.aligned-text{
+    transform: skew(var(--main-skew-inverse));
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--offset-5px);
+}

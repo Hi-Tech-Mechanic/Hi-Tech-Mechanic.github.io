@@ -1,0 +1,9 @@
+.info-container__summary{
+    position: relative;
+    padding-right: 120px;
+    
+    font-size: larger;
+    font-weight: 600;
+
+    cursor: pointer;
+}

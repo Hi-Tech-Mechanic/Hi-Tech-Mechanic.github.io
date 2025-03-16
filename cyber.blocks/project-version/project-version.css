@@ -1,0 +1,16 @@
+.project-version {
+  text-align: center;
+  padding: var(--offset-5px);
+  margin-bottom: var(--offset-30px);
+
+  display: inline flex;
+  gap: var(--offset-5px);
+
+  color: var(--text-color);
+  background-color: var(--background-color);
+  border: solid 1px;
+  border-radius: 5px;
+
+  border-color: hsl(from var(--text-color) h s calc(l + 10));
+  box-shadow: 2px 2px 3px var(--text-color);
+}

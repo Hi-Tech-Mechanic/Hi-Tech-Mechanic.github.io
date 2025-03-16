@@ -1,0 +1,12 @@
+.recursive-mirror {
+  padding: 4px;
+  background-color: rgba(0, 255, 221, 0.1);
+  border: 1px solid rgba(11, 149, 184, 0.671);
+  border-radius: 10px;
+
+  transition: padding 0.3s;
+}
+
+.recursive-mirror:hover {
+  padding: 3px;
+}

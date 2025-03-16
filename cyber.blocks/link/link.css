@@ -1,0 +1,14 @@
+.link{
+    color: var(--text-color);
+    text-decoration: none;
+
+    transition: font-size var(--animation-duration-03s);
+}
+
+.link:hover{
+    font-size: calc(1em + 4px);
+}
+
+.link:focus{
+    font-size: calc(1em + 4px);
+}

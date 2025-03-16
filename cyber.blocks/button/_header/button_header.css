@@ -1,0 +1,7 @@
+.button_header {
+  padding: 5px var(--offset-10px);
+
+  text-wrap: nowrap;
+  font-size: large;
+  font-weight: 600;
+}

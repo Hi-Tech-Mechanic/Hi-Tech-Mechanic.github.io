@@ -1,0 +1,10 @@
+.icon_square {
+  display: inline-block;
+  position: relative;
+  height: 30px;
+  width: 30px;
+
+  background-color: black;
+  box-shadow: 0 0 2px black;
+  border-radius: 25%;
+}

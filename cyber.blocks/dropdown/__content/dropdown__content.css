@@ -1,0 +1,19 @@
+.dropdown__content {
+  transform: skew(var(--main-skew-inverse));
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: var(--offset-10px) var(--offset-20px);
+  gap: var(--offset-10px);
+
+  border: var(--border-thickness-thin) solid var(--border-color);
+  border-radius: var(--average-border-radius);
+  background-color: var(--window-background-color);
+  box-shadow: 0 0 var(--offset-10px) 0 var(--text-color);
+}

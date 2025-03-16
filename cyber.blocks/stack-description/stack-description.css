@@ -1,0 +1,21 @@
+.stack-description {
+  transform: skew(-25deg);
+  padding: var(--offset-5px);
+  padding-bottom: var(--offset-10px);
+  margin: 0 var(--offset-15px);
+  margin-top: var(--offset-10px);
+  margin-bottom: var(--offset-10px);
+
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  row-gap: 10px;
+  border: 1px solid;
+  border-bottom: 4px double;
+  border-right: 4px double;
+  border-radius: 5px 10px;
+
+  font-size: larger;
+  font-weight: 600;
+  line-height: var(--offset-40px);
+}

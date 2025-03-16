@@ -1,0 +1,9 @@
+.difficulty-tag_theme_medium{
+    background-color: var(--difficulty-medium);
+    border-color: hsl(from var(--difficulty-medium) h s calc(l - 30));
+    box-shadow: 0 0 var(--offset-10px) hsl(from var(--difficulty-medium) h s calc(l - 30));
+}
+
+.difficulty-tag_theme_medium::after{
+    content: "Medium";
+}
