@@ -1,3 +1,5 @@
+import "../js/data.js";
+
 import "../styles/main.css";
 import "../styles/fonts/cormorant-regular.css";
 import "../styles/roots/colors.css";

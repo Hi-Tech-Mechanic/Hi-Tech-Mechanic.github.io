@@ -4,7 +4,7 @@ const dropdownButton = document.getElementById("dropdown-button");
 const navMenuCachedDisplay = navMenu.style.display;
 const dropdownButtonCachedDisplay = dropdownButton.style.display;
 
-const minWidthPoint = 630;
+const minWidthPoint = 780;
 
 checkScreenWidth();
 window.addEventListener("resize", checkScreenWidth);
