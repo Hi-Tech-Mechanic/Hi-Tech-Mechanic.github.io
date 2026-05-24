@@ -52,6 +52,7 @@ import "../cyber.blocks/image-content-grid/image-content-grid.css";
 
 import "../cyber.blocks/info-container/info-container.css";
 import "../cyber.blocks/info-container/info-container.js";
+import "../cyber.blocks/info-container/_highlighted/info-container_highlighted.css";
 import "../cyber.blocks/info-container/__description/info-container__description.css";
 import "../cyber.blocks/info-container/__list/info-container__list.css";
 import "../cyber.blocks/info-container/__name/info-container__name.css";
