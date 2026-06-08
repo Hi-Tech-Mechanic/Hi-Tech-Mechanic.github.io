@@ -1,4 +1,4 @@
-import "../js/data.js";
+import "../js/render.js";
 
 import "../styles/main.css";
 import "../styles/fonts/cormorant-regular.css";

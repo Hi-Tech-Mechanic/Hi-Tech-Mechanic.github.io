@@ -120,4 +120,3 @@ import "../videos/furniture-gameplay-compressed.mp4";
 import "../videos/character-menu-concept.mp4";
 import "../videos/character-menu-concept.mpeg";
 import "../videos/character-menu-concept.webm";
-
