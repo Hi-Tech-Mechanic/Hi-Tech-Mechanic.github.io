@@ -1,4 +1,4 @@
-import "../js/data.js";
+import "../js/render.js";
 
 import "../styles/main.css";
 import "../styles/fonts/cormorant-regular.css";
@@ -114,10 +114,10 @@ import "../cyber.blocks/image/image.css";
 
 ///////////////////////////////////////////////////////////////
 
-// import "../videos/multiverse-memes_landscape-video.mp4";
 import "../videos/multiverse-memes_portrait-video.mp4";
 import "../videos/exolab-gameplay-compressed.mp4";
 import "../videos/furniture-gameplay-compressed.mp4";
 import "../videos/character-menu-concept.mp4";
 import "../videos/character-menu-concept.mpeg";
 import "../videos/character-menu-concept.webm";
+
