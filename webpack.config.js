@@ -6,8 +6,8 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
     entry: {
-        index: './js/index.js',
-        info: './js/old_index.js',
+        cyber: './js/index.js',
+        common: './js/old_index.js',
     },
     
     output: {
@@ -56,7 +56,9 @@ module.exports = {
             minify: false,
         }),
         new CleanWebpackPlugin(),
-        new MiniCssExtractPlugin(),
+        new MiniCssExtractPlugin({
+            filename: '[name].bundle.css',
+        }),
         new CopyWebpackPlugin({
             patterns: [
                 {

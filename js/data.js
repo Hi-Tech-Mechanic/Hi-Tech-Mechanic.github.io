@@ -375,7 +375,7 @@ export const projectsData = [
         icon: { src: "favicon.png", alt: "This website icon" },
         sourceUrl: "https://github.com/Hi-Tech-Mechanic/Hi-Tech-Mechanic.github.io",
         difficulty: "medium",
-        version: { number: "1.2.5", status: "green" },
+        version: { number: "1.4.0", status: "green" },
         stackId: "portfolio-website",
         terminal: {
           summaryId: "Terminal",
