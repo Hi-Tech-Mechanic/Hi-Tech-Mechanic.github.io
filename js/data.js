@@ -391,9 +391,12 @@ export const projectsData = [
         actionButton: { label: "Открыть", href: "https://hi-tech-mechanic.github.io/furniture-shop/" },
         difficulty: "hard",
         stackId: "furniture-shop",
-        description: `<p>Это задача для курсовой работы.</p>`,
+        description: `<p>Разрабатывалась для курсовой работы. Идея такова что пользователь во время покупки мебели в интернет магазине может примерить её и расположить в виртуальном пространстве, чтобы определиться с покупкой.
+        Номинально была сделана одна страница "интернет магазина". Чтобы внутри уже данного сайта открывать целевое web приложение.</p>
+        <p>Система сохранения основана на LiteDB если приложение запущено локально с пк. Если пользователь сидит через браузер то для хранения используется localStorage браузера.
+        Если что-то непонятно можно зайти в справочник и посмотреть привязки клавиш.</p>`,
         video: {
-          poster: "images/furniture-shop/5.avif",
+          poster: "images/furniture-shop/4.avif",
           sources: [{ src: "videos/furniture-gameplay-compressed.mp4", type: "video/mp4" }],
           fallbackLink: "videos/furniture-gameplay-compressed.mp4",
         },
@@ -401,13 +404,11 @@ export const projectsData = [
           gridClass: "image-content-grid-2-columns",
           images: [
             { src: "images/furniture-shop/1.avif", caption: "Домашняя страница" },
-            { src: "images/furniture-shop/2.avif", caption: "Список товаров в масштабе" },
-            { src: "images/furniture-shop/3.avif", caption: "Корзина пока выглядит не ахти" },
-            { src: "images/furniture-shop/4.avif", caption: "Внутрь встроен iframe с webgl приложением" },
-            { src: "images/furniture-shop/5.avif", caption: "Предоставлены категории мебели и справочник с управлением" },
-            { src: "images/furniture-shop/6.avif", caption: "Расстановка предметов происходит путем редактирования размеров и направления по желанию" },
-            { src: "images/furniture-shop/7.avif", caption: "Можно заспамить мебелью всю хату" },
-            { src: "images/furniture-shop/8.avif", caption: "Можно даже пострелять и послушать музыку)" },
+            { src: "images/furniture-shop/2.avif", caption: "Внутрь встроен Iframe с WebGL приложением" },
+            { src: "images/furniture-shop/3.avif", caption: "Можно посмотреть настройки управления клавиш в справочнике" },
+            { src: "images/furniture-shop/4.avif", caption: "Выставление предмета. Можно редактировать размеры и угол поворота" },
+            { src: "images/furniture-shop/5.avif", caption: "Удаление. Можно удалять составные части предмета, так и предмет целиком" },
+            { src: "images/furniture-shop/6.avif", caption: "Имеется пару треков на выбор, а находчивые могут даже пострелять" },
           ],
         },
       },
