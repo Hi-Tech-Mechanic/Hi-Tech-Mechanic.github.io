@@ -1,6 +1,7 @@
 import { projectsData, knowledgeBaseData } from "./data.js";
 
 const EXTERNAL_LINK_SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentColor"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></svg>`;
+let projectVersionList = new Map();
 
 export function renderProjects() {
     const main = document.getElementById("main");
@@ -23,6 +24,9 @@ export function renderProjects() {
     main.insertAdjacentHTML("afterbegin", html);
 
     renderKnowledgeBase();
+    
+    // Запускаем после загрузки DOM
+    document.addEventListener("DOMContentLoaded", fetchProjectsReleaseVersions);
 }
 
 function renderKnowledgeBase() {
@@ -114,7 +118,7 @@ function renderProjectCard(project) {
       <div class="detailts-content">
         <div class="info-container__description">
           <p class="stack-description" id="${project.stackId}">Используемый стек:</p>
-          ${renderVersion(project.version)}
+          ${renderVersion(project)}
           ${renderTerminal(project.terminal)}
           ${project.description || ""}
         </div>
@@ -143,15 +147,71 @@ function renderActionButton(button) {
     </a>`;
 }
 
-function renderVersion(version) {
-    if (!version) return "";
+function renderVersion(project) {
+    if (!project.version) return "";
+
+    const elementId = project.version.elementId;
+    projectVersionList.set(elementId, project.repository);
+
     return `
     <div>
       <div class="project-version">
-        Version: ${version.number}
-        <div class="bulb bulb_${version.status}"></div>
+        <p id="${elementId}">Version: ${project.version.number}</p>
+        <div id="${elementId}-bulb"class="bulb bulb_${project.version.status}"></div>
       </div>
     </div>`;
+}
+
+async function fetchProjectsReleaseVersions() {
+    const owner = "Hi-Tech-Mechanic";
+    const cacheDuration = 1000 * 60 * 60 * 4; // 4 часа в миллисекундах
+
+    for (let [elementId, repo] of projectVersionList) {
+        var versionElement = document.getElementById(elementId);
+
+        if (!versionElement) return;
+
+        const cacheKey = elementId;
+        const cacheTimeKey = elementId + "-" + "cached-time";
+
+        const cachedVersion = localStorage.getItem(cacheKey);
+        const cacheTime = localStorage.getItem(cacheTimeKey);
+
+        // Если есть кэш и он не устарел, используем его
+        if (cachedVersion && cacheTime && Date.now() - cacheTime < cacheDuration) {
+            versionElement.textContent = cachedVersion;
+            continue;
+        }
+
+        try {
+            // URL для получения последнего релиза
+            var apiUrl = `https://api.github.com/repos/${owner}/${repo}/releases/latest`;
+            const response = await fetch(apiUrl);
+            if (!response.ok) {
+                throw new Error(`Ошибка HTTP: ${response.status}`);
+                // Если статус 404, значит в репозитории еще нет созданных релизов (Releases)
+            }
+
+            const data = await response.json();
+
+            // Удаляем букву v в начале если есть
+            var version = data.tag_name.replace(/v/g, "");
+            version = `Version: ${version}`;
+
+            versionElement.textContent = version;
+
+            localStorage.setItem(cacheKey, version);
+            localStorage.setItem(cacheTimeKey, Date.now().toString());
+        } catch (error) {
+            console.error("Не удалось получить версию:", error);
+            versionElement.textContent = "Неизвестно";
+            versionElement.classList.add("error");
+
+            // Меняем лампочку на красную
+            var bulbElement = document.getElementById(`${elementId}-bulb`);
+            bulbElement.className = "bulb bulb_red";
+        }
+    }
 }
 
 function renderTerminal(terminal) {
