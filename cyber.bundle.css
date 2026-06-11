@@ -62,7 +62,7 @@ details[open] + div.detailts-content {
   --technology-languages: hsl(120, 80%, 50%);
   --technology-frameworks: hsl(190, 80%, 50%);
   --technology-work-environment: hsl(250, 80%, 50%);
-  --technology-methodologyes: hsl(335, 80%, 50%);
+  --technology-methodologies: hsl(335, 80%, 50%);
 
   --angular-gradient-of-light-70: linear-gradient(
     335deg,
@@ -726,7 +726,7 @@ details[open] + div.detailts-content {
 }
 
 .stack-description {
-  transform: skew(-25deg);
+  transform: skew(var(--main-skew));
   padding: var(--offset-5px);
   padding-bottom: var(--offset-10px);
   margin: 0 var(--offset-15px);
@@ -765,10 +765,16 @@ details[open] + div.detailts-content {
   margin-bottom: 5px;
 }
 
-.stack-description_theme_methodologyes {
-  color: var(--technology-methodologyes);
+.stack-description_theme_methodologies {
+  color: var(--technology-methodologies);
   margin-top: 5px;
   margin-bottom: 5px;
+}
+
+.stack-description__text{
+    transform: skew(var(--main-skew-inverse));
+    padding-right: 5px;
+    padding-left: 5px;
 }
 
 .tag {
@@ -890,17 +896,17 @@ details[open] + div.detailts-content {
 .technology-unit_theme_work-environment:hover::after {
   background-color: hsl(from var(--technology-work-environment) h s calc(l + 25));
 }
-.technology-unit_theme_methodologyes {
-  background-color: hsl(from var(--technology-methodologyes) h s calc(l - 20));
-  border-color: hsl(from var(--technology-methodologyes) h s calc(l + 10));
-  box-shadow: 0 0 var(--offset-10px) var(--technology-methodologyes),
-    3px 3px 0 hsl(from var(--technology-methodologyes) h s calc(l - 30)),
+.technology-unit_theme_methodologies {
+  background-color: hsl(from var(--technology-methodologies) h s calc(l - 20));
+  border-color: hsl(from var(--technology-methodologies) h s calc(l + 10));
+  box-shadow: 0 0 var(--offset-10px) var(--technology-methodologies),
+    3px 3px 0 hsl(from var(--technology-methodologies) h s calc(l - 30)),
     5px 5px var(--offset-5px) black;
 }
 
-.technology-unit_theme_methodologyes:hover::before,
-.technology-unit_theme_methodologyes:hover::after {
-  background-color: hsl(from var(--technology-methodologyes) h s calc(l + 25));
+.technology-unit_theme_methodologies:hover::before,
+.technology-unit_theme_methodologies:hover::after {
+  background-color: hsl(from var(--technology-methodologies) h s calc(l + 25));
 }
 .terminal-code {
   margin-top: var(--offset-5px);
