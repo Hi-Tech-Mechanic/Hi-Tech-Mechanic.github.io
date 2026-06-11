@@ -80,7 +80,7 @@ import "../common.blocks/stack-description/stack-description.css";
 import "../common.blocks/stack-description/_theme_languages/stack-description_theme_languages.css";
 import "../common.blocks/stack-description/_theme_frameworks/stack-description_theme_frameworks.css";
 import "../common.blocks/stack-description/_theme_work-environment/stack-description_theme_work-environment.css";
-import "../common.blocks/stack-description/_theme_methodologyes/stack-description_theme_methodologyes.css";
+import "../common.blocks/stack-description/_theme_methodologies/stack-description_theme_methodologies.css";
 
 import "../common.blocks/tag/tag.css";
 import "../common.blocks/tag/__update/tag__update.css";
@@ -91,7 +91,7 @@ import "../common.blocks/technology-unit/technology-unit.js";
 import "../common.blocks/technology-unit/_theme_frameworks/technology-unit_theme_frameworks.css";
 import "../common.blocks/technology-unit/_theme_languages/technology-unit_theme_languages.css";
 import "../common.blocks/technology-unit/_theme_work-environment/technology-unit_theme_work-environment.css";
-import "../common.blocks/technology-unit/_theme_methodologyes/technology-unit_theme_methodologyes.css";
+import "../common.blocks/technology-unit/_theme_methodologies/technology-unit_theme_methodologies.css";
 
 import "../common.blocks/terminal-code/terminal-code.css";
 import "../common.blocks/terminal-code/terminal-code.js";

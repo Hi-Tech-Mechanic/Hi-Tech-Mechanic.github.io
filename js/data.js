@@ -383,7 +383,7 @@ export const projectsData = [
         stackId: "portfolio-website",
         terminal: {
           summaryId: "Terminal",
-          summaryText: "Package devDependencies",
+          summaryText: "Package Development Dependencies",
           contentId: "Portfolio website - terminal",
         },
       },

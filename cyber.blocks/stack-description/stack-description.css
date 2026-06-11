@@ -1,5 +1,5 @@
 .stack-description {
-  transform: skew(-25deg);
+  transform: skew(var(--main-skew));
   padding: var(--offset-5px);
   padding-bottom: var(--offset-10px);
   margin: 0 var(--offset-15px);

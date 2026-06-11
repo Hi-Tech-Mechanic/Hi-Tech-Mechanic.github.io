@@ -42,7 +42,7 @@ allProjects.forEach((project) => {
       createStackElement(
         element,
         stackContainers[iteration],
-        "technology-unit_theme_methodologyes",
+        "technology-unit_theme_methodologies",
         false
       );
     }
@@ -73,7 +73,7 @@ for (let key in methodologies) {
   createStackElement(
     methodologies[key],
     methodologiesBlock,
-    "technology-unit_theme_methodologyes",
+    "technology-unit_theme_methodologies",
     true
   );
 }

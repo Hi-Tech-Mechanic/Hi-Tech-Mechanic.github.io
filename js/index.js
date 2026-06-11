@@ -84,7 +84,8 @@ import "../cyber.blocks/stack-description/stack-description.css";
 import "../cyber.blocks/stack-description/_theme_languages/stack-description_theme_languages.css";
 import "../cyber.blocks/stack-description/_theme_frameworks/stack-description_theme_frameworks.css";
 import "../cyber.blocks/stack-description/_theme_work-environment/stack-description_theme_work-environment.css";
-import "../cyber.blocks/stack-description/_theme_methodologyes/stack-description_theme_methodologyes.css";
+import "../cyber.blocks/stack-description/_theme_methodologies/stack-description_theme_methodologies.css";
+import "../cyber.blocks/stack-description/stack-description__text/stack-description__text.css";
 
 import "../cyber.blocks/tag/tag.css";
 import "../cyber.blocks/tag/__update/tag__update.css";
@@ -95,7 +96,7 @@ import "../cyber.blocks/technology-unit/technology-unit.js";
 import "../cyber.blocks/technology-unit/_theme_frameworks/technology-unit_theme_frameworks.css";
 import "../cyber.blocks/technology-unit/_theme_languages/technology-unit_theme_languages.css";
 import "../cyber.blocks/technology-unit/_theme_work-environment/technology-unit_theme_work-environment.css";
-import "../cyber.blocks/technology-unit/_theme_methodologyes/technology-unit_theme_methodologyes.css";
+import "../cyber.blocks/technology-unit/_theme_methodologies/technology-unit_theme_methodologies.css";
 
 import "../cyber.blocks/terminal-code/terminal-code.css";
 import "../cyber.blocks/terminal-code/terminal-code.js";
