@@ -1,8 +1,0 @@
-.dropdown {
-  display: none;
-  position: relative;
-}
-
-.dropdown:hover .dropdown__content {
-  display: flex;
-}
