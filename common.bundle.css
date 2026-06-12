@@ -45,7 +45,7 @@ details[open] + div.detailts-content {
     font-weight: 500;
 }
 :root {
-  --text-color: white;
+  --text-color: rgb(255, 255, 255);
   --border-color: grey;
   --window-background-color: hsl(0, 0%, 5%);
   --background-color: hsla(0, 0%, 5%, 1);
@@ -820,7 +820,13 @@ details[open] + div.detailts-content {
     5px 5px var(--offset-5px) black;
 }
 
-.terminal-code {
+.terminal{
+  margin-top: var(--offset-10px);
+  padding: var(--offset-5px);
+  background-color: rgb(from var(--text-color) r g b / 0.1);
+  border-radius: var(--small-border-radius);
+}
+.terminal__code {
   margin-top: var(--offset-5px);
   padding: 0 var(--offset-5px);
 

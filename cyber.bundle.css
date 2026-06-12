@@ -45,7 +45,7 @@ details[open] + div.detailts-content {
     font-weight: 500;
 }
 :root {
-  --text-color: white;
+  --text-color: rgb(255, 255, 255);
   --border-color: grey;
   --window-background-color: hsl(0, 0%, 5%);
   --background-color: hsla(0, 0%, 5%, 1);
@@ -530,10 +530,16 @@ details[open] + div.detailts-content {
     border-radius: var(--average-border-radius);
     background-color: var(--background-color);
 }
-.info-container_highlighted{
-    background: #e69b10;
-    background: linear-gradient(0deg,rgba(248, 165, 10, 0.7) 0%, rgba(255, 255, 255, 0) 100%);
+.info-container_highlighted {
+    background-image:
+        radial-gradient(#ff9a03 1px, transparent 1px), radial-gradient(#ff9a03 1px, transparent 1px);
+    background-size: 20px 20px;
+    /* Смещаем второй слой на половину размера ячейки */
+    background-position:
+        0 0,
+        10px 10px;
 }
+
 .info-container__description{
     margin: var(--offset-10px);
 }
@@ -732,7 +738,8 @@ details[open] + div.detailts-content {
   margin: 0 var(--offset-15px);
   margin-top: var(--offset-10px);
   margin-bottom: var(--offset-10px);
-
+  background-color: rgb(from var(--text-color) r g b / 0.1);
+  
   display: inline-flex;
   flex-wrap: wrap;
   align-items: center;
@@ -748,27 +755,31 @@ details[open] + div.detailts-content {
 }
 
 .stack-description_theme_languages {
-  color: var(--technology-languages);
+  color: hsl(from var(--technology-languages) h s calc(l + 15));
   margin-top: 5px;
   margin-bottom: 5px;
+  background-color: hsl(from var(--technology-languages) h s calc(l - 35));
 }
 
 .stack-description_theme_frameworks {
-  color: var(--technology-frameworks);
+  color: hsl(from var(--technology-frameworks) h s calc(l + 15));
   margin-top: 5px;
   margin-bottom: 5px;
+  background-color: hsl(from var(--technology-frameworks) h s calc(l - 35));
 }
 
 .stack-description_theme_work-environment {
-  color: var(--technology-work-environment);
+  color: hsl(from var(--technology-work-environment) h s calc(l + 15));
   margin-top: 5px;
   margin-bottom: 5px;
+  background-color: hsl(from var(--technology-work-environment) h s calc(l - 35));
 }
 
 .stack-description_theme_methodologies {
-  color: var(--technology-methodologies);
+  color: hsl(from var(--technology-methodologies) h s calc(l + 15));
   margin-top: 5px;
   margin-bottom: 5px;
+  background-color: hsl(from var(--technology-methodologies) h s calc(l - 35));
 }
 
 .stack-description__text{
@@ -908,7 +919,13 @@ details[open] + div.detailts-content {
 .technology-unit_theme_methodologies:hover::after {
   background-color: hsl(from var(--technology-methodologies) h s calc(l + 25));
 }
-.terminal-code {
+.terminal{
+  margin-top: var(--offset-10px);
+  padding: var(--offset-5px);
+  background-color: rgb(from var(--text-color) r g b / 0.1);
+  border-radius: var(--small-border-radius);
+}
+.terminal__code {
   margin-top: var(--offset-5px);
   padding: 0 var(--offset-5px);
 
