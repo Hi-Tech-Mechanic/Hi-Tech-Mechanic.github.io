@@ -1,5 +1,6 @@
 .stack-description_theme_work-environment {
-  color: var(--technology-work-environment);
+  color: hsl(from var(--technology-work-environment) h s calc(l + 15));
   margin-top: 5px;
   margin-bottom: 5px;
+  background-color: hsl(from var(--technology-work-environment) h s calc(l - 35));
 }

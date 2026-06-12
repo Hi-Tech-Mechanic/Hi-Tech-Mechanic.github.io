@@ -1,5 +1,5 @@
 class dark {
-  static textColor = "white";
+  static textColor = "rgb(255, 255, 255)";
   static backgroundColor = "hsla(0, 0%, 5%, 0.3)";
   static windowBackgroundColor = "hsl(0, 0%, 5%)";
   static buttonBackgroundColor = "hsla(0, 0%, 15%, 0.5)";
@@ -8,7 +8,7 @@ class dark {
 }
 
 class light {
-  static textColor = "black";
+  static textColor = "rgb(0, 0, 0)";
   static backgroundColor = "hsla(0, 0%, 95%, 0.3)";
   static windowBackgroundColor = "hsl(0, 0%, 95%)";
   static buttonBackgroundColor = "hsla(0, 0%, 65%, 0.5)";

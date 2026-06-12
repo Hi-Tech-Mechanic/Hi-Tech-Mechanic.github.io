@@ -5,7 +5,8 @@
   margin: 0 var(--offset-15px);
   margin-top: var(--offset-10px);
   margin-bottom: var(--offset-10px);
-
+  background-color: rgb(from var(--text-color) r g b / 0.1);
+  
   display: inline-flex;
   flex-wrap: wrap;
   align-items: center;

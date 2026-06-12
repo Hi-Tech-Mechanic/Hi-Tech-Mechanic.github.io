@@ -1,5 +1,6 @@
 .stack-description_theme_languages {
-  color: var(--technology-languages);
+  color: hsl(from var(--technology-languages) h s calc(l + 15));
   margin-top: 5px;
   margin-bottom: 5px;
+  background-color: hsl(from var(--technology-languages) h s calc(l - 35));
 }

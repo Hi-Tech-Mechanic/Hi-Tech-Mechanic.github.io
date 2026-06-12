@@ -1,0 +1,6 @@
+.terminal{
+  margin-top: var(--offset-10px);
+  padding: var(--offset-5px);
+  background-color: rgb(from var(--text-color) r g b / 0.1);
+  border-radius: var(--small-border-radius);
+}

@@ -117,10 +117,12 @@ function renderProjectCard(project) {
       </details>
       <div class="detailts-content">
         <div class="info-container__description">
-          <p class="stack-description" id="${project.stackId}">Используемый стек:</p>
+          <div class="stack-description" id="${project.stackId}">
+             <p class="stack-description__text">Используемый стек:</p>
+          </div>
           ${renderVersion(project)}
-          ${renderTerminal(project.terminal)}
           ${project.description || ""}
+          ${renderTerminal(project.terminal)}
         </div>
         ${renderVideo(project.video)}
         ${renderGallery(project.gallery)}
@@ -218,9 +220,9 @@ function renderTerminal(terminal) {
     if (!terminal) return "";
     return `
     <details>
-      <summary id="${terminal.summaryId}">${terminal.summaryText}</summary>
+      <summary class="terminal" id="${terminal.summaryId}">${terminal.summaryText}</summary>
     </details>
-    <div class="terminal-code" id="${terminal.contentId}"></div>`;
+    <div class="terminal__code" id="${terminal.contentId}"></div>`;
 }
 
 function renderVideo(video) {

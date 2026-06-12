@@ -98,11 +98,12 @@ import "../cyber.blocks/technology-unit/_theme_languages/technology-unit_theme_l
 import "../cyber.blocks/technology-unit/_theme_work-environment/technology-unit_theme_work-environment.css";
 import "../cyber.blocks/technology-unit/_theme_methodologies/technology-unit_theme_methodologies.css";
 
-import "../cyber.blocks/terminal-code/terminal-code.css";
-import "../cyber.blocks/terminal-code/terminal-code.js";
+import "../common.blocks/terminal/terminal.css";
+import "../common.blocks/terminal/__code/terminal__code.css";
+import "../common.blocks/terminal/__code/terminal__code.js";
 
-import "../cyber.blocks/theme-toggle/theme-toggle.js";
-import "../cyber.blocks/theme-toggle/theme-toggle.css";
+import "../common.blocks/theme-toggle/theme-toggle.js";
+import "../common.blocks/theme-toggle/theme-toggle.css";
 
 import "../cyber.blocks/promo-card/promo-card.css";
 import "../cyber.blocks/promo-card/promo-card.js";

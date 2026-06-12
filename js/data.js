@@ -310,7 +310,6 @@ export const projectsData = [
         name: "Minecraft: Industrialization",
         year: 2024,
         icon: { src: "images/minecraft-industrialization/icon.png", alt: "Minecraft: Industrialization icon" },
-        extraName: " (в разработке)",
         difficulty: "hard",
         stackId: "minecraft-industrialization",
         description: `<p>Экономическая игра с производством механизмов, добычей ископаемых и последующей всеобщей автоматизацией. Мотивы были взяты из мода industrial craft, industrial craft upgrade и build craft.</p>`,
@@ -381,6 +380,7 @@ export const projectsData = [
         difficulty: "medium",
         version: { status: "green", elementId: "current-web-site-id"},
         stackId: "portfolio-website",
+        description: `<p>Реализовано автоматическое вытягивание последних релизных версий проектов из GitHub. Сборки и релизы происходят автоматически после отправки коммитов через GitHub actions</p>`,
         terminal: {
           summaryId: "Terminal",
           summaryText: "Package Development Dependencies",
@@ -445,7 +445,7 @@ export const projectsData = [
         actionButton: { label: "Открыть", href: "https://hi-tech-mechanic.github.io/russian-travel/" },
         difficulty: "easy",
         stackId: "russian-travel",
-        description: `<p>Тренировка адаптивной верстки. Еще допиливаю.</p>`,
+        description: `<p>Тренировка адаптивной pixel perfect верстки с референса в figma.</p>`,
         gallery: {
           gridClass: "image-content-grid-2-columns",
           images: [
@@ -469,7 +469,7 @@ export const projectsData = [
         sourceUrl: "https://github.com/Hi-Tech-Mechanic/RPG-style-character-menu-concept",
         difficulty: "easy",
         stackId: "character-menu-concept",
-        description: `<p>Инвентарь и игровые механики в стиле SCI-FI RPG.</p><p>Для запуска нужно скачать всю папку с билдом.</p>`,
+        description: `<p>Инвентарь в стиле SCI-FI RPG.</p>`,
         video: {
           poster: "images/character-menu-concept/1.avif",
           sources: [
